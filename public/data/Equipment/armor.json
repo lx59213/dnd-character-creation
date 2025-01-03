@@ -1,0 +1,226 @@
+{
+  "armor.padded": {
+    "id": "armor.padded",
+    "name": "棉甲",
+    "displayName": "棉甲 Padded Armor",
+    "description": "由层层软垫和织物制成的护甲。",
+    "weight": 8,
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "type": "轻型",
+    "baseAC": 11,
+    "stealthDisadvantage": true,
+    "donTime": 1,
+    "doffTime": 1,
+    "rarity": "普通"
+  },
+  "armor.leather": {
+    "id": "armor.leather",
+    "name": "皮甲",
+    "displayName": "皮甲 Leather Armor",
+    "description": "由坚韧皮革制成的胸甲和护具。",
+    "weight": 10,
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "type": "轻型",
+    "baseAC": 11,
+    "stealthDisadvantage": false,
+    "donTime": 1,
+    "doffTime": 1,
+    "rarity": "普通"
+  },
+  "armor.studded_leather": {
+    "id": "armor.studded_leather",
+    "name": "镶钉皮甲",
+    "displayName": "镶钉皮甲 Studded Leather",
+    "description": "由坚韧的皮革制成，并用密集的金属铆钉加固。",
+    "weight": 13,
+    "cost": {
+      "amount": 45,
+      "unit": "gp"
+    },
+    "type": "轻型",
+    "baseAC": 12,
+    "stealthDisadvantage": false,
+    "donTime": 1,
+    "doffTime": 1,
+    "rarity": "普通"
+  },
+  "armor.hide": {
+    "id": "armor.hide",
+    "name": "兽皮甲",
+    "displayName": "兽皮甲 Hide",
+    "description": "这件粗糙的护甲由厚实的兽皮制成。",
+    "weight": 12,
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "type": "中型",
+    "baseAC": 12,
+    "stealthDisadvantage": false,
+    "donTime": 5,
+    "doffTime": 1,
+    "rarity": "普通"
+  },
+  "armor.chain_shirt": {
+    "id": "armor.chain_shirt",
+    "name": "链甲衫",
+    "displayName": "链甲衫 Chain Shirt",
+    "description": "由金属环编织而成的护甲，覆盖躯干。",
+    "weight": 20,
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "type": "中型",
+    "baseAC": 13,
+    "stealthDisadvantage": false,
+    "donTime": 5,
+    "doffTime": 1,
+    "rarity": "普通"
+  },
+  "armor.scale_mail": {
+    "id": "armor.scale_mail",
+    "name": "鳞甲",
+    "displayName": "鳞甲 Scale Mail",
+    "description": "由重叠的金属鳞片制成的护甲，包括一套护手。",
+    "weight": 45,
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "type": "中型",
+    "baseAC": 14,
+    "stealthDisadvantage": true,
+    "donTime": 5,
+    "doffTime": 1,
+    "rarity": "普通"
+  },
+  "armor.breastplate": {
+    "id": "armor.breastplate",
+    "name": "胸甲",
+    "displayName": "胸甲 Breastplate",
+    "description": "一件适合的金属胸甲，保护穿戴者的重要器官。",
+    "weight": 20,
+    "cost": {
+      "amount": 400,
+      "unit": "gp"
+    },
+    "type": "中型",
+    "baseAC": 14,
+    "stealthDisadvantage": false,
+    "donTime": 5,
+    "doffTime": 1,
+    "rarity": "普通"
+  },
+  "armor.half_plate": {
+    "id": "armor.half_plate",
+    "name": "半板甲",
+    "displayName": "半板甲 Half Plate",
+    "description": "由塑形金属板构成的护甲，覆盖大部分身体。",
+    "weight": 40,
+    "cost": {
+      "amount": 750,
+      "unit": "gp"
+    },
+    "type": "中型",
+    "baseAC": 15,
+    "stealthDisadvantage": true,
+    "donTime": 5,
+    "doffTime": 1,
+    "rarity": "普通"
+  },
+  "armor.ring_mail": {
+    "id": "armor.ring_mail",
+    "name": "环甲",
+    "displayName": "环甲 Ring Mail",
+    "description": "皮革护甲上缝制着金属环，提供额外保护。",
+    "weight": 40,
+    "cost": {
+      "amount": 30,
+      "unit": "gp"
+    },
+    "type": "重型",
+    "baseAC": 14,
+    "stealthDisadvantage": true,
+    "donTime": 10,
+    "doffTime": 5,
+    "rarity": "普通"
+  },
+  "armor.chainmail": {
+    "id": "armor.chainmail",
+    "name": "链甲",
+    "displayName": "链甲 Chain Mail",
+    "description": "由相互交织的金属环制成的护甲。",
+    "weight": 55,
+    "cost": {
+      "amount": 75,
+      "unit": "gp"
+    },
+    "type": "重型",
+    "baseAC": 16,
+    "strengthRequirement": 13,
+    "stealthDisadvantage": true,
+    "donTime": 10,
+    "doffTime": 5,
+    "rarity": "普通"
+  },
+  "armor.splint": {
+    "id": "armor.splint",
+    "name": "板条甲",
+    "displayName": "板条甲 Splint",
+    "description": "由垂直排列的金属条带制成，由柔韧的链环连接。",
+    "weight": 60,
+    "cost": {
+      "amount": 200,
+      "unit": "gp"
+    },
+    "type": "重型",
+    "baseAC": 17,
+    "strengthRequirement": 15,
+    "stealthDisadvantage": true,
+    "donTime": 10,
+    "doffTime": 5,
+    "rarity": "普通"
+  },
+  "armor.plate": {
+    "id": "armor.plate",
+    "name": "板甲",
+    "displayName": "板甲 Plate",
+    "description": "由精心打造的连接金属板构成，能为整个身体提供最大程度的保护。",
+    "weight": 65,
+    "cost": {
+      "amount": 1500,
+      "unit": "gp"
+    },
+    "type": "重型",
+    "baseAC": 18,
+    "strengthRequirement": 15,
+    "stealthDisadvantage": true,
+    "donTime": 10,
+    "doffTime": 5,
+    "rarity": "普通"
+  },
+  "armor.shield": {
+    "id": "armor.shield",
+    "name": "盾牌",
+    "displayName": "盾牌 Shield",
+    "description": "一面木制或金属制的盾牌，用于格挡攻击。",
+    "weight": 6,
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "type": "盾牌",
+    "baseAC": 2,
+    "stealthDisadvantage": false,
+    "donTime": 1,
+    "doffTime": 1,
+    "rarity": "普通"
+  }
+}

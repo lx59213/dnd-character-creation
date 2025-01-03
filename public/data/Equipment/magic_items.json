@@ -1,0 +1,196 @@
+{
+  "magic.healing_potion": {
+    "id": "magic.healing_potion",
+    "name": "治疗药水",
+    "displayName": "治疗药水 Potion of Healing",
+    "description": "喝下这瓶红色液体，恢复2d4+2点生命值。",
+    "weight": 0.5,
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "type": "药水",
+    "attunement": false,
+    "rarity": "普通"
+  },
+  "magic.greater_healing_potion": {
+    "id": "magic.greater_healing_potion",
+    "name": "强效治疗药水",
+    "displayName": "强效治疗药水 Potion of Greater Healing",
+    "description": "喝下这瓶红色液体，恢复4d4+4点生命值。",
+    "weight": 0.5,
+    "cost": {
+      "amount": 200,
+      "unit": "gp"
+    },
+    "type": "药水",
+    "attunement": false,
+    "rarity": "罕见"
+  },
+  "magic.superior_healing_potion": {
+    "id": "magic.superior_healing_potion",
+    "name": "超效治疗药水",
+    "displayName": "超效治疗药水 Potion of Superior Healing",
+    "description": "喝下这瓶红色液体，恢复8d4+8点生命值。",
+    "weight": 0.5,
+    "cost": {
+      "amount": 2000,
+      "unit": "gp"
+    },
+    "type": "药水",
+    "attunement": false,
+    "rarity": "稀有"
+  },
+  "magic.ring_protection": {
+    "id": "magic.ring_protection",
+    "name": "防护戒指",
+    "displayName": "防护戒指 Ring of Protection",
+    "description": "你的AC和所有豁免检定获得+1加值。",
+    "weight": 0.1,
+    "cost": {
+      "amount": 3500,
+      "unit": "gp"
+    },
+    "type": "戒指",
+    "attunement": true,
+    "rarity": "稀有"
+  },
+  "magic.ring_resistance": {
+    "id": "magic.ring_resistance",
+    "name": "抗性戒指",
+    "displayName": "抗性戒指 Ring of Resistance",
+    "description": "你对一种伤害类型具有抗性。",
+    "weight": 0.1,
+    "cost": {
+      "amount": 6000,
+      "unit": "gp"
+    },
+    "type": "戒指",
+    "attunement": true,
+    "rarity": "稀有"
+  },
+  "magic.ring_spell_storing": {
+    "id": "magic.ring_spell_storing",
+    "name": "法术储存戒指",
+    "displayName": "法术储存戒指 Ring of Spell Storing",
+    "description": "这枚戒指可以储存最多5环的法术，总环数不超过5。",
+    "weight": 0.1,
+    "cost": {
+      "amount": 8000,
+      "unit": "gp"
+    },
+    "type": "戒指",
+    "attunement": true,
+    "rarity": "稀有"
+  },
+  "magic.wand_magic_missiles": {
+    "id": "magic.wand_magic_missiles",
+    "name": "魔法飞弹魔杖",
+    "displayName": "魔法飞弹魔杖 Wand of Magic Missiles",
+    "description": "这根魔杖有7发充能。使用1发充能可以施展魔法飞弹法术。",
+    "weight": 1,
+    "cost": {
+      "amount": 4000,
+      "unit": "gp"
+    },
+    "type": "魔杖",
+    "attunement": false,
+    "charges": {
+      "max": 7,
+      "recharge": "黎明"
+    },
+    "rarity": "罕见"
+  },
+  "magic.wand_fireballs": {
+    "id": "magic.wand_fireballs",
+    "name": "火球魔杖",
+    "displayName": "火球魔杖 Wand of Fireballs",
+    "description": "这根魔杖有7发充能。使用1发充能可以施展火球术法术。",
+    "weight": 1,
+    "cost": {
+      "amount": 8000,
+      "unit": "gp"
+    },
+    "type": "魔杖",
+    "attunement": true,
+    "charges": {
+      "max": 7,
+      "recharge": "黎明"
+    },
+    "rarity": "稀有"
+  },
+  "magic.staff_power": {
+    "id": "magic.staff_power",
+    "name": "威能法杖",
+    "displayName": "威能法杖 Staff of Power",
+    "description": "这根强大的法杖可以施展多种法术，并能增强你的法术攻击。",
+    "weight": 4,
+    "cost": {
+      "amount": 25000,
+      "unit": "gp"
+    },
+    "type": "法杖",
+    "attunement": true,
+    "charges": {
+      "max": 20,
+      "recharge": "黎明"
+    },
+    "rarity": "非常稀有"
+  },
+  "magic.cloak_protection": {
+    "id": "magic.cloak_protection",
+    "name": "防护斗篷",
+    "displayName": "防护斗篷 Cloak of Protection",
+    "description": "穿戴此斗篷时，你的AC和所有豁免检定获得+1加值。",
+    "weight": 1,
+    "cost": {
+      "amount": 3500,
+      "unit": "gp"
+    },
+    "type": "斗篷",
+    "attunement": true,
+    "rarity": "罕见"
+  },
+  "magic.cloak_displacement": {
+    "id": "magic.cloak_displacement",
+    "name": "错位斗篷",
+    "displayName": "错位斗篷 Cloak of Displacement",
+    "description": "穿戴此斗篷时，你的影像会产生错位，使对你的攻击具有劣势。",
+    "weight": 1,
+    "cost": {
+      "amount": 6000,
+      "unit": "gp"
+    },
+    "type": "斗篷",
+    "attunement": true,
+    "rarity": "稀有"
+  },
+  "magic.amulet_health": {
+    "id": "magic.amulet_health",
+    "name": "生命护符",
+    "displayName": "生命护符 Amulet of Health",
+    "description": "你的体质值变为19。如果你的体质已经是19或更高，则此物品对你没有效果。",
+    "weight": 1,
+    "cost": {
+      "amount": 8000,
+      "unit": "gp"
+    },
+    "type": "护符",
+    "attunement": true,
+    "rarity": "稀有"
+  },
+  "magic.bag_holding": {
+    "id": "magic.bag_holding",
+    "name": "次元袋",
+    "displayName": "次元袋 Bag of Holding",
+    "description": "这个袋子内部空间比外表大得多，可以容纳最多500磅重、64立方尺体积的物品。",
+    "weight": 15,
+    "cost": {
+      "amount": 4000,
+      "unit": "gp"
+    },
+    "type": "奇物",
+    "attunement": false,
+    "rarity": "罕见"
+  }
+}

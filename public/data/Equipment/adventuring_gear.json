@@ -1,0 +1,197 @@
+{
+  "gear.backpack": {
+    "id": "gear.backpack",
+    "name": "背包",
+    "displayName": "背包 Backpack",
+    "description": "一个皮革或帆布制成的背包，可以装载物品。",
+    "weight": 5,
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "category": "容器",
+    "rarity": "普通"
+  },
+  "gear.rope": {
+    "id": "gear.rope",
+    "name": "麻绳",
+    "displayName": "麻绳 Rope, Hempen (50 feet)",
+    "description": "50尺长的麻绳，可以承受200磅重量。",
+    "weight": 10,
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "category": "探险装备",
+    "rarity": "普通"
+  },
+  "gear.torch": {
+    "id": "gear.torch",
+    "name": "火把",
+    "displayName": "火把 Torch",
+    "description": "一根火把燃烧1小时，提供20尺范围的明亮光照和额外20尺的微光光照。",
+    "weight": 1,
+    "cost": {
+      "amount": 1,
+      "unit": "cp"
+    },
+    "category": "照明",
+    "rarity": "普通"
+  },
+  "gear.rations": {
+    "id": "gear.rations",
+    "name": "干粮",
+    "displayName": "干粮 Rations (1 day)",
+    "description": "一天所需的干粮。",
+    "weight": 2,
+    "cost": {
+      "amount": 5,
+      "unit": "sp"
+    },
+    "category": "食物",
+    "rarity": "普通"
+  },
+  "gear.bedroll": {
+    "id": "gear.bedroll",
+    "name": "睡袋",
+    "displayName": "睡袋 Bedroll",
+    "description": "野外露营用的睡袋。",
+    "weight": 7,
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "category": "露营装备",
+    "rarity": "普通"
+  },
+  "gear.tinderbox": {
+    "id": "gear.tinderbox",
+    "name": "火绒盒",
+    "displayName": "火绒盒 Tinderbox",
+    "description": "这个小容器装有火石、火绒和钢制打火石。使用它生火需要一个动作。",
+    "weight": 1,
+    "cost": {
+      "amount": 5,
+      "unit": "sp"
+    },
+    "category": "工具",
+    "rarity": "普通"
+  },
+  "gear.waterskin": {
+    "id": "gear.waterskin",
+    "name": "水袋",
+    "displayName": "水袋 Waterskin",
+    "description": "可以盛装4品脱液体的容器。",
+    "weight": 5,
+    "cost": {
+      "amount": 2,
+      "unit": "sp"
+    },
+    "category": "容器",
+    "rarity": "普通"
+  },
+  "gear.lantern": {
+    "id": "gear.lantern",
+    "name": "提灯",
+    "displayName": "提灯 Lantern, Hooded",
+    "description": "可以照亮30尺范围，提供明亮光照，并额外照亮30尺范围的微光光照。使用1品脱油可以连续燃烧6小时。",
+    "weight": 2,
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "category": "照明",
+    "rarity": "普通"
+  },
+  "gear.crowbar": {
+    "id": "gear.crowbar",
+    "name": "撬棍",
+    "displayName": "撬棍 Crowbar",
+    "description": "使用撬棍进行依赖力量的检定时具有优势。",
+    "weight": 5,
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "category": "工具",
+    "rarity": "普通"
+  },
+  "gear.hammer": {
+    "id": "gear.hammer",
+    "name": "锤子",
+    "displayName": "锤子 Hammer",
+    "description": "用于敲打帐篷桩或其他需要的场合。",
+    "weight": 3,
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "category": "工具",
+    "rarity": "普通"
+  },
+  "gear.piton": {
+    "id": "gear.piton",
+    "name": "登山钉",
+    "displayName": "登山钉 Piton",
+    "description": "用于攀爬时固定绳索的金属钉。",
+    "weight": 0.25,
+    "cost": {
+      "amount": 5,
+      "unit": "cp"
+    },
+    "category": "探险装备",
+    "rarity": "普通"
+  },
+  "gear.tent": {
+    "id": "gear.tent",
+    "name": "帐篷",
+    "displayName": "帐篷 Tent, Two-person",
+    "description": "一个简单的双人帐篷，提供遮风挡雨的庇护所。",
+    "weight": 20,
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "category": "露营装备",
+    "rarity": "普通"
+  },
+  "gear.healers_kit": {
+    "id": "gear.healers_kit",
+    "name": "医疗工具包",
+    "displayName": "医疗工具包 Healer's Kit",
+    "description": "包含绷带、药膏和夹板。该工具包有10次使用次数。使用一个动作和一次使用次数，你可以稳定一个生命值为0的生物。",
+    "weight": 3,
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "category": "工具",
+    "rarity": "普通"
+  },
+  "gear.component_pouch": {
+    "id": "gear.component_pouch",
+    "name": "材料包",
+    "displayName": "材料包 Component Pouch",
+    "description": "一个小皮袋，内含施法所需的各种材料和配件，除非材料有特定的价格标注。",
+    "weight": 2,
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "category": "施法工具",
+    "rarity": "普通"
+  },
+  "gear.spellbook": {
+    "id": "gear.spellbook",
+    "name": "法术书",
+    "displayName": "法术书 Spellbook",
+    "description": "一本皮革封面的书，包含100页空白羊皮纸，用于记录法术。",
+    "weight": 3,
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "category": "施法工具",
+    "rarity": "普通"
+  }
+}

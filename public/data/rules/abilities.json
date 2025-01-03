@@ -1,0 +1,186 @@
+{
+    "abilityScores": {
+        "strength": {
+            "name": "strength",
+            "displayName": "力量",
+            "description": "力量衡量角色的体力、运动能力和纯粹的物理力量。",
+            "commonChecks": [
+                "运动检定",
+                "攀爬检定",
+                "跳跃检定",
+                "游泳检定",
+                "破门检定"
+            ],
+            "affectedSkills": ["运动"],
+            "savingThrowExamples": [
+                "对抗强制移动",
+                "破除束缚",
+                "避免被击倒"
+            ]
+        },
+        "dexterity": {
+            "name": "dexterity",
+            "displayName": "敏捷",
+            "description": "敏捷代表灵活性、反应速度和平衡能力。",
+            "commonChecks": [
+                "特技检定",
+                "巧手检定",
+                "隐匿检定",
+                "解除陷阱",
+                "开锁检定"
+            ],
+            "affectedSkills": ["特技", "巧手", "隐匿"],
+            "savingThrowExamples": [
+                "躲避范围效果",
+                "闪避陷阱",
+                "保持平衡"
+            ]
+        },
+        "constitution": {
+            "name": "constitution",
+            "displayName": "体质",
+            "description": "体质表示健康、耐力和生命力。",
+            "commonChecks": [
+                "抵抗疾病",
+                "忍受极端环境",
+                "持续剧烈运动",
+                "熬夜不休息"
+            ],
+            "affectedSkills": [],
+            "savingThrowExamples": [
+                "维持专注",
+                "抵抗毒素",
+                "忍受极端温度"
+            ]
+        },
+        "intelligence": {
+            "name": "intelligence",
+            "displayName": "智力",
+            "description": "智力决定推理能力、记忆力和学习能力。",
+            "commonChecks": [
+                "调查检定",
+                "历史知识",
+                "神秘知识",
+                "解谜检定"
+            ],
+            "affectedSkills": ["奥秘", "历史", "调查", "自然", "宗教"],
+            "savingThrowExamples": [
+                "抵抗幻术",
+                "识破错觉",
+                "回忆重要信息"
+            ]
+        },
+        "wisdom": {
+            "name": "wisdom",
+            "displayName": "感知",
+            "description": "感知反映直觉、感知力和洞察力。",
+            "commonChecks": [
+                "察觉检定",
+                "洞悉检定",
+                "医疗检定",
+                "野外求生"
+            ],
+            "affectedSkills": ["驯兽", "洞悉", "医疗", "察觉", "求生"],
+            "savingThrowExamples": [
+                "抵抗魅惑",
+                "察觉危险",
+                "保持警觉"
+            ]
+        },
+        "charisma": {
+            "name": "charisma",
+            "displayName": "魅力",
+            "description": "魅力衡量个性力量、社交能力和领导能力。",
+            "commonChecks": [
+                "说服检定",
+                "欺骗检定",
+                "威吓检定",
+                "表演检定"
+            ],
+            "affectedSkills": ["欺骗", "威吓", "表演", "说服"],
+            "savingThrowExamples": [
+                "抵抗放逐",
+                "保持意志",
+                "展现领导力"
+            ]
+        }
+    },
+    "modifierTable": {
+        "1": -5,
+        "2": -4,
+        "3": -4,
+        "4": -3,
+        "5": -3,
+        "6": -2,
+        "7": -2,
+        "8": -1,
+        "9": -1,
+        "10": 0,
+        "11": 0,
+        "12": 1,
+        "13": 1,
+        "14": 2,
+        "15": 2,
+        "16": 3,
+        "17": 3,
+        "18": 4,
+        "19": 4,
+        "20": 5,
+        "21": 5,
+        "22": 6,
+        "23": 6,
+        "24": 7,
+        "25": 7,
+        "26": 8,
+        "27": 8,
+        "28": 9,
+        "29": 9,
+        "30": 10
+    },
+    "defaultValue": 8,
+    "minimumValue": 3,
+    "maximumValue": 20,
+    "pointBuy": {
+        "startingPoints": 27,
+        "costs": {
+            "8": 0,
+            "9": 1,
+            "10": 2,
+            "11": 3,
+            "12": 4,
+            "13": 5,
+            "14": 7,
+            "15": 9
+        },
+        "minimumScore": 8,
+        "maximumScore": 15
+    },
+    "standardArray": [15, 14, 13, 12, 10, 8],
+    "rollMethods": {
+        "standard": {
+            "name": "standard",
+            "displayName": "标准投点",
+            "description": "投4d6取最高的3个数字之和",
+            "diceCount": 4,
+            "diceType": 6,
+            "keepHighest": 3
+        },
+        "classic": {
+            "name": "classic",
+            "displayName": "经典投点",
+            "description": "直接投3d6",
+            "diceCount": 3,
+            "diceType": 6,
+            "keepHighest": 3
+        }
+    },
+    "improvements": {
+        "standardLevels": [4, 8, 12, 16, 19],
+        "pointsPerImprovement": 2,
+        "maximumScore": 20,
+        "restrictions": {
+            "singleAbilityMaximum": 2,
+            "totalPointsPerLevel": 2
+        }
+    }
+}

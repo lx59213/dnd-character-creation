@@ -1,0 +1,216 @@
+{
+  "proficiency.weapon.simple_melee": {
+    "id": "proficiency.weapon.simple_melee",
+    "name": "简单近战武器",
+    "displayName": "简单近战武器 Simple Melee Weapons",
+    "description": "你熟练使用简单近战武器，如匕首、短棒等。",
+    "category": "武器",
+    "type": "简单近战"
+  },
+  "proficiency.weapon.simple_ranged": {
+    "id": "proficiency.weapon.simple_ranged",
+    "name": "简单远程武器",
+    "displayName": "简单远程武器 Simple Ranged Weapons",
+    "description": "你熟练使用简单远程武器，如轻弩、投石索等。",
+    "category": "武器",
+    "type": "简单远程"
+  },
+  "proficiency.weapon.martial_melee": {
+    "id": "proficiency.weapon.martial_melee",
+    "name": "军用近战武器",
+    "displayName": "军用近战武器 Martial Melee Weapons",
+    "description": "你熟练使用军用近战武器，如长剑、战斧等。",
+    "category": "武器",
+    "type": "军用近战"
+  },
+  "proficiency.weapon.martial_ranged": {
+    "id": "proficiency.weapon.martial_ranged",
+    "name": "军用远程武器",
+    "displayName": "军用远程武器 Martial Ranged Weapons",
+    "description": "你熟练使用军用远程武器，如重弩、长弓等。",
+    "category": "武器",
+    "type": "军用远程"
+  },
+  "proficiency.weapon.club": {
+    "id": "proficiency.weapon.club",
+    "name": "短棒",
+    "displayName": "短棒 Club",
+    "description": "你熟练使用短棒。",
+    "category": "武器",
+    "type": "简单近战",
+    "damage": "1d4 钝击"
+  },
+  "proficiency.weapon.dagger": {
+    "id": "proficiency.weapon.dagger",
+    "name": "匕首",
+    "displayName": "匕首 Dagger",
+    "description": "你熟练使用匕首。",
+    "category": "武器",
+    "type": "简单近战",
+    "damage": "1d4 穿刺"
+  },
+  "proficiency.weapon.dart": {
+    "id": "proficiency.weapon.dart",
+    "name": "飞镖",
+    "displayName": "飞镖 Dart",
+    "description": "你熟练使用飞镖。",
+    "category": "武器",
+    "type": "简单远程",
+    "damage": "1d4 穿刺"
+  },
+  "proficiency.weapon.hand_crossbow": {
+    "id": "proficiency.weapon.hand_crossbow",
+    "name": "手弩",
+    "displayName": "手弩 Hand Crossbow",
+    "description": "你熟练使用手弩。",
+    "category": "武器",
+    "type": "军用远程",
+    "damage": "1d6 穿刺"
+  },
+  "proficiency.weapon.javelin": {
+    "id": "proficiency.weapon.javelin",
+    "name": "标枪",
+    "displayName": "标枪 Javelin",
+    "description": "你熟练使用标枪。",
+    "category": "武器",
+    "type": "简单近战",
+    "damage": "1d6 穿刺"
+  },
+  "proficiency.weapon.light_crossbow": {
+    "id": "proficiency.weapon.light_crossbow",
+    "name": "轻弩",
+    "displayName": "轻弩 Light Crossbow",
+    "description": "你熟练使用轻弩。",
+    "category": "武器",
+    "type": "简单远程",
+    "damage": "1d8 穿刺"
+  },
+  "proficiency.weapon.longsword": {
+    "id": "proficiency.weapon.longsword",
+    "name": "长剑",
+    "displayName": "长剑 Longsword",
+    "description": "你熟练使用长剑。",
+    "category": "武器",
+    "type": "军用近战"
+  },
+  "proficiency.weapon.mace": {
+    "id": "proficiency.weapon.mace",
+    "name": "硬头锤",
+    "displayName": "硬头锤 Mace",
+    "description": "你熟练使用硬头锤。",
+    "category": "武器",
+    "type": "简单近战",
+    "damage": "1d6 钝击"
+  },
+  "proficiency.weapon.quarterstaff": {
+    "id": "proficiency.weapon.quarterstaff",
+    "name": "长棍",
+    "displayName": "长棍 Quarterstaff",
+    "description": "你熟练使用长棍。",
+    "category": "武器",
+    "type": "简单近战",
+    "damage": "1d6 钝击"
+  },
+  "proficiency.weapon.rapier": {
+    "id": "proficiency.weapon.rapier",
+    "name": "刺剑",
+    "displayName": "刺剑 Rapier",
+    "description": "你熟练使用刺剑。",
+    "category": "武器",
+    "type": "军用近战",
+    "damage": "1d8 穿刺"
+  },
+  "proficiency.weapon.scimitar": {
+    "id": "proficiency.weapon.scimitar",
+    "name": "弯刀",
+    "displayName": "弯刀 Scimitar",
+    "description": "你熟练使用弯刀。",
+    "category": "武器",
+    "type": "军用近战",
+    "damage": "1d6 挥砍"
+  },
+  "proficiency.weapon.shortsword": {
+    "id": "proficiency.weapon.shortsword",
+    "name": "短剑",
+    "displayName": "短剑 Shortsword",
+    "description": "你熟练使用短剑。",
+    "category": "武器",
+    "type": "军用近战",
+    "damage": "1d6 穿刺"
+  },
+  "proficiency.weapon.sickle": {
+    "id": "proficiency.weapon.sickle",
+    "name": "镰刀",
+    "displayName": "镰刀 Sickle",
+    "description": "你熟练使用镰刀。",
+    "category": "武器",
+    "type": "简单近战",
+    "damage": "1d4 挥砍"
+  },
+  "proficiency.weapon.sling": {
+    "id": "proficiency.weapon.sling",
+    "name": "投石索",
+    "displayName": "投石索 Sling",
+    "description": "你熟练使用投石索。",
+    "category": "武器",
+    "type": "简单远程",
+    "damage": "1d4 钝击"
+  },
+  "proficiency.weapon.spear": {
+    "id": "proficiency.weapon.spear",
+    "name": "矛",
+    "displayName": "矛 Spear",
+    "description": "你熟练使用矛。",
+    "category": "武器",
+    "type": "简单近战",
+    "damage": "1d6 穿刺"
+  },
+  "proficiency.weapon.shortbow": {
+    "id": "proficiency.weapon.shortbow",
+    "name": "短弓",
+    "displayName": "短弓 Shortbow",
+    "description": "你熟练使用短弓。",
+    "category": "武器",
+    "type": "简单远程"
+  },
+  "proficiency.weapon.longbow": {
+    "id": "proficiency.weapon.longbow",
+    "name": "长弓",
+    "displayName": "长弓 Longbow",
+    "description": "你熟练使用长弓。",
+    "category": "武器",
+    "type": "军用远程"
+  },
+  "proficiency.weapon.battleaxe": {
+    "id": "proficiency.weapon.battleaxe",
+    "name": "战斧",
+    "displayName": "战斧 Battleaxe",
+    "description": "你熟练使用战斧。",
+    "category": "武器",
+    "type": "军用近战"
+  },
+  "proficiency.weapon.handaxe": {
+    "id": "proficiency.weapon.handaxe",
+    "name": "手斧",
+    "displayName": "手斧 Handaxe",
+    "description": "你熟练使用手斧。",
+    "category": "武器",
+    "type": "简单近战"
+  },
+  "proficiency.weapon.lighthammer": {
+    "id": "proficiency.weapon.lighthammer",
+    "name": "轻锤",
+    "displayName": "轻锤 Light Hammer",
+    "description": "你熟练使用轻锤。",
+    "category": "武器",
+    "type": "简单近战"
+  },
+  "proficiency.weapon.warhammer": {
+    "id": "proficiency.weapon.warhammer",
+    "name": "战锤",
+    "displayName": "战锤 Warhammer",
+    "description": "你熟练使用战锤。",
+    "category": "武器",
+    "type": "军用近战"
+  }
+}

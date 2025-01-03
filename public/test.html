@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>D&D Race Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .race-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .race-name {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .race-description {
+            color: #34495e;
+            margin-bottom: 15px;
+        }
+        .attributes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .attribute {
+            background: #f8f9fa;
+            padding: 8px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .feature {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .feature h3 {
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+        }
+        .error {
+            color: red;
+            padding: 20px;
+            background: #ffe6e6;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .language-select {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <select id="language" class="language-select">
+        <option value="en">English</option>
+        <option value="zh">中文</option>
+    </select>
+    <div id="content"></div>
+
+    <script>
+        let currentLanguage = 'en';
+
+        async function fetchRaces() {
+            try {
+                const response = await fetch(`http://localhost:3000/api/races?lang=${currentLanguage}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const races = await response.json();
+                displayRaces(races);
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('content').innerHTML = `
+                    <div class="error">
+                        <h2>Error Loading Data</h2>
+                        <p>${error.message}</p>
+                        <p>Make sure the server is running on port 3000</p>
+                    </div>
+                `;
+            }
+        }
+
+        function displayRaces(races) {
+            const content = document.getElementById('content');
+            content.innerHTML = races.map(race => `
+                <div class="race-card">
+                    <div class="race-name">${race.name}</div>
+                    <div class="race-description">${race.description}</div>
+                    
+                    <h3>Attributes</h3>
+                    <div class="attributes">
+                        ${race.attributes.abilityBoosts ? 
+                            Object.entries(race.attributes.abilityBoosts).map(([attr, value]) => `
+                                <div class="attribute">
+                                    <strong>${attr}</strong>: ${value > 0 ? '+' : ''}${value}
+                                </div>
+                            `).join('') : ''}
+                        ${race.attributes.speed ? `
+                            <div class="attribute">
+                                <strong>Speed</strong>: ${race.attributes.speed}
+                            </div>
+                        ` : ''}
+                    </div>
+
+                    <h3>Features</h3>
+                    ${race.features.map(feature => `
+                        <div class="feature">
+                            <h3>${feature.name}</h3>
+                            <p>${feature.description}</p>
+                        </div>
+                    `).join('')}
+
+                    ${race.attributes.proficiencies?.length > 0 ? `
+                        <h3>Proficiencies</h3>
+                        <p>${race.attributes.proficiencies.join(', ')}</p>
+                    ` : ''}
+                </div>
+            `).join('');
+        }
+
+        document.getElementById('language').addEventListener('change', (e) => {
+            currentLanguage = e.target.value;
+            fetchRaces();
+        });
+
+        // Initial load
+        fetchRaces();
+    </script>
+</body>
+</html>

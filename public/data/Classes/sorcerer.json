@@ -1,0 +1,294 @@
+{
+    "name": "sorcerer",
+    "displayName": "术士",
+    "description": "术士拥有与生俱来的魔法天赋，他们的力量来源于龙族血统或其他神秘起源。",
+    "hitDie": 6,
+    "primaryAbility": ["魅力"],
+    
+    "Other proficiencies": {
+        "armor": [],
+        "weapons": [
+            { "id": "proficiency.weapon.dagger" },
+            { "id": "proficiency.weapon.dart" },
+            { "id": "proficiency.weapon.sling" },
+            { "id": "proficiency.weapon.quarterstaff" },
+            { "id": "proficiency.weapon.light_crossbow" }
+        ],
+        "tools": [],
+        "savingThrows": [
+            { "id": "proficiency.savingThrow.constitution" },
+            { "id": "proficiency.savingThrow.charisma" }
+        ]
+    },
+
+    "multiclassing": {
+        "prerequisites": {
+            "charisma": 13
+        },
+        "Other proficiencies": {
+            "armor": [],
+            "weapons": [],
+            "tools": []
+        }
+    },
+
+    "skillChoices": {
+        "count": 2,
+        "from": ["奥秘", "欺瞒", "洞悉", "威吓", "说服", "宗教"]
+    },
+    "spellcasting": {
+        "ability": "魅力",
+        "spellList": "sorcerer",
+        "cantripsKnown": {
+            "1": 4,
+            "4": 5,
+            "10": 6
+        },
+        "spellsKnown": {
+            "1": 2,
+            "2": 3,
+            "3": 4,
+            "4": 5,
+            "5": 6,
+            "6": 7,
+            "7": 8,
+            "8": 9,
+            "9": 10,
+            "10": 11,
+            "11": 12,
+            "13": 13,
+            "15": 14,
+            "17": 15
+        }
+    },
+    "specialResources": [
+        {
+            "name": "术法点",
+            "description": "你可以将术法点用于各种魔法效果。术法点数量等于你的术士等级。",
+            "resourcePerLevel": {
+                "1": 1,
+                "2": 2,
+                "3": 3,
+                "4": 4,
+                "5": 5,
+                "6": 6,
+                "7": 7,
+                "8": 8,
+                "9": 9,
+                "10": 10,
+                "11": 11,
+                "12": 12,
+                "13": 13,
+                "14": 14,
+                "15": 15,
+                "16": 16,
+                "17": 17,
+                "18": 18,
+                "19": 19,
+                "20": 20
+            }
+        }
+    ],
+    "features": [
+        {
+            "name": "术法血统",
+            "description": "选择一个决定你魔法来源的血统。你的选择赋予你特殊能力和特性。",
+            "mechanicalEffect": "获得血统特性和法术",
+            "level": 1
+        },
+        {
+            "name": "术士血统",
+            "description": "你获得一个决定你魔法来源的血统。这个血统会赋予你特殊能力。",
+            "level": 1
+        },
+        {
+            "name": "魔力涌现",
+            "description": "你可以利用你内在的魔法储备来增强法术。",
+            "mechanicalEffect": ["获得术法点，数量等于术士等级", "可以使用术法点来获得各种魔法效果"],
+            "level": 2
+        },
+        {
+            "name": "魔力涌现",
+            "description": "你可以使用术法点来增强法术效果。",
+            "mechanicalEffect": ["可以将法术位转换为术法点", "可以将术法点转换为法术位"],
+            "level": 2
+        },
+        {
+            "name": "巧施法术",
+            "description": "你学会如何扭曲你的法术来适应你的需求。",
+            "mechanicalEffect": ["可以使用术法点来改变法术的性质", "包括延长、加快、增强等效果"],
+            "level": 3
+        },
+        {
+            "name": "巧施法术",
+            "description": "你学会如何扭曲法术来适应需求。你可以使用术法点来改变法术。",
+            "mechanicalEffect": ["仔细施法：花费1点使攻击豁免有劣势", "远程施法：花费1点使施法距离翻倍", "法术增效：花费1点使伤害骰重骰1"],
+            "level": 3
+        },
+        {
+            "name": "属性值提升",
+            "description": "你可以提升一项属性值2点，或者两项属性值各提升1点。",
+            "level": 4
+        },
+        {
+            "name": "魔法引导",
+            "description": "你可以通过消耗术法点来恢复法术位。",
+            "mechanicalEffect": ["短休时可以恢复部分法术位"],
+            "level": 20
+        }
+    ],
+    "abilityScoreImprovements": {
+        "levels": [
+          4,
+          8,
+          12,
+          16,
+          19
+        ],
+        "choices": {
+          "standardASI": {
+            "type": "ability_score_increase",
+            "description": "提升一项属性值2点，或者提升两项属性值各1点",
+            "options": [
+              {
+                "type": "single",
+                "increase": 2
+              },
+              {
+                "type": "double",
+                "increase": 1
+              }
+            ]
+          },
+          "feat": {
+            "type": "feat",
+            "description": "获得一个专长"
+          }
+        }
+      },
+    "subclasses": [
+        {
+            "name": "draconic",
+            "displayName": "龙族血统",
+            "description": "你的天生魔法来源于龙族血统。",
+            "features": [
+                {
+                    "name": "龙族先祖",
+                    "description": "选择一种龙类。你的法术和能力会受到这种龙类的影响。",
+                    "mechanicalEffect": ["选择一种龙类伤害类型", "说龙语", "AC变为13+敏捷调整值"],
+                    "level": 1
+                },
+                {
+                    "name": "龙族先祖",
+                    "description": "选择一种龙类作为你的先祖。你的法术和能力会受到这种龙类的影响。",
+                    "mechanicalEffect": ["选择一种龙类伤害类型", "说龙语", "AC变为13+敏捷调整值"],
+                    "level": 1
+                },
+                {
+                    "name": "龙族韧性",
+                    "description": "你的生命值获得提升，皮肤变得如同龙鳞一般坚韧。",
+                    "mechanicalEffect": ["每级额外获得1点生命值", "不穿护甲时AC为13+敏捷调整值"],
+                    "level": 1
+                },
+                {
+                    "name": "元素亲和",
+                    "description": "当你施放与你龙族血统相关的伤害类型的法术时，你可以增加额外伤害。",
+                    "mechanicalEffect": "相应伤害类型的法术可以加上魅力调整值的伤害",
+                    "level": 6
+                },
+                {
+                    "name": "元素亲和",
+                    "description": "当你施放与你龙族血统相关的伤害类型的法术时，你可以增加额外伤害。",
+                    "mechanicalEffect": ["伤害法术可以加上魅力调整值"],
+                    "level": 6
+                },
+                {
+                    "name": "龙之翼",
+                    "description": "你可以长出一对龙翼，获得飞行速度。",
+                    "mechanicalEffect": ["获得等于当前速度的飞行速度"],
+                    "level": 14
+                },
+                {
+                    "name": "龙族威仪",
+                    "description": "你可以引导龙族的恐怖威仪，让周围的敌人感到恐惧。",
+                    "mechanicalEffect": ["可以让周围60尺内的敌人恐慌"],
+                    "level": 18
+                }
+            ]
+        },
+        {
+            "name": "wild_magic",
+            "displayName": "狂野魔法",
+            "description": "你的魔法来源于原始魔法的混沌能量。",
+            "features": [
+                {
+                    "name": "狂野魔法涌动",
+                    "description": "你的法术可能会引发随机的魔法效果。",
+                    "mechanicalEffect": ["施法时可能触发狂野魔法", "获得施法优势"],
+                    "level": 1
+                },
+                {
+                    "name": "潮汐转变",
+                    "description": "你可以通过消耗你的幸运来影响周围的魔法能量。",
+                    "mechanicalEffect": ["可以重骰d20", "每长休恢复一次"],
+                    "level": 1
+                },
+                {
+                    "name": "弯曲运势",
+                    "description": "你可以操纵狂野魔法的混沌能量来影响周围的事物。",
+                    "mechanicalEffect": ["可以影响其他生物的攻击骰", "可以强制触发狂野魔法"],
+                    "level": 6
+                },
+                {
+                    "name": "操控混沌",
+                    "description": "当狂野魔法效果触发时，你可以掷两次并选择其一。",
+                    "mechanicalEffect": ["狂野魔法效果有两次选择机会"],
+                    "level": 14
+                },
+                {
+                    "name": "混沌洪流",
+                    "description": "你的狂野魔法变得更加强大和不可预测。",
+                    "mechanicalEffect": ["可以用反应触发狂野魔法", "效果范围和伤害提升"],
+                    "level": 18
+                }
+            ]
+        },
+        {
+            "name": "storm",
+            "displayName": "风暴术士",
+            "description": "你的魔法来源于元素位面的风暴之力。",
+            "features": [
+                {
+                    "name": "风暴之源",
+                    "description": "你可以说水族语和原初语，并且在暴风雨天气下有特殊能力。",
+                    "mechanicalEffect": ["获得水族语和原初语", "暴风雨中获得特殊效果"],
+                    "level": 1
+                },
+                {
+                    "name": "风暴引导",
+                    "description": "你可以在施法时引导闪电或雷鸣的力量。",
+                    "mechanicalEffect": ["法术可以造成闪电或雷鸣伤害", "可以推开周围的敌人"],
+                    "level": 1
+                },
+                {
+                    "name": "风暴之心",
+                    "description": "你获得对闪电和雷鸣伤害的抗性，并且可以飞行短距离。",
+                    "mechanicalEffect": ["获得闪电和雷鸣抗性", "可以短距离飞行"],
+                    "level": 6
+                },
+                {
+                    "name": "风暴导引",
+                    "description": "你可以改变闪电和雷鸣法术的性质。",
+                    "mechanicalEffect": ["可以改变法术伤害类型", "可以增加法术效果"],
+                    "level": 14
+                },
+                {
+                    "name": "风暴之主",
+                    "description": "你获得完全的飞行能力，并且可以控制周围的天气。",
+                    "mechanicalEffect": ["获得持续飞行速度", "可以控制天气"],
+                    "level": 18
+                }
+            ]
+        }
+    ]
+}

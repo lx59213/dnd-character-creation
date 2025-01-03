@@ -1,0 +1,95 @@
+{
+  "name": "Dwarf",
+  "displayName": "矮人",
+  "description": "矮人是坚韧的矿工和战士种族，他们居住在群山的厅堂中。他们以其坚毅、耐力和精湛的工艺而闻名。虽然身材矮小，但矮人极其强壮且耐久。",
+  "size": "Medium",
+  "speed": 7.5,
+  "abilityScoreIncrease": {
+    "constitution": 2
+  },
+  "proficiencies": [
+    {
+      "id": "history",
+      "type": "skill",
+      "restriction": "stone"
+    }
+  ],
+  "racialTraits": [
+    {
+      "name": "黑暗视觉",
+      "description": "习惯了地下生活的你在黑暗和微光环境下有着优异的视力。在微光环境下，你可以视物如同在明亮光照下一般；在黑暗环境下，你可以视物如同在微光环境下一般，但你在黑暗中只能看到灰色。",
+      "mechanicalEffect": "黑暗视觉范围12格（60尺）"
+    },
+    {
+      "name": "矮人韧性",
+      "description": "你在对抗毒素的豁免检定上具有优势，且你对毒素伤害具有抗性。",
+      "mechanicalEffect": ["对抗毒素的豁免检定具有优势", "对毒素伤害具有抗性"]
+    },
+    {
+      "name": "矮人战斗训练",
+      "description": "你熟练使用战斧、手斧、轻锤和战锤。",
+      "mechanicalEffect": ["熟练使用战斧", "熟练使用手斧", "熟练使用轻锤", "熟练使用战锤"]
+    },
+    {
+      "name": "工具熟练",
+      "description": "你熟练使用下列工匠工具中的一种：铁匠工具、酿酒工具或石匠工具。",
+      "mechanicalEffect": "可选择一种工匠工具获得熟练项"
+    },
+    {
+      "name": "石中智者",
+      "description": "你精通历史（限于石制品相关）技能。每当你对石制物品进行历史检定时，你可以在检定中加入双倍的熟练加值。",
+      "mechanicalEffect": "石制品历史检定获得双倍熟练加值"
+    }
+  ],
+  "languages": ["通用语", "矮人语"],
+
+  "Other proficiencies": {
+    "weapons": [
+      { "id": "proficiency.weapon.battleaxe" },
+      { "id": "proficiency.weapon.handaxe" },
+      { "id": "proficiency.weapon.lighthammer" },
+      { "id": "proficiency.weapon.warhammer" }
+    ],
+    "tools": [
+      { "id": "proficiency.tool.artisans" }
+    ]
+  },
+  "subraces": [
+    {
+      "name": "HillDwarf",
+      "displayName": "丘陵矮人",
+      "description": "作为丘陵矮人，你拥有敏锐的感知力和出众的耐力。在费伦大陆，丘陵矮人也被称为金矮人，他们的皮肤呈浅棕色或深棕色，头发通常为黑色、灰色或褐色。",
+      "abilityScoreIncrease": {
+        "wisdom": 1
+      },
+      "traits": [
+        {
+          "name": "矮人体魄",
+          "description": "你的生命值最大值增加1点，且每当你提升等级时再增加1点。",
+          "mechanicalEffect": "每级额外获得1点生命值"
+        }
+      ]
+    },
+    {
+      "name": "MountainDwarf",
+      "displayName": "山地矮人",
+      "description": "作为山地矮人，你强壮且耐力惊人。你的祖先在高山中开凿巨大的城堡和繁华的城市。",
+      "abilityScoreIncrease": {
+        "strength": 2
+      },
+      "traits": [
+        {
+          "name": "矮人护甲训练",
+          "description": "你熟练使用轻型护甲和中型护甲。",
+          "mechanicalEffect": ["熟练使用轻甲", "熟练使用中甲"]
+        }
+      ],
+      "Other proficiencies": {
+        "armor": [
+          { "id": "proficiency.armor.light" },
+          { "id": "proficiency.armor.medium" }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "proficiency.armor.light": {
+    "id": "proficiency.armor.light",
+    "name": "轻型护甲",
+    "displayName": "轻型护甲 Light Armor",
+    "description": "你熟练穿着轻型护甲，如皮甲、棉甲等。",
+    "category": "护甲",
+    "type": "轻型"
+  },
+  "proficiency.armor.medium": {
+    "id": "proficiency.armor.medium",
+    "name": "中型护甲",
+    "displayName": "中型护甲 Medium Armor",
+    "description": "你熟练穿着中型护甲，如链甲衫、鳞甲等。",
+    "category": "护甲",
+    "type": "中型"
+  },
+  "proficiency.armor.heavy": {
+    "id": "proficiency.armor.heavy",
+    "name": "重型护甲",
+    "displayName": "重型护甲 Heavy Armor",
+    "description": "你熟练穿着重型护甲，如板甲、锁子甲等。",
+    "category": "护甲",
+    "type": "重型"
+  },
+  "proficiency.armor.shield": {
+    "id": "proficiency.armor.shield",
+    "name": "盾牌",
+    "displayName": "盾牌 Shield",
+    "description": "你熟练使用盾牌。",
+    "category": "护甲",
+    "type": "盾牌"
+  }
+}

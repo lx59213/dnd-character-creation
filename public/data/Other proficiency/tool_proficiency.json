@@ -1,0 +1,118 @@
+{
+  "proficiency.tool.artisans": {
+    "id": "proficiency.tool.artisans",
+    "name": "工匠工具",
+    "displayName": "工匠工具 Artisan's Tools",
+    "description": "你熟练使用特定类型的工匠工具。",
+    "category": "工具",
+    "type": "工匠",
+    "subtypes": [
+      {
+        "id": "proficiency.tool.artisans.smith",
+        "name": "铁匠工具",
+        "displayName": "铁匠工具 Smith's Tools"
+      },
+      {
+        "id": "proficiency.tool.artisans.carpenter",
+        "name": "木匠工具",
+        "displayName": "木匠工具 Carpenter's Tools"
+      }
+    ]
+  },
+  "proficiency.tool.gaming": {
+    "id": "proficiency.tool.gaming",
+    "name": "游戏工具",
+    "displayName": "游戏工具 Gaming Set",
+    "description": "你熟练使用特定类型的游戏工具。",
+    "category": "工具",
+    "type": "游戏",
+    "subtypes": [
+      {
+        "id": "proficiency.tool.gaming.dice",
+        "name": "骰子",
+        "displayName": "骰子 Dice Set"
+      },
+      {
+        "id": "proficiency.tool.gaming.cards",
+        "name": "纸牌",
+        "displayName": "纸牌 Playing Cards"
+      }
+    ]
+  },
+  "proficiency.tool.herbalism_kit": {
+    "id": "proficiency.tool.herbalism_kit",
+    "name": "草药工具",
+    "displayName": "草药工具 Herbalism Kit",
+    "description": "你熟练使用草药工具，可以制作药水和药剂。",
+    "category": "工具",
+    "type": "专业"
+  },
+  "proficiency.tool.musical_instruments": {
+    "id": "proficiency.tool.musical_instruments",
+    "name": "乐器",
+    "displayName": "乐器 Musical Instruments",
+    "description": "你熟练使用特定类型的乐器。",
+    "category": "工具",
+    "type": "乐器",
+    "subtypes": [
+      {
+        "id": "proficiency.tool.musical_instruments.bagpipes",
+        "name": "风笛",
+        "displayName": "风笛 Bagpipes"
+      },
+      {
+        "id": "proficiency.tool.musical_instruments.drum",
+        "name": "鼓",
+        "displayName": "鼓 Drum"
+      },
+      {
+        "id": "proficiency.tool.musical_instruments.dulcimer",
+        "name": "扬琴",
+        "displayName": "扬琴 Dulcimer"
+      },
+      {
+        "id": "proficiency.tool.musical_instruments.flute",
+        "name": "长笛",
+        "displayName": "长笛 Flute"
+      },
+      {
+        "id": "proficiency.tool.musical_instruments.horn",
+        "name": "号角",
+        "displayName": "号角 Horn"
+      },
+      {
+        "id": "proficiency.tool.musical_instruments.lute",
+        "name": "鲁特琴",
+        "displayName": "鲁特琴 Lute"
+      },
+      {
+        "id": "proficiency.tool.musical_instruments.lyre",
+        "name": "七弦琴",
+        "displayName": "七弦琴 Lyre"
+      },
+      {
+        "id": "proficiency.tool.musical_instruments.pan_flute",
+        "name": "排箫",
+        "displayName": "排箫 Pan Flute"
+      },
+      {
+        "id": "proficiency.tool.musical_instruments.shawm",
+        "name": "双簧管",
+        "displayName": "双簧管 Shawm"
+      },
+      {
+        "id": "proficiency.tool.musical_instruments.viol",
+        "name": "维奥尔琴",
+        "displayName": "维奥尔琴 Viol"
+      }
+    ]
+  },
+  "proficiency.tool.thieves": {
+    "id": "proficiency.tool.thieves",
+    "name": "盗贼工具",
+    "displayName": "盗贼工具 Thieves' Tools",
+    "description": "你熟练使用盗贼工具，可以撬锁和解除陷阱。",
+    "category": "工具",
+    "type": "专业"
+  }
+}

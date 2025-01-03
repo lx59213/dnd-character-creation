@@ -1,0 +1,53 @@
+{
+    "fighter_champion": {
+        "name": "战士（勇士）",
+        "description": "专精于武器战斗的战士，擅长近战和持久战。",
+        "race": "human",
+        "class": "fighter",
+        "subclass": "champion",
+        "background": "soldier",
+        "abilityScores": {
+            "strength": 16,
+            "dexterity": 14,
+            "constitution": 15,
+            "intelligence": 10,
+            "wisdom": 12,
+            "charisma": 8
+        },
+        "skills": ["athletics", "intimidation"]
+    },
+    "wizard_evocation": {
+        "name": "法师（塑能）",
+        "description": "专注于破坏性法术的法师，擅长远程魔法攻击。",
+        "race": "high_elf",
+        "class": "wizard",
+        "subclass": "evocation",
+        "background": "sage",
+        "abilityScores": {
+            "strength": 8,
+            "dexterity": 14,
+            "constitution": 14,
+            "intelligence": 16,
+            "wisdom": 12,
+            "charisma": 10
+        },
+        "skills": ["arcana", "investigation"]
+    },
+    "cleric_life": {
+        "name": "牧师（生命）",
+        "description": "专注于治疗和支援的牧师，是队伍的重要后盾。",
+        "race": "hill_dwarf",
+        "class": "cleric",
+        "subclass": "life",
+        "background": "acolyte",
+        "abilityScores": {
+            "strength": 14,
+            "dexterity": 10,
+            "constitution": 14,
+            "intelligence": 8,
+            "wisdom": 16,
+            "charisma": 12
+        },
+        "skills": ["medicine", "religion"]
+    }
+}

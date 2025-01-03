@@ -1,0 +1,407 @@
+{
+  "name": "fighter",
+  "displayName": "战士",
+  "description": "战士是所有战斗艺术的大师。他们精通各种武器和防具，掌握着致命的战斗技巧，并且拥有无与伦比的战斗耐力。作为最普遍的冒险者职业，战士在各个文明中都备受尊重。有些战士通过严格的军事训练成长，而另一些则在残酷的生存环境中磨练自己的技艺。",
+  "hitDie": 10,
+  "primaryAbility": [
+    "力量",
+    "敏捷"
+  ],
+
+  "skill proficiencies": [],
+
+  "Other proficiencies": {
+    "armor": [
+      { "id": "proficiency.armor.light" },
+      { "id": "proficiency.armor.medium" },
+      { "id": "proficiency.armor.heavy" },
+      { "id": "proficiency.armor.shield" }
+    ],
+    "weapons": [
+      { "id": "proficiency.weapon.simple_melee" },
+      { "id": "proficiency.weapon.simple_ranged" },
+      { "id": "proficiency.weapon.martial_melee" },
+      { "id": "proficiency.weapon.martial_ranged" }
+    ],
+    "tools": [],
+    "savingThrows": [
+      { "id": "proficiency.savingThrow.strength" },
+      { "id": "proficiency.savingThrow.constitution" }
+    ]
+  },
+  "multiclassing": {
+    "prerequisites": {
+      "strength": 13,
+      "dexterity": 13
+    },
+    "Other proficiencies": {
+      "armor": [
+        { "id": "proficiency.armor.light" },
+        { "id": "proficiency.armor.medium" },
+        { "id": "proficiency.armor.shield" }
+      ],
+      "weapons": [
+        { "id": "proficiency.weapon.simple_melee" },
+        { "id": "proficiency.weapon.simple_ranged" },
+        { "id": "proficiency.weapon.martial_melee" },
+        { "id": "proficiency.weapon.martial_ranged" }
+      ]
+    }
+  },
+  "skillChoices": {
+    "count": 2,
+    "from": [
+      "杂技",
+      "驯兽",
+      "运动",
+      "历史",
+      "洞悉",
+      "威吓",
+      "察觉",
+      "求生"
+    ]
+  },
+  "specialResources": {
+    "动作如潮": {
+      "displayName": "动作如潮",
+      "description": "你可以在一个回合中使用一个附赠动作来获得一个额外的动作。17级后每场战斗可使用两次，但每回合仍限一次。每次短休或长休后恢复所有使用次数。",
+      "resourcePerLevel": {
+        "1": 0,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1,
+        "10": 1,
+        "11": 1,
+        "12": 1,
+        "13": 1,
+        "14": 1,
+        "15": 1,
+        "16": 1,
+        "17": 2,
+        "18": 2,
+        "19": 2,
+        "20": 2
+      }
+    },
+    "回气": {
+      "displayName": "回气",
+      "description": "你可以使用一个附赠动作恢复1d10+战士等级的生命值。17级后每次休息可使用两次。每次短休或长休后恢复所有使用次数。",
+      "resourcePerLevel": {
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1,
+        "10": 1,
+        "11": 1,
+        "12": 1,
+        "13": 1,
+        "14": 1,
+        "15": 1,
+        "16": 1,
+        "17": 2,
+        "18": 2,
+        "19": 2,
+        "20": 2
+      }
+    },
+    "不屈": {
+      "displayName": "不屈",
+      "description": "你可以在失败一次豁免检定时重掷。13级后每次长休可使用两次。每次长休后恢复所有使用次数。",
+      "resourcePerLevel": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 1,
+        "10": 1,
+        "11": 1,
+        "12": 1,
+        "13": 2,
+        "14": 2,
+        "15": 2,
+        "16": 2,
+        "17": 2,
+        "18": 2,
+        "19": 2,
+        "20": 2
+      }
+    },
+    "优势骰": {
+      "displayName": "优势骰",
+      "description": "战斗大师可用于战技的优势骰数量。3级为d8，10级升级为d10，18级升级为d12。每当你获得一个新的战士等级时，你获得一个额外的优势骰。",
+      "resourcePerLevel": {
+        "3": 4,
+        "4": 5,
+        "5": 6,
+        "6": 7,
+        "7": 8,
+        "8": 9,
+        "9": 10,
+        "10": 11,
+        "11": 12,
+        "12": 13,
+        "13": 14,
+        "14": 15,
+        "15": 16,
+        "16": 17,
+        "17": 18,
+        "18": 19,
+        "19": 20,
+        "20": 21
+      }
+    }
+  },
+  "features": [
+    {
+      "name": "战斗风格",
+      "description": "你采用一种特殊的战斗风格作为你的专业。从以下选项中选择一种：\n- 防御：当你穿着护甲时，你的AC获得+1加值。\n- 决斗：当你单手持用一把近战武器，且未持用其他武器时，你使用该武器攻击时获得+2伤害加值。\n- 巨武战斗：当你使用重型武器进行伤害掷骰且结果为1或2时，你可以重掷该骰子，但必须使用新的结果。\n- 保护：当一个你能看见的生物攻击你周边5尺内的一个目标（不包括攻击者自己）时，你可以使用你的反应动作让该次攻击检定具有劣势。你必须持用一面盾牌。\n- 射击：你使用远程武器进行攻击时获得+2伤害加值。\n- 双武器战斗：当你进行双武器战斗时，你可以将你的属性调整值加入副手武器的伤害中。",
+      "mechanicalEffect": [
+        "选择一种战斗风格"
+      ],
+      "level": 1
+    },
+    {
+      "name": "动作如潮",
+      "description": "你可以在一个回合中使用一个附赠动作来获得一个额外的动作。",
+      "mechanicalEffect": [
+        "每回合可以获得一个额外动作"
+      ],
+      "level": 2
+    },
+    {
+      "name": "武术流派",
+      "description": "你选择一个专精的武术流派。",
+      "level": 3
+    },
+    {
+      "name": "额外攻击",
+      "description": "你可以在使用攻击动作时发动两次攻击，而不是一次。",
+      "mechanicalEffect": [
+        "每回合可以攻击两次"
+      ],
+      "level": 5
+    },
+    {
+      "name": "不屈",
+      "description": "你获得了在危险中生存的能力。",
+      "mechanicalEffect": [
+        "可以重掷一次失败的豁免检定"
+      ],
+      "level": 9
+    },
+    {
+      "name": "第二风格",
+      "description": "你可以选择第二个战斗风格。",
+      "level": 10
+    },
+    {
+      "name": "三次攻击",
+      "description": "你可以在使用攻击动作时发动三次攻击，而不是两次。",
+      "mechanicalEffect": [
+        "每回合可以攻击三次"
+      ],
+      "level": 11
+    },
+    {
+      "name": "不屈意志",
+      "description": "你的意志变得更加坚定。",
+      "mechanicalEffect": [
+        "每次长休可以使用两次不屈能力"
+      ],
+      "level": 13
+    },
+    {
+      "name": "四次攻击",
+      "description": "你可以在使用攻击动作时发动四次攻击，而不是三次。",
+      "mechanicalEffect": [
+        "每回合可以攻击四次"
+      ],
+      "level": 20
+    }
+  ],
+  "abilityScoreImprovements": {
+    "levels": [
+      4,
+      6,
+      8,
+      12,
+      14,
+      16,
+      19
+    ],
+    "choices": {
+      "standardASI": {
+        "type": "ability_score_increase",
+        "description": "提升一项属性值2点，或者提升两项属性值各1点",
+        "options": [
+          {
+            "type": "single",
+            "points": 2
+          },
+          {
+            "type": "double",
+            "points": 1
+          }
+        ]
+      },
+      "featOption": {
+        "type": "feat",
+        "description": "获得一个专长"
+      }
+    }
+  },
+  "subclasses": [
+    {
+      "name": "champion",
+      "displayName": "冠军勇士",
+      "description": "冠军致力于磨练战斗技艺的最基本形式：武器挥舞、防具穿戴和纯粹的体魄。这种战士是完美的战士原型，是军队中的大师和比武大会的冠军。",
+      "features": [
+        {
+          "name": "强化暴击",
+          "description": "从第3级开始，你的武器攻击在投出19-20时也可以造成重击。这个范围会在第15级时扩大到18-20。",
+          "mechanicalEffect": [
+            "3级：暴击范围扩大到19-20",
+            "15级：暴击范围扩大到18-20"
+          ],
+          "level": 3
+        },
+        {
+          "name": "卓越运动",
+          "description": "从第7级开始，你可以在力量、敏捷或体质检定中加入半个熟练加值（向上取整）。",
+          "mechanicalEffect": "力量、敏捷、体质检定获得额外加值",
+          "level": 7
+        },
+        {
+          "name": "额外战斗风格",
+          "description": "在第10级时，你可以从战斗风格特性中选择第二种战斗风格。",
+          "mechanicalEffect": "获得第二个战斗风格",
+          "level": 10
+        },
+        {
+          "name": "生存本能",
+          "description": "从第18级开始，如果你在战斗开始时生命值低于一半，你会恢复5 + 你的体质调整值的生命值。",
+          "mechanicalEffect": [
+            "战斗开始时若生命值低于一半",
+            "恢复5+体质调整值的生命值"
+          ],
+          "level": 18
+        }
+      ]
+    },
+    {
+      "name": "battlemaster",
+      "displayName": "战斗大师",
+      "description": "战斗大师精通各种战斗技巧，运用特殊的战技来压制和混淆敌人。他们将战斗视为一门学术，结合了体能训练和智力研究。",
+      "features": [
+        {
+          "name": "战技",
+          "description": "你学会使用特殊的战技来增强你的战斗能力。你学会三种战技，并获得四个优势骰（d8）。每当你获得一个新的战士等级时，你可以用一个你知道的战技交换另一个战技。此外，每当你获得一个新的战士等级时，你获得一个额外的优势骰。",
+          "mechanicalEffect": [
+            "获得3个战技",
+            "获得4个d8优势骰",
+            "每升一级获得一个额外优势骰",
+            "升级时可以更换已知战技"
+          ],
+          "level": 3
+        },
+        {
+          "name": "了解你的敌人",
+          "description": "从第7级开始，如果你花费至少1分钟时间观察或与一个生物互动，你可以了解其某些能力。DM会告诉你以下两项特征中的其中之一：该生物的当前生命值、护甲等级、力量值、敏捷值、体质值、或当前的状态。",
+          "mechanicalEffect": [
+            "观察1分钟可了解目标的特定属性",
+            "可以得知生命值、AC或属性值"
+          ],
+          "level": 7
+        },
+        {
+          "name": "改良战技",
+          "description": "在第10级时，你的优势骰变为d10。在第18级时，它们变为d12。",
+          "mechanicalEffect": [
+            "10级：优势骰升级为d10",
+            "18级：优势骰升级为d12"
+          ],
+          "level": 10
+        },
+        {
+          "name": "无情",
+          "description": "从第15级开始，当你掷先攻时，如果你没有剩余的优势骰，你获得1个优势骰。",
+          "mechanicalEffect": "战斗开始时若无优势骰则获得1个",
+          "level": 15
+        },
+        {
+          "name": "精通战技",
+          "description": "在第18级时，你的优势骰变为d12。",
+          "mechanicalEffect": "优势骰升级为d12",
+          "level": 18
+        }
+      ]
+    },
+    {
+      "name": "eldritch-knight",
+      "displayName": "奥法骑士",
+      "description": "奥法骑士将武术训练与魔法研究相结合。他们学习法术来增强自己的战斗能力，成为一个强大的魔法战士。",
+      "features": [
+        {
+          "name": "施法",
+          "description": "从第3级开始，你获得施法能力。你主要从法师法术列表中学习法术，特别是塑能系和防护系法术。",
+          "mechanicalEffect": [
+            "获得施法能力",
+            "使用法师法术列表",
+            "专注于塑能和防护系法术"
+          ],
+          "level": 3
+        },
+        {
+          "name": "武器羁绊",
+          "description": "在第3级时，你学会在武器上施加魔法羁绊。你可以用1小时的仪式将自己与一件武器绑定。当你与武器分离30尺或更远时，你可以用一个附赠动作将武器传送到你的手中。你最多可以与两件武器建立羁绊。",
+          "mechanicalEffect": [
+            "可与最多两件武器建立羁绊",
+            "可用附赠动作召回武器"
+          ],
+          "level": 3
+        },
+        {
+          "name": "战法一体",
+          "description": "从第7级开始，当你使用你的动作施放一个战斗法师法术时，你可以用一个附赠动作发动一次武器攻击。",
+          "mechanicalEffect": "施法后可用附赠动作攻击",
+          "level": 7
+        },
+        {
+          "name": "奥法突袭",
+          "description": "在第10级时，当你使用动作如潮时，你可以用其中一个动作来施放一个战斗法师法术，而不是发动攻击。",
+          "mechanicalEffect": "动作如潮可用于施法",
+          "level": 10
+        },
+        {
+          "name": "奥法护盾",
+          "description": "从第15级开始，当你使用奥术能量时，它可以保护你。当你使用一个法术位施放法术时，你获得AC加值直到你的下一回合开始，加值等于你所用法术位的环阶。",
+          "mechanicalEffect": [
+            "施法后获得临时AC加值",
+            "加值等于法术环阶"
+          ],
+          "level": 15
+        },
+        {
+          "name": "改良战法一体",
+          "description": "从第18级开始，当你使用你的动作施放一个战斗法师法术时，你可以用一个附赠动作发动两次武器攻击。",
+          "mechanicalEffect": "施法后可用附赠动作攻击两次",
+          "level": 18
+        }
+      ]
+    }
+  ]
+}

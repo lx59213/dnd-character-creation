@@ -1,0 +1,76 @@
+{
+  "name": "human",
+  "displayName": "人类",
+  "description": "人类是最年轻的常见种族，他们晚于矮人、精灵和龙族来到世界，但却是最具适应性和野心的种族。他们多变的文化和天性使他们比其他种族更容易改变，更乐于冒险。",
+  "size": "中型",
+  "speed": 30,
+  "abilityScoreIncrease": {
+    "strength": 1,
+    "dexterity": 1,
+    "constitution": 1,
+    "intelligence": 1,
+    "wisdom": 1,
+    "charisma": 1
+  },
+  "proficiencies": [],
+  "racialTraits": [
+    {
+      "name": "额外语言",
+      "description": "你可以说、读、写一门额外的语言，由你选择。",
+      "mechanicalEffect": "可以选择一门额外的语言"
+    }
+  ],
+  "languages": ["通用语"],
+  "subraces": [
+    {
+      "name": "variant-human",
+      "displayName": "变体人类",
+      "description": "如果你的游戏使用了可选规则，你的DM可能会允许这个变体版本的人类。这个版本反映了人类在特定领域的专长。",
+      "abilityScoreImprovements": {
+        "levels": [1],
+        "choices": {
+          "standardASI": {
+            "type": "ability_score_increase",
+            "description": "选择两项属性各提升1点",
+            "options": [
+              {
+                "type": "double",
+                "points": 1,
+                "count": 2
+              }
+            ]
+          }
+        }
+      },
+      "featSystem": {
+        "levels": [1],
+        "choices": {
+          "standardFeat": {
+            "type": "feat",
+            "description": "获得一个专长",
+            "count": 1
+          }
+        }
+      },
+      "skillChoices": {
+        "count": 1,
+        "from": ["运动", "杂技", "巧手", "隐匿", 
+                 "奥秘", "历史", "调查", "自然", "宗教",
+                 "驯兽", "洞悉", "医疗", "察觉", "生存",
+                 "欺诈", "威吓", "表演", "说服"]
+      },
+      "traits": [
+        {
+          "name": "技能熟练",
+          "description": "你获得一项技能熟练项。",
+          "mechanicalEffect": "可以选择一项技能获得熟练项"
+        },
+        {
+          "name": "专长",
+          "description": "你获得一个专长。",
+          "mechanicalEffect": "可以选择一个专长"
+        }
+      ]
+    }
+  ]
+}

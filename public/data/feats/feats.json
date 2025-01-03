@@ -1,0 +1,215 @@
+{
+    "feats": [
+        {
+            "id": "feat.alert",
+            "name": "警觉",
+            "displayName": "警觉 (Alert)",
+            "description": "你总是保持警惕，获得以下好处：\n• 你的先攻检定获得+5加值\n• 你不会被突袭\n• 其他生物无法通过潜行对你获得优势",
+            "prerequisites": {},
+            "effects": {
+                "initiative": "+5",
+                "cannotBeSurprised": true,
+                "immuneToStealth": true
+            }
+        },
+        {
+            "id": "feat.athlete",
+            "name": "运动员",
+            "displayName": "运动员 (Athlete)",
+            "description": "你经过体能训练以进行特技动作，获得以下好处：\n• 力量或敏捷+1\n• 陷入倒地时，起立只需5尺移动力\n• 攀爬无需额外移动力\n• 助跑跳跃只需5尺，而不是10尺",
+            "prerequisites": {},
+            "effects": {
+                "abilityScoreIncrease": {
+                    "choice": ["strength", "dexterity"],
+                    "amount": 1
+                },
+                "standingCost": 5,
+                "climbingCost": 0,
+                "runningJumpDistance": 5
+            }
+        },
+        {
+            "id": "feat.actor",
+            "name": "演员",
+            "displayName": "演员 (Actor)",
+            "description": "精通于模仿和演戏，让你获得以下好处：\n• 魅力+1\n• 进行欺瞒和表演检定时具有优势\n• 可以模仿他人声音和口音",
+            "prerequisites": {},
+            "effects": {
+                "abilityScoreIncrease": {
+                    "charisma": 1
+                },
+                "skillAdvantage": ["deception", "performance"],
+                "mimicry": true
+            }
+        },
+        {
+            "id": "feat.grappler",
+            "name": "擒抱者",
+            "displayName": "擒抱者 (Grappler)",
+            "description": "着重磨练过如何保持近距离擒抱的技巧，获得以下好处：\n• 力量+1\n• 你可以尝试擒抱体型比你大一级的生物\n• 当你成功擒抱时，该生物被束缚",
+            "prerequisites": {
+                "ability": {
+                    "strength": 13
+                }
+            },
+            "effects": {
+                "abilityScoreIncrease": {
+                    "strength": 1
+                },
+                "grappleSize": "+1",
+                "grappleEffect": "restrained"
+            }
+        },
+        {
+            "id": "feat.heavy_armor_master",
+            "name": "重甲掌握",
+            "displayName": "重甲掌握 (Heavy Armor Master)",
+            "description": "你经过专门训练，能够更好地使用重甲，获得以下好处：\n• 力量+1\n• 当你穿着重甲时，来自钝击、穿刺和挥砍的伤害减少3点",
+            "prerequisites": {
+                "proficiency": ["heavy armor"]
+            },
+            "effects": {
+                "abilityScoreIncrease": {
+                    "strength": 1
+                },
+                "damageReduction": {
+                    "conditions": ["wearing heavy armor"],
+                    "types": ["bludgeoning", "piercing", "slashing"],
+                    "amount": 3
+                }
+            }
+        },
+        {
+            "id": "feat.magic_initiate",
+            "name": "魔法学徒",
+            "displayName": "魔法学徒 (Magic Initiate)",
+            "description": "你从一个职业的法术列表中学习两个戏法和一个1环法术。使用该职业的施法关键属性。1环法术每天可以施展一次。",
+            "prerequisites": {},
+            "effects": {
+                "spellcasting": {
+                    "cantrips": 2,
+                    "spells": {
+                        "level": 1,
+                        "count": 1,
+                        "uses": 1
+                    }
+                }
+            }
+        },
+        {
+            "id": "feat.martial_adept",
+            "name": "战术大师",
+            "displayName": "战术大师 (Martial Adept)",
+            "description": "你学习了两个战技，并获得一个d6战技骰。短休或长休后恢复。",
+            "prerequisites": {},
+            "effects": {
+                "maneuvers": {
+                    "known": 2,
+                    "dieType": 6,
+                    "dieCount": 1
+                }
+            }
+        },
+        {
+            "id": "feat.mobile",
+            "name": "移动射手",
+            "displayName": "移动射手 (Mobile)",
+            "description": "你特别擅长在战斗中快速移动，获得以下好处：\n• 速度+10尺\n• 困难地形不会消耗额外移动力\n• 当你对一个生物进行近战攻击后，该回合内不会引发借机攻击",
+            "prerequisites": {},
+            "effects": {
+                "speed": "+10",
+                "ignoreDifficultTerrain": true,
+                "noOpportunityAttacks": true
+            }
+        },
+        {
+            "id": "feat.spell_sniper",
+            "name": "施法者",
+            "displayName": "施法者 (Spell Sniper)",
+            "description": "你掌握了远程施法技巧：\n• 需要攻击检定的法术射程翻倍\n• 这类法术忽视半掩蔽和四分之三掩蔽\n• 学习一个需要攻击检定的戏法",
+            "prerequisites": {
+                "spellcasting": true
+            },
+            "effects": {
+                "spellRange": "double",
+                "ignoreCover": true,
+                "learnCantrip": {
+                    "type": "attack",
+                    "count": 1
+                }
+            }
+        },
+        {
+            "id": "feat.tough",
+            "name": "强韧",
+            "displayName": "强韧 (Tough)",
+            "description": "你的生命值上限增加等于你等级两倍的数值。每当你获得等级时，你的生命值上限额外增加2点。",
+            "prerequisites": {},
+            "effects": {
+                "hitPoints": {
+                    "bonus": "level * 2",
+                    "perLevel": 2
+                }
+            }
+        },
+        {
+            "id": "feat.war_caster",
+            "name": "战争施法者",
+            "displayName": "战争施法者 (War Caster)",
+            "description": "你在战斗中施法更有优势：\n• 即使手持武器或盾牌，也能施展有姿势成分的法术\n• 对专注检定具有优势\n• 可以用法术进行借机攻击",
+            "prerequisites": {
+                "spellcasting": true
+            },
+            "effects": {
+                "somatic": true,
+                "concentrationAdvantage": true,
+                "opportunitySpells": true
+            }
+        },
+        {
+            "id": "feat.weapon_master",
+            "name": "武器大师",
+            "displayName": "武器大师 (Weapon Master)",
+            "description": "你精通于武器的使用：\n• 力量或敏捷+1\n• 获得四种武器的熟练项",
+            "prerequisites": {},
+            "effects": {
+                "abilityScoreIncrease": {
+                    "choice": ["strength", "dexterity"],
+                    "amount": 1
+                },
+                "weaponProficiencies": {
+                    "count": 4
+                }
+            }
+        },
+        {
+            "id": "feat.keen_mind",
+            "name": "敏锐心智",
+            "displayName": "敏锐心智 (Keen Mind)",
+            "description": "你拥有异常敏锐的心智：\n• 智力+1\n• 始终知道北方在哪\n• 始终知道距日出或日落还有多久\n• 能准确回忆一个月内看到或听到的任何事物",
+            "prerequisites": {},
+            "effects": {
+                "abilityScoreIncrease": {
+                    "intelligence": 1
+                },
+                "direction": true,
+                "time": true,
+                "memory": true
+            }
+        },
+        {
+            "id": "feat.linguist",
+            "name": "语言学家",
+            "displayName": "语言学家 (Linguist)",
+            "description": "你研究语言和密码：\n• 智力+1\n• 学会三种语言\n• 可以创造书面密码",
+            "prerequisites": {},
+            "effects": {
+                "abilityScoreIncrease": {
+                    "intelligence": 1
+                },
+                "languages": 3,
+                "cipherCreation": true
+            }
+        }
+    ]
+}

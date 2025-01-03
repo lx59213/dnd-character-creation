@@ -1,0 +1,491 @@
+{
+    "name": "monk",
+    "displayName": "武僧",
+    "description": "武僧是气的大师，他们通过训练身体和心灵来完善自我。",
+    "hitDie": 8,
+    "primaryAbility": ["敏捷", "感知"],
+    
+    "Other proficiencies": {
+        "armor": [],
+        "weapons": [
+            { "id": "proficiency.weapon.simple_melee" },
+            { "id": "proficiency.weapon.simple_ranged" },
+            { "id": "proficiency.weapon.shortsword" }
+        ],
+        "tools": [],
+        "savingThrows": [
+            { "id": "proficiency.savingThrow.strength" },
+            { "id": "proficiency.savingThrow.dexterity" }
+        ]
+    },
+
+    "multiclassing": {
+        "prerequisites": {
+            "dexterity": 13,
+            "wisdom": 13
+        },
+        "Other proficiencies": {
+            "armor": [],
+            "weapons": [
+                { "id": "proficiency.weapon.simple_melee" },
+                { "id": "proficiency.weapon.simple_ranged" },
+                { "id": "proficiency.weapon.shortsword" }
+            ],
+            "tools": []
+        }
+    },
+
+
+    "abilityScoreImprovements": {
+        "levels": [
+          4,
+          8,
+          12,
+          16,
+          19
+        ],
+        "choices": {
+          "standardASI": {
+            "type": "ability_score_increase",
+            "description": "提升一项属性值2点，或者提升两项属性值各1点",
+            "options": [
+              {
+                "type": "single",
+                "increase": 2
+              },
+              {
+                "type": "double",
+                "increase": 1
+              }
+            ]
+          },
+          "feat": {
+            "type": "feat",
+            "description": "获得一个专长"
+          }
+        }
+    },
+
+    "skillChoices": {
+        "count": 2,
+        "from": ["杂技", "运动", "历史", "洞悉", "宗教", "隐匿"]
+    },
+    "specialResources": {
+        "气": {
+            "displayName": "气点数",
+            "description": "你可以引导体内的神秘能量，称为气。你可以花费气点来使用各种武僧特性。每次短休息或长休息后恢复所有气点。",
+            "resourcePerLevel": {
+                "1": 0,
+                "2": 2,
+                "3": 3,
+                "4": 4,
+                "5": 5,
+                "6": 6,
+                "7": 7,
+                "8": 8,
+                "9": 9,
+                "10": 10,
+                "11": 11,
+                "12": 12,
+                "13": 13,
+                "14": 14,
+                "15": 15,
+                "16": 16,
+                "17": 17,
+                "18": 18,
+                "19": 19,
+                "20": 20
+            }
+        },
+        "武艺骰": {
+            "displayName": "武艺骰",
+            "description": "你的徒手打击和武僧武器伤害骰。这个骰子会随着你的武僧等级提升而变大。",
+            "resourcePerLevel": {
+                "1": "1d4",
+                "2": "1d4",
+                "3": "1d4",
+                "4": "1d4",
+                "5": "1d6",
+                "6": "1d6",
+                "7": "1d6",
+                "8": "1d6",
+                "9": "1d6",
+                "10": "1d6",
+                "11": "1d8",
+                "12": "1d8",
+                "13": "1d8",
+                "14": "1d8",
+                "15": "1d8",
+                "16": "1d8",
+                "17": "1d10",
+                "18": "1d10",
+                "19": "1d10",
+                "20": "1d10"
+            }
+        }
+    },
+    "features": [
+        {
+            "name": "无甲防御",
+            "description": "当你不穿任何护甲且未持用盾牌时，你的AC等于10 + 你的敏捷调整值 + 你的感知调整值。",
+            "mechanicalEffect": "AC = 10 + 敏捷调整值 + 感知调整值",
+            "level": 1
+        },
+        {
+            "name": "武艺",
+            "description": "你的武术训练允许你在进行徒手打击时造成更多伤害，并且可以在主要动作进行徒手打击后用附赠动作再次进行徒手打击。",
+            "mechanicalEffect": ["徒手打击伤害1d4", "可以用附赠动作进行一次额外的徒手打击"],
+            "level": 1
+        },
+        {
+            "name": "气",
+            "description": "你可以引导体内的神秘能量，称为气。",
+            "mechanicalEffect": ["获得气点数，数量等于武僧等级", "短休息或长休息后恢复所有气点"],
+            "level": 2
+        },
+        {
+            "name": "属性值提升",
+            "description": "你可以提升一项属性值2点，或者提升两项属性值各1点。",
+            "mechanicalEffect": "提升属性值",
+            "level": 4
+        },
+        {
+            "name": "额外攻击",
+            "description": "从第5级开始，你可以在使用攻击动作时发动两次攻击，而不是一次。",
+            "mechanicalEffect": "每回合可攻击两次",
+            "level": 5
+        },
+        {
+            "name": "气修为",
+            "description": "从第6级开始，你的徒手打击视为魔法武器，用于克服伤害抗性和免疫。",
+            "mechanicalEffect": "徒手打击视为魔法武器",
+            "level": 6
+        },
+        {
+            "name": "闪避",
+            "description": "从第7级开始，你的本能反应让你能够在某种程度上躲避范围效应。当你需要进行敏捷豁免检定时，如果你失败，你只受到一半伤害，如果你成功，则不受到任何伤害。",
+            "mechanicalEffect": [
+                "敏捷豁免成功时免疫伤害",
+                "敏捷豁免失败时伤害减半"
+            ],
+            "level": 7
+        },
+        {
+            "name": "属性值提升",
+            "description": "你可以提升一项属性值2点，或者提升两项属性值各1点。",
+            "mechanicalEffect": "提升属性值",
+            "level": 8
+        },
+        {
+            "name": "无情步伐",
+            "description": "从第9级开始，你可以沿着垂直表面奔跑和在水面上行走。",
+            "mechanicalEffect": [
+                "可以在垂直表面奔跑",
+                "可以在水面上行走"
+            ],
+            "level": 9
+        },
+        {
+            "name": "心如止水",
+            "description": "从第10级开始，你获得免疫毒素和疾病的能力。",
+            "mechanicalEffect": [
+                "免疫毒素",
+                "免疫疾病"
+            ],
+            "level": 10
+        },
+        {
+            "name": "属性值提升",
+            "description": "你可以提升一项属性值2点，或者提升两项属性值各1点。",
+            "mechanicalEffect": "提升属性值",
+            "level": 12
+        },
+        {
+            "name": "舌灵精通",
+            "description": "从第13级开始，你获得说所有语言的能力。",
+            "mechanicalEffect": "可以说所有语言",
+            "level": 13
+        },
+        {
+            "name": "金刚身",
+            "description": "从第14级开始，你的精通气的掌控让你获得了衰老的迟缓。",
+            "mechanicalEffect": [
+                "不会因衰老而虚弱",
+                "不需要饮食和睡眠"
+            ],
+            "level": 14
+        },
+        {
+            "name": "不死本质",
+            "description": "从第15级开始，你的气让你可以在濒死时支撑自己。当你被击倒至0生命值但未立即死亡时，你可以花费1点气来让自己恢复1点生命值。",
+            "mechanicalEffect": "可以花费1点气在濒死时恢复1点生命值",
+            "level": 15
+        },
+        {
+            "name": "属性值提升",
+            "description": "你可以提升一项属性值2点，或者提升两项属性值各1点。",
+            "mechanicalEffect": "提升属性值",
+            "level": 16
+        },
+        {
+            "name": "空灵体",
+            "description": "从第18级开始，你可以花费4点气来施放星界投影术，不需要任何材料成分。",
+            "mechanicalEffect": "可以花费4点气施放星界投影术",
+            "level": 18
+        },
+        {
+            "name": "属性值提升",
+            "description": "你可以提升一项属性值2点，或者提升两项属性值各1点。",
+            "mechanicalEffect": "提升属性值",
+            "level": 19
+        },
+        {
+            "name": "气之完美",
+            "description": "在第20级时，当你投先攻且没有剩余的气点时，你恢复4点气。",
+            "mechanicalEffect": "战斗开始时若无气点则恢复4点",
+            "level": 20
+        }
+    ],
+    "subclasses": [
+        {
+            "name": "openhand",
+            "displayName": "散打宗",
+            "description": "散打宗的武僧是武术的终极大师。他们利用气来治疗伤势、提升速度和击倒敌人。",
+            "features": [
+                {
+                    "name": "散打技巧",
+                    "description": "每当你击中一个生物时，可以迫使其进行豁免检定，若失败则会被击倒、推开或无法进行反应动作。",
+                    "mechanicalEffect": [
+                        "击中时可以使用开明手法",
+                        "目标需要进行豁免"
+                    ],
+                    "level": 3
+                },
+                {
+                    "name": "混元体",
+                    "description": "从第6级开始，你可以花费1点气来施放疾步或羽落术。",
+                    "mechanicalEffect": [
+                        "可以花费1点气施放疾步",
+                        "可以花费1点气施放羽落术"
+                    ],
+                    "level": 6
+                },
+                {
+                    "name": "宁神境",
+                    "description": "从第11级开始，你可以进入特殊的冥想状态。你可以花费8小时进行冥想而不是睡眠，并获得长休息的好处。",
+                    "mechanicalEffect": "可以通过冥想代替睡眠",
+                    "level": 11
+                },
+                {
+                    "name": "渗透劲",
+                    "description": "在第17级时，你获得了能让生物震颤的能力。当你击中一个生物时，你可以花费3点气。如果目标失败一次体质豁免，在接下来的回合开始时，它的生命值降至0。如果目标通过豁免，它受到10d10的黯蚀伤害。",
+                    "mechanicalEffect": [
+                        "可以花费3点气使用掌法",
+                        "目标豁免失败时生命值降至0",
+                        "目标豁免成功时受到10d10黯蚀伤害"
+                    ],
+                    "level": 17
+                }
+            ]
+        },
+        {
+            "name": "shadow",
+            "displayName": "暗影宗",
+            "description": "暗影宗的武僧走在阴影与光明的边缘，他们是隐秘和欺诈的大师。",
+            "features": [
+                {
+                    "name": "暗影技艺",
+                    "description": "从第3级开始，你可以花费2点气来施放黑暗术、寂静术或隐雾术。",
+                    "mechanicalEffect": [
+                        "可以花费2点气施放黑暗术",
+                        "可以花费2点气施放寂静术",
+                        "可以花费2点气施放隐雾术"
+                    ],
+                    "level": 3
+                },
+                {
+                    "name": "暗影步",
+                    "description": "在第6级时，当你处于昏暗光线或黑暗中时，你可以花费2点气作为附赠动作传送至最远60尺内你能看见的另一处阴影中。",
+                    "mechanicalEffect": "可以在阴影中传送",
+                    "level": 6
+                },
+                {
+                    "name": "幽影斗篷",
+                    "description": "在第11级时，当你处于昏暗光线或黑暗中时，你可以使用你的动作变得隐形，直到你攻击或施放法术。",
+                    "mechanicalEffect": "可以在阴影中隐形",
+                    "level": 11
+                },
+                {
+                    "name": "灵机一斩",
+                    "description": "第17级起，你可以抓住利用生物被攻击命中时的短暂停顿。身处你身边5尺范围内的生物被除你之外的生物攻击命中时，你可以用反应对该被攻击生物发动一次近战攻击。",
+                    "mechanicalEffect": "可以用反应对5尺内，被他者攻击的生物发动一次近战攻击",
+                    "level": 17
+                }
+            ]
+        },
+        {
+            "name": "four-elements",
+            "displayName": "四象宗",
+            "description": "你追随一个教导掌控元素的宗派。你运气凝神时可以掌握创造之力，随意的驱使元素甚至将其当做躯体的延伸。宗派的某些成员会精修单一的元素，而其它人则同时使役所有元素。本宗派的许多武僧会用纹身描绘自身气的力量形式，比如盘龙或是诸如凤、鱼、树、山、奔浪等等。",
+            "features": [
+                {
+                    "name": "四象门徒",
+                    "description": "从第3级起，你开始学习操控元素的法门。每种法门在使用时都需要消耗气。你会先习得元素同调法门和另一个自选法门。你将在第6、第11、第17级时，将各习得一个新法门。你每次习得新的法门时，还可以将一个你已知的法门替换为另一个符合选择条件的法门。\n\n从第5级起，你可以通过消耗额外的气来提升以法门施展法术的环阶。每额外消耗1点气，法术环阶就提升1级。你可消耗的气点数上限如下：\n- 5-8级：3点\n- 9-12级：4点\n- 13-16级：5点\n- 17-20级：6点",
+                    "mechanicalEffect": [
+                        "获得元素同调和一个自选法门",
+                        "6、11、17级各获得一个新法门",
+                        "可以升环施法",
+                        "气点消耗上限随等级提升"
+                    ],
+                    "level": 3
+                },
+                {
+                    "name": "元素法门精通",
+                    "description": "第6级时，你掌握了更多元素法门。你学会一个新的元素法门，并且可以替换一个已知法门。此时你可以选择需要6级的法门，如北风之握或狮吼功。",
+                    "mechanicalEffect": [
+                        "获得一个新元素法门",
+                        "可以替换一个已知法门",
+                        "可以选择6级法门"
+                    ],
+                    "level": 6
+                },
+                {
+                    "name": "元素法门进阶",
+                    "description": "第11级时，你的元素掌控更加精深。你学会一个新的元素法门，并且可以替换一个已知法门。此时你可以选择需要11级的法门，如凤凰烈焰、云雾势或攀云步。",
+                    "mechanicalEffect": [
+                        "获得一个新元素法门",
+                        "可以替换一个已知法门",
+                        "可以选择11级法门"
+                    ],
+                    "level": 11
+                },
+                {
+                    "name": "元素法门大成",
+                    "description": "第17级时，你达到了元素掌控的巅峰。你学会一个新的元素法门，并且可以替换一个已知法门。此时你可以选择需要17级的法门，如寒冬之息、苍山庇佑、噬焰流或滚石流。",
+                    "mechanicalEffect": [
+                        "获得一个新元素法门",
+                        "可以替换一个已知法门",
+                        "可以选择17级法门"
+                    ],
+                    "level": 17
+                }
+            ],
+            "elementalDisciplines": [
+                {
+                    "name": "元素同调",
+                    "description": "你可以用动作短暂操控身边30尺内的元素之力，并产生下列效应之一：\n· 用土、水、气、火创造一次无害的瞬间视听效应\n· 瞬间点燃或吹熄蜡烛、火炬或小型营火\n· 加热或降温至多1磅无生命的物质，至多持续1小时\n· 将土，水，雾或火塑形成至多1尺立方的粗糙形状，至多持续1分钟",
+                    "kiCost": 0,
+                    "level": 3
+                },
+                {
+                    "name": "火蛇利牙",
+                    "description": "你在自己回合内执行攻击动作时，可以消耗1点气使得火焰触须从四肢喷涌而出。在本回合余下时间里，你进行徒手打击时的触及范围增加10尺。而这些攻击造成的伤害变为火焰伤害。若在攻击命中时再消耗1点气，则该次攻击还可额外造成1d10的火焰伤害。",
+                    "kiCost": 1,
+                    "level": 3
+                },
+                {
+                    "name": "四雷拳",
+                    "description": "你可以消耗2点气施展雷鸣波。",
+                    "kiCost": 2,
+                    "spell": "thunderwave",
+                    "level": 3
+                },
+                {
+                    "name": "凝气刚拳",
+                    "description": "作为一个动作，你可以消耗2点气并指定一个在你身边30尺内的生物。该生物必须进行力量豁免，失败则受到3d10钝击伤害，每额外消耗1点气增加1d10伤害，并可将目标推开20尺并击倒。豁免成功则伤害减半且不被推离和击倒。",
+                    "kiCost": 2,
+                    "level": 3
+                },
+                {
+                    "name": "风灵突进",
+                    "description": "你可以消耗2点气施展造风术。",
+                    "kiCost": 2,
+                    "spell": "gust_of_wind",
+                    "level": 3
+                },
+                {
+                    "name": "身化长流",
+                    "description": "作为一个动作，你可以消耗1点气操控120尺内一块不大于30尺的冰或水区域，可以将水凝为冰或将冰化为水，并可塑造成任意形状。",
+                    "kiCost": 1,
+                    "level": 3
+                },
+                {
+                    "name": "飞炎击",
+                    "description": "你可以消耗2点气施展燃烧之手。",
+                    "kiCost": 2,
+                    "spell": "burning_hands",
+                    "level": 3
+                },
+                {
+                    "name": "清流鞭",
+                    "description": "作为一个动作消耗2点气，指定30尺内一个目标进行敏捷豁免。失败则受到3d10钝击伤害，每额外消耗1点气增加1d10伤害，且可使目标倒地或拉近25尺。豁免成功则伤害减半且不被拉近和击倒。",
+                    "kiCost": 2,
+                    "level": 3
+                },
+                {
+                    "name": "北风之握",
+                    "description": "你可以消耗3点气施展人类定身术。",
+                    "kiCost": 3,
+                    "spell": "hold_person",
+                    "level": 6
+                },
+                {
+                    "name": "狮吼功",
+                    "description": "你可以消耗3点气施展粉碎音波。",
+                    "kiCost": 3,
+                    "spell": "shatter",
+                    "level": 6
+                },
+                {
+                    "name": "凤凰烈焰",
+                    "description": "你可以消耗4点气施展火球术。",
+                    "kiCost": 4,
+                    "spell": "fireball",
+                    "level": 11
+                },
+                {
+                    "name": "云雾势",
+                    "description": "你可以消耗4点气对自身施展气化形体。",
+                    "kiCost": 4,
+                    "spell": "gaseous_form",
+                    "level": 11
+                },
+                {
+                    "name": "攀云步",
+                    "description": "你可以消耗4点气对自身施展飞行术。",
+                    "kiCost": 4,
+                    "spell": "fly",
+                    "level": 11
+                },
+                {
+                    "name": "寒冬之息",
+                    "description": "你可以消耗6点气施展寒冰锥。",
+                    "kiCost": 6,
+                    "spell": "cone_of_cold",
+                    "level": 17
+                },
+                {
+                    "name": "苍山庇佑",
+                    "description": "你可以消耗5点气对自身施展石肤术。",
+                    "kiCost": 5,
+                    "spell": "stoneskin",
+                    "level": 17
+                },
+                {
+                    "name": "噬焰流",
+                    "description": "你可以消耗5点气施展火墙术。",
+                    "kiCost": 5,
+                    "spell": "wall_of_fire",
+                    "level": 17
+                },
+                {
+                    "name": "滚石流",
+                    "description": "你可以消耗6点气施展石墙术。",
+                    "kiCost": 6,
+                    "spell": "wall_of_stone",
+                    "level": 17
+                }
+            ]
+        }
+    ]
+}

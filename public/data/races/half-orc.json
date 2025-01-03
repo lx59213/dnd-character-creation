@@ -1,0 +1,36 @@
+{
+  "name": "half-orc",
+  "displayName": "半兽人",
+  "description": "半兽人的灰色皮肤带着绿色调，标志着他们与野蛮的兽人部落有着血缘关系。半兽人继承了人类的适应性和野心，以及兽人的力量和耐力，这使他们成为了出色的冒险者。",
+  "size": "中型",
+  "speed": 30,
+  "abilityScoreIncrease": {
+    "strength": 2,
+    "constitution": 1
+  },
+  "skill proficiencies": [
+    {
+      "id": "intimidation",
+      "type": "skill"
+    }
+  ],
+  "racialTraits": [
+    {
+      "name": "黑暗视觉",
+      "description": "得益于你的兽人血统，你在黑暗和微光环境下有着优异的视力。在微光环境下，你可以视物如同在明亮光照下一般；在黑暗环境下，你可以视物如同在微光环境下一般，但你在黑暗中只能看到灰色。",
+      "mechanicalEffect": "黑暗视觉范围12格（60尺）"
+    },
+    {
+      "name": "凶暴耐性",
+      "description": "当你的生命值降至0但未立即死亡时，你可以将生命值降至1。你在使用此特性后必须完成一次长休才能再次使用。",
+      "mechanicalEffect": "每次长休之间可使用一次，生命值降至0时可以改为降至1"
+    },
+    {
+      "name": "野蛮攻击",
+      "description": "当你使用近战武器进行重击时，你可以额外掷一个武器伤害骰，并将其计入重击的额外伤害中。",
+      "mechanicalEffect": "近战武器重击时额外增加一个武器伤害骰"
+    }
+  ],
+  "languages": ["通用语", "兽人语"],
+  "subraces": []
+}

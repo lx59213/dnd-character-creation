@@ -1,0 +1,197 @@
+{
+  "mount.horse_riding": {
+    "id": "mount.horse_riding",
+    "name": "坐骑马",
+    "displayName": "坐骑马 Riding Horse",
+    "description": "一匹训练有素的坐骑。",
+    "weight": 0,
+    "cost": {
+      "amount": 75,
+      "unit": "gp"
+    },
+    "speed": 60,
+    "carryingCapacity": 480,
+    "type": "land",
+    "rarity": "common"
+  },
+  "mount.horse_war": {
+    "id": "mount.horse_war",
+    "name": "战马",
+    "displayName": "战马 Warhorse",
+    "description": "一匹经过战斗训练的强壮马匹。",
+    "weight": 0,
+    "cost": {
+      "amount": 400,
+      "unit": "gp"
+    },
+    "speed": 60,
+    "carryingCapacity": 540,
+    "type": "land",
+    "rarity": "common"
+  },
+  "mount.horse_draft": {
+    "id": "mount.horse_draft",
+    "name": "驮马",
+    "displayName": "驮马 Draft Horse",
+    "description": "一匹强壮的马匹，适合负重和拉车。",
+    "weight": 0,
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "speed": 40,
+    "carryingCapacity": 540,
+    "type": "land",
+    "rarity": "common"
+  },
+  "mount.pony": {
+    "id": "mount.pony",
+    "name": "矮种马",
+    "displayName": "矮种马 Pony",
+    "description": "一匹小型马匹。",
+    "weight": 0,
+    "cost": {
+      "amount": 30,
+      "unit": "gp"
+    },
+    "speed": 40,
+    "carryingCapacity": 225,
+    "type": "land",
+    "rarity": "common"
+  },
+  "mount.camel": {
+    "id": "mount.camel",
+    "name": "骆驼",
+    "displayName": "骆驼 Camel",
+    "description": "适合在沙漠环境中旅行的坐骑。",
+    "weight": 0,
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "speed": 50,
+    "carryingCapacity": 480,
+    "type": "land",
+    "rarity": "common"
+  },
+  "mount.elephant": {
+    "id": "mount.elephant",
+    "name": "大象",
+    "displayName": "大象 Elephant",
+    "description": "一头强大的大象，可以作为坐骑或运输工具。",
+    "weight": 0,
+    "cost": {
+      "amount": 200,
+      "unit": "gp"
+    },
+    "speed": 40,
+    "carryingCapacity": 1320,
+    "type": "land",
+    "rarity": "uncommon"
+  },
+  "mount.mastiff": {
+    "id": "mount.mastiff",
+    "name": "獒犬",
+    "displayName": "獒犬 Mastiff",
+    "description": "一只训练有素的大型犬，适合小型生物骑乘。",
+    "weight": 0,
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "speed": 40,
+    "carryingCapacity": 195,
+    "type": "land",
+    "rarity": "common"
+  },
+  "mount.cart": {
+    "id": "mount.cart",
+    "name": "手推车",
+    "displayName": "手推车 Cart",
+    "description": "一辆双轮手推车。",
+    "weight": 200,
+    "cost": {
+      "amount": 15,
+      "unit": "gp"
+    },
+    "speed": 30,
+    "carryingCapacity": 1000,
+    "type": "land",
+    "rarity": "common"
+  },
+  "mount.wagon": {
+    "id": "mount.wagon",
+    "name": "篷车",
+    "displayName": "篷车 Wagon",
+    "description": "一辆四轮篷车，可以用来运输大量货物。",
+    "weight": 400,
+    "cost": {
+      "amount": 35,
+      "unit": "gp"
+    },
+    "speed": 30,
+    "carryingCapacity": 2000,
+    "type": "land",
+    "rarity": "common"
+  },
+  "mount.carriage": {
+    "id": "mount.carriage",
+    "name": "马车",
+    "displayName": "马车 Carriage",
+    "description": "一辆豪华的四轮马车，适合载客。",
+    "weight": 600,
+    "cost": {
+      "amount": 100,
+      "unit": "gp"
+    },
+    "speed": 40,
+    "carryingCapacity": 1500,
+    "type": "land",
+    "rarity": "common"
+  },
+  "mount.rowboat": {
+    "id": "mount.rowboat",
+    "name": "划艇",
+    "displayName": "划艇 Rowboat",
+    "description": "一艘小型划艇。",
+    "weight": 100,
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "speed": 15,
+    "carryingCapacity": 1500,
+    "type": "water",
+    "rarity": "common"
+  },
+  "mount.keelboat": {
+    "id": "mount.keelboat",
+    "name": "龙骨船",
+    "displayName": "龙骨船 Keelboat",
+    "description": "一艘中型船只，适合河流和近海航行。",
+    "weight": 3000,
+    "cost": {
+      "amount": 3000,
+      "unit": "gp"
+    },
+    "speed": 15,
+    "carryingCapacity": 6000,
+    "type": "water",
+    "rarity": "uncommon"
+  },
+  "mount.sailing_ship": {
+    "id": "mount.sailing_ship",
+    "name": "帆船",
+    "displayName": "帆船 Sailing Ship",
+    "description": "一艘大型帆船，适合海上航行。",
+    "weight": 10000,
+    "cost": {
+      "amount": 10000,
+      "unit": "gp"
+    },
+    "speed": 30,
+    "carryingCapacity": 20000,
+    "type": "water",
+    "rarity": "rare"
+  }
+}

@@ -1,0 +1,3484 @@
+{
+  "吟游诗人": {
+    "0": [
+      {
+        "name": "剑刃防护 Blade Ward",
+        "id": "spell.0.BladeWard"
+      },
+      {
+        "name": "舞光术 Dancing Lights",
+        "id": "spell.0.DancingLights"
+      },
+      {
+        "name": "交友术 Friends",
+        "id": "spell.0.Friends"
+      },
+      {
+        "name": "光亮术 Light",
+        "id": "spell.0.Light"
+      },
+      {
+        "name": "法师之手 Mage Hand",
+        "id": "spell.0.MageHand"
+      },
+      {
+        "name": "修复术 Mending",
+        "id": "spell.0.Mending"
+      },
+      {
+        "name": "传讯术 Message",
+        "id": "spell.0.Message"
+      },
+      {
+        "name": "次级幻影 Minor Illusion",
+        "id": "spell.0.MinorIllusion"
+      },
+      {
+        "name": "魔法伎俩 Prestidigitation",
+        "id": "spell.0.Prestidigitation"
+      },
+      {
+        "name": "克敌机先 True Strike",
+        "id": "spell.0.TrueStrike"
+      },
+      {
+        "name": "恶言相加 Vicious Mockery",
+        "id": "spell.0.ViciousMockery"
+      }
+    ],
+    "1": [
+      {
+        "name": "化兽为友 Animal Friendship",
+        "id": "spell.1.AnimalFriendship"
+      },
+      {
+        "name": "灾祸术 Bane",
+        "id": "spell.1.Bane"
+      },
+      {
+        "name": "魅惑人类 Charm Person",
+        "id": "spell.1.CharmPerson"
+      },
+      {
+        "name": "通晓语言 Comprehend Languages",
+        "id": "spell.1.ComprehendLanguages"
+      },
+      {
+        "name": "疗伤术 Cure Wounds",
+        "id": "spell.1.CureWounds"
+      },
+      {
+        "name": "侦测魔法 Detect Magic",
+        "id": "spell.1.DetectMagic"
+      },
+      {
+        "name": "易容术 Disguise Self",
+        "id": "spell.1.DisguiseSelf"
+      },
+      {
+        "name": "不谐低语 Dissonant Whispers",
+        "id": "spell.1.DissonantWhispers"
+      },
+      {
+        "name": "妖火 Faerie Fire",
+        "id": "spell.1.FaerieFire"
+      },
+      {
+        "name": "羽落术 Feather Fall",
+        "id": "spell.1.FeatherFall"
+      },
+      {
+        "name": "治愈真言 Healing Word",
+        "id": "spell.1.HealingWord"
+      },
+      {
+        "name": "英雄气概 Heroism",
+        "id": "spell.1.Heroism"
+      },
+      {
+        "name": "鉴定术 Identify",
+        "id": "spell.1.Identify"
+      },
+      {
+        "name": "迷幻手稿 Illusory Script",
+        "id": "spell.1.IllusoryScript"
+      },
+      {
+        "name": "大步奔行 Longstrider",
+        "id": "spell.1.Longstrider"
+      },
+      {
+        "name": "无声幻影 Silent Image",
+        "id": "spell.1.SilentImage"
+      },
+      {
+        "name": "睡眠术 Sleep",
+        "id": "spell.1.Sleep"
+      },
+      {
+        "name": "动物交谈术 Speak With Animal",
+        "id": "spell.1.SpeakWithAnimal"
+      },
+      {
+        "name": "塔莎狂笑术 Tasha’s Hideous Laughter",
+        "id": "spell.1.TashasHideousLaughter"
+      },
+      {
+        "name": "雷鸣波 Thunderwave",
+        "id": "spell.1.Thunderwave"
+      },
+      {
+        "name": "隐形仆役 Unseen Servant",
+        "id": "spell.1.UnseenServant"
+      }
+    ],
+    "2": [
+      {
+        "name": "动物信使 Animal Messenger",
+        "id": "spell.2.AnimalMessenger"
+      },
+      {
+        "name": "安定心神 Calm Emotions",
+        "id": "spell.2.CalmEmotions"
+      },
+      {
+        "name": "匕首之云 Cloud of Daggers",
+        "id": "spell.2.CloudofDaggers"
+      },
+      {
+        "name": "疯狂冠冕 Crown of Madness",
+        "id": "spell.2.CrownofMadness"
+      },
+      {
+        "name": "侦测思想 Detect Thoughts",
+        "id": "spell.2.DetectThoughts"
+      },
+      {
+        "name": "强化属性 Enhance Ability",
+        "id": "spell.2.EnhanceAbility"
+      },
+      {
+        "name": "注目术 Enthrall",
+        "id": "spell.2.Enthrall"
+      },
+      {
+        "name": "灼热金属 Heat Metal",
+        "id": "spell.2.HeatMetal"
+      },
+      {
+        "name": "人类定身术 Hold Person",
+        "id": "spell.2.HoldPerson"
+      },
+      {
+        "name": "隐形术 Invisibility",
+        "id": "spell.2.Invisibility"
+      },
+      {
+        "name": "敲击术 Knock",
+        "id": "spell.2.Knock"
+      },
+      {
+        "name": "次级复原术 Lesser Restoration",
+        "id": "spell.2.LesserRestoration"
+      },
+      {
+        "name": "动植物定位术 Locate Animals or Plants",
+        "id": "spell.2.LocateAnimalsorPlants"
+      },
+      {
+        "name": "物件定位术 Locate Object",
+        "id": "spell.2.LocateObject"
+      },
+      {
+        "name": "魔嘴术 Magic Mouth",
+        "id": "spell.2.MagicMouth"
+      },
+      {
+        "name": "魅影之力 Phantasmal Force",
+        "id": "spell.2.PhantasmalForce"
+      },
+      {
+        "name": "识破隐形 See Invisibility",
+        "id": "spell.2.SeeInvisibility"
+      },
+      {
+        "name": "粉碎音波 Shatter",
+        "id": "spell.2.Shatter"
+      },
+      {
+        "name": "沉默术 Silence",
+        "id": "spell.2.Silence"
+      },
+      {
+        "name": "暗示术 Suggestion",
+        "id": "spell.2.Suggestion"
+      },
+      {
+        "name": "诚实之域 Zone of Truth",
+        "id": "spell.2.ZoneofTruth"
+      }
+    ],
+    "3": [
+      {
+        "name": "降咒 Bestow Curse",
+        "id": "spell.3.BestowCurse"
+      },
+      {
+        "name": "鹰眼术 Clairvoyance",
+        "id": "spell.3.Clairvoyance"
+      },
+      {
+        "name": "解除魔法 Dispel Magic",
+        "id": "spell.3.DispelMagic"
+      },
+      {
+        "name": "恐惧术 Fear",
+        "id": "spell.3.Fear"
+      },
+      {
+        "name": "假死术 Feign Death",
+        "id": "spell.3.FeignDeath"
+      },
+      {
+        "name": "守卫刻文 Glyph of Warding",
+        "id": "spell.3.GlyphofWarding"
+      },
+      {
+        "name": "催眠图纹 Hypnotic Pattern",
+        "id": "spell.3.HypnoticPattern"
+      },
+      {
+        "name": "李欧蒙小屋 Leomund’s Tiny Hut",
+        "id": "spell.3.LeomundsTinyHut"
+      },
+      {
+        "name": "高等幻影 Major Image",
+        "id": "spell.3.MajorImage"
+      },
+      {
+        "name": "回避侦测 Nondetection",
+        "id": "spell.3.Nondetection"
+      },
+      {
+        "name": "植物滋长 Plant Growth",
+        "id": "spell.3.PlantGrowth"
+      },
+      {
+        "name": "短讯术 Sending",
+        "id": "spell.3.Sending"
+      },
+      {
+        "name": "死者交谈 Speak With Dead",
+        "id": "spell.3.SpeakwithDead"
+      },
+      {
+        "name": "植物交谈 Speak With Plants",
+        "id": "spell.3.SpeakwithPlants"
+      },
+      {
+        "name": "臭云术 Stinking Cloud",
+        "id": "spell.3.StinkingCloud"
+      },
+      {
+        "name": "巧言术 Tongues",
+        "id": "spell.3.Tongues"
+      }
+    ],
+    "4": [
+      {
+        "name": "强迫术 Compulsion",
+        "id": "spell.4.Compulsion"
+      },
+      {
+        "name": "困惑术 Confusion",
+        "id": "spell.4.Confusion"
+      },
+      {
+        "name": "任意门 Dimension Door",
+        "id": "spell.4.DimensionDoor"
+      },
+      {
+        "name": "行动自如 Freedom of Movement",
+        "id": "spell.4.FreedomofMovement"
+      },
+      {
+        "name": "高等隐形术 Greater Invisibility",
+        "id": "spell.4.GreaterInvisibility"
+      },
+      {
+        "name": "幻景 Hallucinatory Terrain",
+        "id": "spell.4.HallucinatoryTerrain"
+      },
+      {
+        "name": "生物定位术 Locate Creature",
+        "id": "spell.4.LocateCreature"
+      },
+      {
+        "name": "变形术 Polymorph",
+        "id": "spell.4.Polymorph"
+      }
+    ],
+    "5": [
+      {
+        "name": "活化物件 Animate Objects",
+        "id": "spell.5.AnimateObjects"
+      },
+      {
+        "name": "启蒙术 Awaken",
+        "id": "spell.5.Awaken"
+      },
+      {
+        "name": "支配人类 Dominate Person",
+        "id": "spell.5.DominatePerson"
+      },
+      {
+        "name": "托梦术 Dream",
+        "id": "spell.5.Dream"
+      },
+      {
+        "name": "指使术 Geas",
+        "id": "spell.5.Geas"
+      },
+      {
+        "name": "高等复原术 Greater Restoration",
+        "id": "spell.5.GreaterRestoration"
+      },
+      {
+        "name": "怪物定身术 Hold Monster",
+        "id": "spell.5.HoldMonster"
+      },
+      {
+        "name": "通晓传奇 Legend Lore",
+        "id": "spell.5.LegendLore"
+      },
+      {
+        "name": "群体疗伤术 Mass Cure Wounds",
+        "id": "spell.5.MassCureWounds"
+      },
+      {
+        "name": "假象术 Mislead",
+        "id": "spell.5.Mislead"
+      },
+      {
+        "name": "篡改记忆 Modify Memory",
+        "id": "spell.5.ModifyMemory"
+      },
+      {
+        "name": "异界誓缚 Planar Binding",
+        "id": "spell.5.PlanarBinding"
+      },
+      {
+        "name": "死者复活 Raise Dead",
+        "id": "spell.5.RaiseDead"
+      },
+      {
+        "name": "探知 Scrying",
+        "id": "spell.5.Scrying"
+      },
+      {
+        "name": "伪装术 Seeming",
+        "id": "spell.5.Seeming"
+      },
+      {
+        "name": "传送法阵 Teleportation Circle",
+        "id": "spell.5.TeleportationCircle"
+      }
+    ],
+    "6": [
+      {
+        "name": "摄心目光 Eyebite",
+        "id": "spell.6.Eyebite"
+      },
+      {
+        "name": "寻路术 Find the Path",
+        "id": "spell.6.FindthePath"
+      },
+      {
+        "name": "铜墙铁壁 Guards and Wards",
+        "id": "spell.6.GuardsandWards"
+      },
+      {
+        "name": "群体暗示术 Mass Suggestion",
+        "id": "spell.6.MassSuggestion"
+      },
+      {
+        "name": "奥图迷舞 Otto’s Irresistible Dance",
+        "id": "spell.6.OttosIrresistibleDance"
+      },
+      {
+        "name": "预置幻影 Programmed Illusion",
+        "id": "spell.6.ProgrammedIllusion"
+      },
+      {
+        "name": "真知术 True Seeing",
+        "id": "spell.6.TrueSeeing"
+      }
+    ],
+    "7": [
+      {
+        "name": "以太化 Etherealness",
+        "id": "spell.7.Etherealness"
+      },
+      {
+        "name": "力场监牢 Forcecage",
+        "id": "spell.7.Forcecage"
+      },
+      {
+        "name": "海市蜃楼 Mirage Arcane",
+        "id": "spell.7.MirageArcane"
+      },
+      {
+        "name": "魔邓肯豪宅术 Mordenkainen's Magnificent Mansion",
+        "id": "spell.7.MordenkainensMagnificentMansion"
+      },
+      {
+        "name": "魔邓肯之剑 Mordenkainen’s Sword",
+        "id": "spell.7.MordenkainensSword"
+      },
+      {
+        "name": "投影术 Project Image",
+        "id": "spell.7.ProjectImage"
+      },
+      {
+        "name": "再生术 Regenerate",
+        "id": "spell.7.Regenerate"
+      },
+      {
+        "name": "复生术 Resurrection",
+        "id": "spell.7.Resurrection"
+      },
+      {
+        "name": "徽记术 Symbol",
+        "id": "spell.7.Symbol"
+      },
+      {
+        "name": "传送术 Teleport",
+        "id": "spell.7.Teleport"
+      }
+    ],
+    "8": [
+      {
+        "name": "支配怪物 Dominate Monster",
+        "id": "spell.8.DominateMonster"
+      },
+      {
+        "name": "弱智术 Feeblemind",
+        "id": "spell.8.Feeblemind"
+      },
+      {
+        "name": "花言巧语 Glibness",
+        "id": "spell.8.Glibness"
+      },
+      {
+        "name": "心灵屏障 Mind Blank",
+        "id": "spell.8.MindBlank"
+      },
+      {
+        "name": "律令震慑 Power Word Stun",
+        "id": "spell.8.PowerWordStun"
+      }
+    ],
+    "9": [
+      {
+        "name": "预警术 Foresight",
+        "id": "spell.9.Foresight"
+      },
+      {
+        "name": "律令医疗 Power Word Heal",
+        "id": "spell.9.PowerWordHeal"
+      },
+      {
+        "name": "律令死亡 Power Word Kill",
+        "id": "spell.9.PowerWordKill"
+      },
+      {
+        "name": "完全变形术 True Polymorph",
+        "id": "spell.9.TruePolymorph"
+      }
+    ]
+  },
+  "牧师": {
+    "0": [
+      {
+        "name": "神导术 Guidance",
+        "id": "spell.0.Guidance"
+      },
+      {
+        "name": "光亮术 Light",
+        "id": "spell.0.Light"
+      },
+      {
+        "name": "修复术 Mending",
+        "id": "spell.0.Mending"
+      },
+      {
+        "name": "提升抗性 Resistance",
+        "id": "spell.0.Resistance"
+      },
+      {
+        "name": "圣火术 Sacred Flame",
+        "id": "spell.0.SacredFlame"
+      },
+      {
+        "name": "维生术 Spare the Dying",
+        "id": "spell.0.SparetheDying"
+      },
+      {
+        "name": "奇术 Thaumaturgy",
+        "id": "spell.0.Thaumaturgy"
+      }
+    ],
+    "1": [
+      {
+        "name": "灾祸术 Bane",
+        "id": "spell.1.Bane"
+      },
+      {
+        "name": "祝福术 Bless",
+        "id": "spell.1.Bless"
+      },
+      {
+        "name": "命令术 Command",
+        "id": "spell.1.Command"
+      },
+      {
+        "name": "疗伤术 Cure Wounds",
+        "id": "spell.1.CureWounds"
+      },
+      {
+        "name": "侦测善恶 Detect Evil and Good",
+        "id": "spell.1.DetectEvilAndGood"
+      },
+      {
+        "name": "侦测魔法 Detect Magic",
+        "id": "spell.1.DetectMagic"
+      },
+      {
+        "name": "侦测毒性和疾病 Detect Poison and Disease",
+        "id": "spell.1.DetectPoisonandDisease"
+      },
+      {
+        "name": "光导箭 Guiding Bolt",
+        "id": "spell.1.GuidingBolt"
+      },
+      {
+        "name": "治愈真言 Healing Word",
+        "id": "spell.1.HealingWord"
+      },
+      {
+        "name": "致伤术 Inflict Wounds",
+        "id": "spell.1.InflictWounds"
+      },
+      {
+        "name": "防护善恶 Protection from Evil and Good",
+        "id": "spell.1.ProtectionfromEvilandGood"
+      },
+      {
+        "name": "净化食粮 Purify Food and Drink",
+        "id": "spell.1.PurifyFoodandDrink"
+      },
+      {
+        "name": "庇护术 Sanctuary",
+        "id": "spell.1.Sanctuary"
+      },
+      {
+        "name": "虔诚护盾 Shield of Faith",
+        "id": "spell.1.ShieldofFaith"
+      }
+    ],
+    "2": [
+      {
+        "name": "援助术 Aid",
+        "id": "spell.2.Aid"
+      },
+      {
+        "name": "卜筮术 Augury",
+        "id": "spell.2.Augury"
+      },
+      {
+        "name": "安定心神 Calm Emotions",
+        "id": "spell.2.CalmEmotions"
+      },
+      {
+        "name": "不灭明焰 Continual Flame",
+        "id": "spell.2.ContinualFlame"
+      },
+      {
+        "name": "强化属性 Enhance Ability",
+        "id": "spell.2.EnhanceAbility"
+      },
+      {
+        "name": "寻找陷阱 Find Traps",
+        "id": "spell.2.FindTraps"
+      },
+      {
+        "name": "遗体防腐 Gentle Repose",
+        "id": "spell.2.GentleRepose"
+      },
+      {
+        "name": "人类定身术 Hold Person",
+        "id": "spell.2.HoldPerson"
+      },
+      {
+        "name": "次级复原术 Lesser Restoration",
+        "id": "spell.2.LesserRestoration"
+      },
+      {
+        "name": "物件定位术 Locate Object",
+        "id": "spell.2.LocateObject"
+      },
+      {
+        "name": "治疗祷言 Prayer of Healing",
+        "id": "spell.2.PrayerofHealing"
+      },
+      {
+        "name": "防护毒素 Protection from Poison",
+        "id": "spell.2.ProtectionfromPoison"
+      },
+      {
+        "name": "沉默术 Silence",
+        "id": "spell.2.Silence"
+      },
+      {
+        "name": "守护之链 Warding Bond",
+        "id": "spell.2.WardingBond"
+      },
+      {
+        "name": "诚实之域 Zone of Truth",
+        "id": "spell.2.ZoneofTruth"
+      }
+    ],
+    "3": [
+      {
+        "name": "活化死尸 Animate Dead",
+        "id": "spell.3.AnimateDead"
+      },
+      {
+        "name": "希望信标 Beacon of Hope",
+        "id": "spell.3.BeaconofHope"
+      },
+      {
+        "name": "降咒 Bestow Curse",
+        "id": "spell.3.BestowCurse"
+      },
+      {
+        "name": "鹰眼术 Clairvoyance",
+        "id": "spell.3.Clairvoyance"
+      },
+      {
+        "name": "造粮术 Create Food and Water",
+        "id": "spell.3.CreateFoodandWater"
+      },
+      {
+        "name": "昼明术 Daylight",
+        "id": "spell.3.Daylight"
+      },
+      {
+        "name": "解除魔法 Dispel Magic",
+        "id": "spell.3.DispelMagic"
+      },
+      {
+        "name": "假死术 Feign Death",
+        "id": "spell.3.FeignDeath"
+      },
+      {
+        "name": "守卫刻文 Glyph of Warding",
+        "id": "spell.3.GlyphofWarding"
+      },
+      {
+        "name": "防护法阵 Magic Circle",
+        "id": "spell.3.MagicCircle"
+      },
+      {
+        "name": "群体治愈真言 Mass Healing Word",
+        "id": "spell.3.MassHealingWord"
+      },
+      {
+        "name": "融身入石 Meld into Stone",
+        "id": "spell.3.MeldintoStone"
+      },
+      {
+        "name": "防护能量伤害 Protection from Energy",
+        "id": "spell.3.ProtectionfromEnergy"
+      },
+      {
+        "name": "移除诅咒 Remove Curse",
+        "id": "spell.3.RemoveCurse"
+      },
+      {
+        "name": "回生术 Revivify",
+        "id": "spell.3.Revivify"
+      },
+      {
+        "name": "短讯术 Sending",
+        "id": "spell.3.Sending"
+      },
+      {
+        "name": "死者交谈 Speak With Dead",
+        "id": "spell.3.SpeakwithDead"
+      },
+      {
+        "name": "灵体卫士 Spirit Guardians",
+        "id": "spell.3.SpiritGuardians"
+      },
+      {
+        "name": "巧言术 Tongues",
+        "id": "spell.3.Tongues"
+      },
+      {
+        "name": "水上行走 Water Walk",
+        "id": "spell.3.WaterWalk"
+      }
+    ],
+    "4": [
+      {
+        "name": "放逐术 Banishment",
+        "id": "spell.4.Banishment"
+      },
+      {
+        "name": "操控水体 Control Water",
+        "id": "spell.4.ControlWater"
+      },
+      {
+        "name": "防死结界 Death Ward",
+        "id": "spell.4.DeathWard"
+      },
+      {
+        "name": "预言术 Divination",
+        "id": "spell.4.Divination"
+      },
+      {
+        "name": "行动自如 Freedom of Movement",
+        "id": "spell.4.FreedomofMovement"
+      },
+      {
+        "name": "信仰守卫 Guardian of Faith",
+        "id": "spell.4.GuardianofFaith"
+      },
+      {
+        "name": "生物定位术 Locate Creature",
+        "id": "spell.4.LocateCreature"
+      },
+      {
+        "name": "塑石术 Stone Shape",
+        "id": "spell.4.StoneShape"
+      }
+    ],
+    "5": [
+      {
+        "name": "通神术 Commune",
+        "id": "spell.5.Commune"
+      },
+      {
+        "name": "疫病术 Contagion",
+        "id": "spell.5.Contagion"
+      },
+      {
+        "name": "反制善恶 Dispel Evil and Good",
+        "id": "spell.5.DispelEvilandGood"
+      },
+      {
+        "name": "焰击术 Flame Strike",
+        "id": "spell.5.FlameStrike"
+      },
+      {
+        "name": "指使术 Geas",
+        "id": "spell.5.Geas"
+      },
+      {
+        "name": "高等复原术 Greater Restoration",
+        "id": "spell.5.GreaterRestoration"
+      },
+      {
+        "name": "圣居 Hallow",
+        "id": "spell.5.Hallow"
+      },
+      {
+        "name": "疫病虫群 Insect Plague",
+        "id": "spell.5.InsectPlague"
+      },
+      {
+        "name": "通晓传奇 Legend Lore",
+        "id": "spell.5.LegendLore"
+      },
+      {
+        "name": "群体疗伤术 Mass Cure Wounds",
+        "id": "spell.5.MassCureWounds"
+      },
+      {
+        "name": "异界誓缚 Planar Binding",
+        "id": "spell.5.PlanarBinding"
+      },
+      {
+        "name": "死者复活 Raise Dead",
+        "id": "spell.5.RaiseDead"
+      },
+      {
+        "name": "探知 Scrying",
+        "id": "spell.5.Scrying"
+      }
+    ],
+    "6": [
+      {
+        "name": "剑刃护壁 Blade Barrier",
+        "id": "spell.6.BladeBarrier"
+      },
+      {
+        "name": "唤起死灵 Create Undead",
+        "id": "spell.6.CreateUndead"
+      },
+      {
+        "name": "寻路术 Find the Path",
+        "id": "spell.6.FindthePath"
+      },
+      {
+        "name": "禁制术 Forbiddance",
+        "id": "spell.6.Forbiddance"
+      },
+      {
+        "name": "重伤术 Harm",
+        "id": "spell.6.Harm"
+      },
+      {
+        "name": "医疗术 Heal",
+        "id": "spell.6.Heal"
+      },
+      {
+        "name": "英雄宴 Heroes' Feast",
+        "id": "spell.6.Feast"
+      },
+      {
+        "name": "异界誓盟 Planar Ally",
+        "id": "spell.6.PlanarAlly"
+      },
+      {
+        "name": "真知术 True Seeing",
+        "id": "spell.6.TrueSeeing"
+      },
+      {
+        "name": "回返真言 Word of Recall",
+        "id": "spell.6.WordofRecall"
+      }
+    ],
+    "7": [
+      {
+        "name": "天界咒唤术 Conjure Celestial",
+        "id": "spell.7.ConjureCelestial"
+      },
+      {
+        "name": "圣言术 Divine Word",
+        "id": "spell.7.DivineWord"
+      },
+      {
+        "name": "以太化 Etherealness",
+        "id": "spell.7.Etherealness"
+      },
+      {
+        "name": "火焰风暴 Fire Storm",
+        "id": "spell.7.FireStorm"
+      },
+      {
+        "name": "异界传送 Plane Shift",
+        "id": "spell.7.PlaneShift"
+      },
+      {
+        "name": "再生术 Regenerate",
+        "id": "spell.7.Regenerate"
+      },
+      {
+        "name": "复生术 Resurrection",
+        "id": "spell.7.Resurrection"
+      },
+      {
+        "name": "徽记术 Symbol",
+        "id": "spell.7.Symbol"
+      }
+    ],
+    "8": [
+      {
+        "name": "反魔法场 Antimagic Field",
+        "id": "spell.8.AntimagicField"
+      },
+      {
+        "name": "操控天气 Control Weather",
+        "id": "spell.8.ControlWeather"
+      },
+      {
+        "name": "地震术 Earthquake",
+        "id": "spell.8.Earthquake"
+      },
+      {
+        "name": "圣洁灵光 Holy Aura",
+        "id": "spell.8.HolyAura"
+      }
+    ],
+    "9": [
+      {
+        "name": "星界投影 Astral Projection",
+        "id": "spell.9.AstralProjection"
+      },
+      {
+        "name": "异界之门 Gate",
+        "id": "spell.9.Gate"
+      },
+      {
+        "name": "群体医疗术 Mass Heal",
+        "id": "spell.9.MassHeal"
+      },
+      {
+        "name": "完全复生术 True Resurrection",
+        "id": "spell.9.TrueResurrection"
+      }
+    ]
+  },
+  "德鲁伊": {
+    "0": [
+      {
+        "name": "德鲁伊伎俩 Druidcraft",
+        "id": "spell.0.Druidcraft"
+      },
+      {
+        "name": "神导术 Guidance",
+        "id": "spell.0.Guidance"
+      },
+      {
+        "name": "修复术 Mending",
+        "id": "spell.0.Mending"
+      },
+      {
+        "name": "毒气喷溅 Poison Spray",
+        "id": "spell.0.PoisonSpray"
+      },
+      {
+        "name": "燃火术 Produce Flame",
+        "id": "spell.0.ProduceFlame"
+      },
+      {
+        "name": "提升抗性 Resistance",
+        "id": "spell.0.Resistance"
+      },
+      {
+        "name": "橡棍术 Shillelagh",
+        "id": "spell.0.Shillelagh"
+      },
+      {
+        "name": "荆棘之鞭 Thorn Whip",
+        "id": "spell.0.ThornWhip"
+      }
+    ],
+    "1": [
+      {
+        "name": "化兽为友 Animal Friendship",
+        "id": "spell.1.AnimalFriendship"
+      },
+      {
+        "name": "魅惑人类 Charm Person",
+        "id": "spell.1.CharmPerson"
+      },
+      {
+        "name": "疗伤术 Cure Wounds",
+        "id": "spell.1.CureWounds"
+      },
+      {
+        "name": "侦测魔法 Detect Magic",
+        "id": "spell.1.DetectMagic"
+      },
+      {
+        "name": "侦测毒性和疾病 Detect Poison and Disease",
+        "id": "spell.1.DetectPoisonandDisease"
+      },
+      {
+        "name": "纠缠术 Entangle",
+        "id": "spell.1.Entangle"
+      },
+      {
+        "name": "妖火 Faerie Fire",
+        "id": "spell.1.FaerieFire"
+      },
+      {
+        "name": "云雾术 Fog Cloud",
+        "id": "spell.1.FogCloud"
+      },
+      {
+        "name": "神莓术 Goodberry",
+        "id": "spell.1.Goodberry"
+      },
+      {
+        "name": "治愈真言 Healing Word",
+        "id": "spell.1.HealingWord"
+      },
+      {
+        "name": "跳跃术 Jump",
+        "id": "spell.1.Jump"
+      },
+      {
+        "name": "大步奔行 Longstrider",
+        "id": "spell.1.Longstrider"
+      },
+      {
+        "name": "净化食粮 Purify Food and Drink",
+        "id": "spell.1.PurifyFoodandDrink"
+      },
+      {
+        "name": "动物交谈术 Speak With Animals",
+        "id": "spell.1.SpeakwithAnimals"
+      },
+      {
+        "name": "雷鸣波 Thunderwave",
+        "id": "spell.1.Thunderwave"
+      }
+    ],
+    "2": [
+      {
+        "name": "动物信使 Animal Messenger",
+        "id": "spell.2.AnimalMessenger"
+      },
+      {
+        "name": "树肤术 Barkskin",
+        "id": "spell.2.Barkskin"
+      },
+      {
+        "name": "野兽知觉 Beast Sense",
+        "id": "spell.2.BeastSense"
+      },
+      {
+        "name": "黑暗视觉 Darkvision",
+        "id": "spell.2.Darkvision"
+      },
+      {
+        "name": "强化属性 Enhance Ability",
+        "id": "spell.2.EnhanceAbility"
+      },
+      {
+        "name": "寻找陷阱 Find Traps",
+        "id": "spell.2.FindTraps"
+      },
+      {
+        "name": "火焰刀 Flame Blade",
+        "id": "spell.2.FlameBlade"
+      },
+      {
+        "name": "炽焰法球 Flaming Sphere",
+        "id": "spell.2.FlamingSphere"
+      },
+      {
+        "name": "造风术 Gust of Wind",
+        "id": "spell.2.GustofWind"
+      },
+      {
+        "name": "灼热金属 Heat Metal",
+        "id": "spell.2.HeatMetal"
+      },
+      {
+        "name": "人类定身术 Hold Person",
+        "id": "spell.2.HoldPerson"
+      },
+      {
+        "name": "次级复原术 Lesser Restoration",
+        "id": "spell.2.LesserRestoration"
+      },
+      {
+        "name": "动植物定位术 Locate Animals or Plants",
+        "id": "spell.2.LocateAnimalsorPlants"
+      },
+      {
+        "name": "物件定位术 Locate Object",
+        "id": "spell.2.LocateObject"
+      },
+      {
+        "name": "月华之光 Moonbeam",
+        "id": "spell.2.Moonbeam"
+      },
+      {
+        "name": "行动无踪 Pass without Trace",
+        "id": "spell.2.PasswithoutTrace"
+      },
+      {
+        "name": "防护毒素 Protection from Poison",
+        "id": "spell.2.ProtectionfromPoison"
+      },
+      {
+        "name": "荆棘丛生 Spike Growth",
+        "id": "spell.2.SpikeGrowth"
+      }
+    ],
+    "3": [
+      {
+        "name": "召雷术 Call Lightning",
+        "id": "spell.3.CallLightning"
+      },
+      {
+        "name": "召唤动物 Conjure Animals",
+        "id": "spell.3.ConjureAnimals"
+      },
+      {
+        "name": "昼明术 Daylight",
+        "id": "spell.3.Daylight"
+      },
+      {
+        "name": "解除魔法 Dispel Magic",
+        "id": "spell.3.DispelMagic"
+      },
+      {
+        "name": "假死术 Feign Death",
+        "id": "spell.3.FeignDeath"
+      },
+      {
+        "name": "融身入石 Meld into Stone",
+        "id": "spell.3.MeldintoStone"
+      },
+      {
+        "name": "植物滋长 Plant Growth",
+        "id": "spell.3.PlantGrowth"
+      },
+      {
+        "name": "防护能量伤害 Protection from Energy",
+        "id": "spell.3.ProtectionfromEnergy"
+      },
+      {
+        "name": "雪雨暴 Sleet Storm",
+        "id": "spell.3.SleetStorm"
+      },
+      {
+        "name": "植物交谈术 Speak With Plants",
+        "id": "spell.3.SpeakwithPlants"
+      },
+      {
+        "name": "水下呼吸 Water Breathing",
+        "id": "spell.3.WaterBreathing"
+      },
+      {
+        "name": "水上行走 Water Walk",
+        "id": "spell.3.WaterWalk"
+      },
+      {
+        "name": "风墙术 Wind Wall",
+        "id": "spell.3.WindWall"
+      }
+    ],
+    "4": [
+      {
+        "name": "枯萎术 Blight",
+        "id": "spell.4.Blight"
+      },
+      {
+        "name": "困惑术 Confusion",
+        "id": "spell.4.Confusion"
+      },
+      {
+        "name": "次级元素咒唤术 Conjure Minor Elementals",
+        "id": "spell.4.ConjureMinorElementals"
+      },
+      {
+        "name": "林地之精咒唤术 Conjure Woodland Beings",
+        "id": "spell.4.ConjureWoodlandBeings"
+      },
+      {
+        "name": "操控水体 Control Water",
+        "id": "spell.4.ControlWater"
+      },
+      {
+        "name": "支配野兽 Dominate Beast",
+        "id": "spell.4.DominateBeast"
+      },
+      {
+        "name": "行动自如 Freedom of Movement",
+        "id": "spell.4.FreedomofMovement"
+      },
+      {
+        "name": "巨虫术 Giant Insect",
+        "id": "spell.4.GiantInsect"
+      },
+      {
+        "name": "擒抱藤 Grasping Vine",
+        "id": "spell.4.GraspingVine"
+      },
+      {
+        "name": "幻景 Hallucinatory Terrain",
+        "id": "spell.4.HallucinatoryTerrain"
+      },
+      {
+        "name": "冰风暴 Ice Storm",
+        "id": "spell.4.IceStorm"
+      },
+      {
+        "name": "生物定位术 Locate Creature",
+        "id": "spell.4.LocateCreature"
+      },
+      {
+        "name": "变形术 Polymorph",
+        "id": "spell.4.Polymorph"
+      },
+      {
+        "name": "塑石术 Stone Shape",
+        "id": "spell.4.StoneShape"
+      },
+      {
+        "name": "石肤术 Stoneskin",
+        "id": "spell.4.Stoneskin"
+      },
+      {
+        "name": "火墙术 Wall of Fire",
+        "id": "spell.4.WallofFire"
+      }
+    ],
+    "5": [
+      {
+        "name": "防活物护罩 Antilife Shell",
+        "id": "spell.5.AntilifeShell"
+      },
+      {
+        "name": "启蒙术 Awaken",
+        "id": "spell.5.Awaken"
+      },
+      {
+        "name": "问道自然 Commune with Nature",
+        "id": "spell.5.CommunewithNature"
+      },
+      {
+        "name": "元素咒唤术 Conjure Elemental",
+        "id": "spell.5.ConjureElemental"
+      },
+      {
+        "name": "疫病术 Contagion",
+        "id": "spell.5.Contagion"
+      },
+      {
+        "name": "指使术 Geas",
+        "id": "spell.5.Geas"
+      },
+      {
+        "name": "高等复原术 Greater Restoration",
+        "id": "spell.5.GreaterRestoration"
+      },
+      {
+        "name": "疫病虫群 Insect Plague",
+        "id": "spell.5.InsectPlague"
+      },
+      {
+        "name": "群体疗伤术 Mass Cure Wounds",
+        "id": "spell.5.MassCureWounds"
+      },
+      {
+        "name": "异界誓缚 Planar Binding",
+        "id": "spell.5.PlanarBinding"
+      },
+      {
+        "name": "转生术 Reincarnate",
+        "id": "spell.5.Reincarnate"
+      },
+      {
+        "name": "探知 Scrying",
+        "id": "spell.5.Scrying"
+      },
+      {
+        "name": "树跃术 Tree Stride",
+        "id": "spell.5.TreeStride"
+      },
+      {
+        "name": "石墙术 Wall of Stone",
+        "id": "spell.5.WallofStone"
+      }
+    ],
+    "6": [
+      {
+        "name": "精类咒唤术 Conjure Fey",
+        "id": "spell.6.ConjureFey"
+      },
+      {
+        "name": "寻路术 Find the Path",
+        "id": "spell.6.FindthePath"
+      },
+      {
+        "name": "医疗术 Heal",
+        "id": "spell.6.Heal"
+      },
+      {
+        "name": "英雄宴 Heroes' Feast",
+        "id": "spell.6.Feast"
+      },
+      {
+        "name": "地动术 Move Earth",
+        "id": "spell.6.MoveEarth"
+      },
+      {
+        "name": "阳炎射线 Sunbeam",
+        "id": "spell.6.Sunbeam"
+      },
+      {
+        "name": "木遁术 Transport via Plants",
+        "id": "spell.6.TransportviaPlants"
+      },
+      {
+        "name": "棘墙术 Wall of Thorns",
+        "id": "spell.6.WallofThorns"
+      },
+      {
+        "name": "御风而行 Wind Walk",
+        "id": "spell.6.WindWalk"
+      }
+    ],
+    "7": [
+      {
+        "name": "火焰风暴 Fire Storm",
+        "id": "spell.7.FireStorm"
+      },
+      {
+        "name": "海市蜃楼 Mirage Arcane",
+        "id": "spell.7.MirageArcane"
+      },
+      {
+        "name": "异界传送 Plane Shift",
+        "id": "spell.7.PlaneShift"
+      },
+      {
+        "name": "再生术 Regenerate",
+        "id": "spell.7.Regenerate"
+      },
+      {
+        "name": "反转重力 Reverse Gravity",
+        "id": "spell.7.ReverseGravity"
+      }
+    ],
+    "8": [
+      {
+        "name": "动物形态 Animal Shapes",
+        "id": "spell.8.AnimalShapes"
+      },
+      {
+        "name": "操控天气 Control Weather",
+        "id": "spell.8.ControlWeather"
+      },
+      {
+        "name": "地震术 Earthquake",
+        "id": "spell.8.Earthquake"
+      },
+      {
+        "name": "弱智术 Feeblemind",
+        "id": "spell.8.Feeblemind"
+      },
+      {
+        "name": "阳炎爆 Sunburst",
+        "id": "spell.8.Sunburst"
+      },
+      {
+        "name": "海啸术 Tsunami",
+        "id": "spell.8.Tsunami"
+      }
+    ],
+    "9": [
+      {
+        "name": "预警术 Foresight",
+        "id": "spell.9.Foresight"
+      },
+      {
+        "name": "形体变化 Shapechange",
+        "id": "spell.9.Shapechange"
+      },
+      {
+        "name": "复仇风暴 Storm of Vengeance",
+        "id": "spell.9.StormofVengeance"
+      },
+      {
+        "name": "完全复生术 True Resurrection",
+        "id": "spell.9.TrueResurrection"
+      }
+    ]
+  },
+  "圣武士": {
+    "0": [],
+    "1": [
+      {
+        "name": "祝福术 Bless",
+        "id": "spell.1.Bless"
+      },
+      {
+        "name": "命令术 Command",
+        "id": "spell.1.Command"
+      },
+      {
+        "name": "强令对决 Compelled Duel",
+        "id": "spell.1.CompelledDuel"
+      },
+      {
+        "name": "疗伤术 Cure Wounds",
+        "id": "spell.1.CureWounds"
+      },
+      {
+        "name": "侦测善恶 Detect Evil and Good",
+        "id": "spell.1.DetectEvilAndGood"
+      },
+      {
+        "name": "侦测魔法 Detect Magic",
+        "id": "spell.1.DetectMagic"
+      },
+      {
+        "name": "侦测毒性和疾病 Detect Poison and Disease",
+        "id": "spell.1.DetectPoisonandDisease"
+      },
+      {
+        "name": "神恩 Divine Favor",
+        "id": "spell.1.DivineFavor"
+      },
+      {
+        "name": "英雄气概 Heroism",
+        "id": "spell.1.Heroism"
+      },
+      {
+        "name": "防护善恶 Protection from Evil and Good",
+        "id": "spell.1.ProtectionfromEvilandGood"
+      },
+      {
+        "name": "净化食粮 Purify Food and Drink",
+        "id": "spell.1.PurifyFoodandDrink"
+      },
+      {
+        "name": "炽焰斩 Searing Smite",
+        "id": "spell.1.SearingSmite"
+      },
+      {
+        "name": "虔诚护盾 Shield of Faith",
+        "id": "spell.1.ShieldofFaith"
+      },
+      {
+        "name": "雷鸣斩 Thunderous Smite",
+        "id": "spell.1.ThunderousSmite"
+      },
+      {
+        "name": "激愤斩 Wrathful Smite",
+        "id": "spell.1.WrathfulSmite"
+      }
+    ],
+    "2": [
+      {
+        "name": "援助术 Aid",
+        "id": "spell.2.Aid"
+      },
+      {
+        "name": "印记斩 Branding Smite",
+        "id": "spell.2.BrandingSmite"
+      },
+      {
+        "name": "寻获坐骑 Find Steed",
+        "id": "spell.2.FindSteed"
+      },
+      {
+        "name": "次级复原术 Lesser Restoration",
+        "id": "spell.2.LesserRestoration"
+      },
+      {
+        "name": "物件定位术 Locate Object",
+        "id": "spell.2.LocateObject"
+      },
+      {
+        "name": "防护毒素 Protection from Poison",
+        "id": "spell.2.ProtectionfromPoison"
+      },
+      {
+        "name": "诚实之域 Zone of Truth",
+        "id": "spell.2.ZoneofTruth"
+      }
+    ],
+    "3": [
+      {
+        "name": "活力灵光 Aura of Vitality",
+        "id": "spell.3.AuraofVitality"
+      },
+      {
+        "name": "致盲斩 Blinding Smite",
+        "id": "spell.3.BlindingSmite"
+      },
+      {
+        "name": "造粮术 Create Food and Water",
+        "id": "spell.3.CreateFoodandWater"
+      },
+      {
+        "name": "十字军披风 Crusader’s Mantle",
+        "id": "spell.3.CrusadersMantle"
+      },
+      {
+        "name": "昼明术 Daylight",
+        "id": "spell.3.Daylight"
+      },
+      {
+        "name": "解除魔法 Dispel Magic",
+        "id": "spell.3.DispelMagic"
+      },
+      {
+        "name": "防护法阵 Magic Circle",
+        "id": "spell.3.MagicCircle"
+      },
+      {
+        "name": "移除诅咒 Remove Curse",
+        "id": "spell.3.RemoveCurse"
+      },
+      {
+        "name": "回生术 Revivify",
+        "id": "spell.3.Revivify"
+      }
+    ],
+    "4": [
+      {
+        "name": "生命灵光 Aura of Life",
+        "id": "spell.4.AuraofLife"
+      },
+      {
+        "name": "净化灵光 Aura of Purity",
+        "id": "spell.4.AuraofPurity"
+      },
+      {
+        "name": "放逐术 Banishment",
+        "id": "spell.4.Banishment"
+      },
+      {
+        "name": "防死结界 Death Ward",
+        "id": "spell.4.DeathWard"
+      },
+      {
+        "name": "生物定位术 Locate Creature",
+        "id": "spell.4.LocateCreature"
+      },
+      {
+        "name": "惊惧斩 Staggering Smite",
+        "id": "spell.4.StaggeringSmite"
+      }
+    ],
+    "5": [
+      {
+        "name": "放逐斩 Banishing Smite",
+        "id": "spell.5.BanishingSmite"
+      },
+      {
+        "name": "原力法阵 Circle of Power",
+        "id": "spell.5.CircleofPower"
+      },
+      {
+        "name": "湮灭波 Destructive Wave",
+        "id": "spell.5.DestructiveWave"
+      },
+      {
+        "name": "反制善恶 Dispel Evil and Good",
+        "id": "spell.5.DispelEvilandGood"
+      },
+      {
+        "name": "指使术 Geas",
+        "id": "spell.5.Geas"
+      },
+      {
+        "name": "死者复活 Raise Dead",
+        "id": "spell.5.RaiseDead"
+      }
+    ],
+    "6": [],
+    "7": [],
+    "8": [],
+    "9": []
+  },
+  "游侠": {
+    "0": [],
+    "1": [
+      {
+        "name": "警报术 Alarm",
+        "id": "spell.1.Alarm"
+      },
+      {
+        "name": "化兽为友 Animal Friendship",
+        "id": "spell.1.AnimalFriendship"
+      },
+      {
+        "name": "疗伤术 Cure Wounds",
+        "id": "spell.1.CureWounds"
+      },
+      {
+        "name": "侦测魔法 Detect Magic",
+        "id": "spell.1.DetectMagic"
+      },
+      {
+        "name": "侦测毒性和疾病 Detect Poison and Disease",
+        "id": "spell.1.DetectPoisonandDisease"
+      },
+      {
+        "name": "诱捕打击 Ensnaring Strike",
+        "id": "spell.1.EnsnaringStrike"
+      },
+      {
+        "name": "云雾术 Fog Cloud",
+        "id": "spell.1.FogCloud"
+      },
+      {
+        "name": "神莓术 Goodberry",
+        "id": "spell.1.Goodberry"
+      },
+      {
+        "name": "棘雹术 Hail of Thorns",
+        "id": "spell.1.HailofThorns"
+      },
+      {
+        "name": "猎人印记 Hunter’s Mark",
+        "id": "spell.1.HuntersMark"
+      },
+      {
+        "name": "跳跃术 Jump",
+        "id": "spell.1.Jump"
+      },
+      {
+        "name": "大步奔行 Longstrider",
+        "id": "spell.1.Longstrider"
+      },
+      {
+        "name": "动物交谈术 Speak With Animals",
+        "id": "spell.1.SpeakwithAnimals"
+      }
+    ],
+    "2": [
+      {
+        "name": "动物信使 Animal Messenger",
+        "id": "spell.2.AnimalMessenger"
+      },
+      {
+        "name": "树肤术 Barkskin",
+        "id": "spell.2.Barkskin"
+      },
+      {
+        "name": "野兽知觉 Beast Sense",
+        "id": "spell.2.BeastSense"
+      },
+      {
+        "name": "警戒箭阵 Cordon of Arrows",
+        "id": "spell.2.CordonofArrows"
+      },
+      {
+        "name": "黑暗视觉 Darkvision",
+        "id": "spell.2.Darkvision"
+      },
+      {
+        "name": "寻找陷阱 Find Traps",
+        "id": "spell.2.FindTraps"
+      },
+      {
+        "name": "次级复原术 Lesser Restoration",
+        "id": "spell.2.LesserRestoration"
+      },
+      {
+        "name": "动植物定位术 Locate Animals or Plants",
+        "id": "spell.2.LocateAnimalsorPlants"
+      },
+      {
+        "name": "物件定位术 Locate Object",
+        "id": "spell.2.LocateObject"
+      },
+      {
+        "name": "行动无踪 Pass without Trace",
+        "id": "spell.2.PasswithoutTrace"
+      },
+      {
+        "name": "防护毒素 Protection from Poison",
+        "id": "spell.2.ProtectionfromPoison"
+      },
+      {
+        "name": "沉默术 Silence",
+        "id": "spell.2.Silence"
+      },
+      {
+        "name": "荆棘丛生 Spike Growth",
+        "id": "spell.2.SpikeGrowth"
+      }
+    ],
+    "3": [
+      {
+        "name": "召唤动物 Conjure Animals",
+        "id": "spell.3.ConjureAnimals"
+      },
+      {
+        "name": "召唤箭雨 Conjure Barrage",
+        "id": "spell.3.ConjureBarrage"
+      },
+      {
+        "name": "昼明术 Daylight",
+        "id": "spell.3.Daylight"
+      },
+      {
+        "name": "闪电箭矢 Lightning Arrows",
+        "id": "spell.3.LightningArrows"
+      },
+      {
+        "name": "回避侦测 Nondetection",
+        "id": "spell.3.Nondetection"
+      },
+      {
+        "name": "植物滋长 Plant Growth",
+        "id": "spell.3.PlantGrowth"
+      },
+      {
+        "name": "防护能量伤害 Protection from Energy",
+        "id": "spell.3.ProtectionfromEnergy"
+      },
+      {
+        "name": "植物交谈术 Speak With Plants",
+        "id": "spell.3.SpeakwithPlants"
+      },
+      {
+        "name": "水下呼吸 Water Breathing",
+        "id": "spell.3.WaterBreathing"
+      },
+      {
+        "name": "水上行走 Water Walk",
+        "id": "spell.3.WaterWalk"
+      },
+      {
+        "name": "风墙术 Wind Wall",
+        "id": "spell.3.WindWall"
+      }
+    ],
+    "4": [
+      {
+        "name": "林地之精咒唤术 Conjure Woodland Beings",
+        "id": "spell.4.ConjureWoodlandBeings"
+      },
+      {
+        "name": "行动自如 Freedom of Movement",
+        "id": "spell.4.FreedomofMovement"
+      },
+      {
+        "name": "擒抱藤 Grasping Vine",
+        "id": "spell.4.GraspingVine"
+      },
+      {
+        "name": "生物定位术 Locate Creature",
+        "id": "spell.4.LocateCreature"
+      },
+      {
+        "name": "石肤术 Stoneskin",
+        "id": "spell.4.Stoneskin"
+      }
+    ],
+    "5": [
+      {
+        "name": "问道自然 Commune with Nature",
+        "id": "spell.5.CommunewithNature"
+      },
+      {
+        "name": "万箭齐发 Conjure Volley",
+        "id": "spell.5.ConjureVolley"
+      },
+      {
+        "name": "迅捷箭袋 Swift Quiver",
+        "id": "spell.5.SwiftQuiver"
+      },
+      {
+        "name": "树跃术 Tree Stride",
+        "id": "spell.5.TreeStride"
+      }
+    ],
+    "6": [],
+    "7": [],
+    "8": [],
+    "9": []
+  },
+  "术士": {
+    "0": [
+      {
+        "name": "酸液飞溅 Acid Splash",
+        "id": "spell.0.AcidSplash"
+      },
+      {
+        "name": "剑刃防护 Blade Ward",
+        "id": "spell.0.BladeWard"
+      },
+      {
+        "name": "冻寒之触 Chill Touch",
+        "id": "spell.0.ChillTouch"
+      },
+      {
+        "name": "舞光术 Dancing Lights",
+        "id": "spell.0.DancingLights"
+      },
+      {
+        "name": "火焰箭 Fire Bolt",
+        "id": "spell.0.Firebolt"
+      },
+      {
+        "name": "交友术 Friends",
+        "id": "spell.0.Friends"
+      },
+      {
+        "name": "光亮术 Light",
+        "id": "spell.0.Light"
+      },
+      {
+        "name": "法师之手 Mage Hand",
+        "id": "spell.0.MageHand"
+      },
+      {
+        "name": "修复术 Mending",
+        "id": "spell.0.Mending"
+      },
+      {
+        "name": "传讯术 Message",
+        "id": "spell.0.Message"
+      },
+      {
+        "name": "次级幻影 Minor Illusion",
+        "id": "spell.0.MinorIllusion"
+      },
+      {
+        "name": "毒气喷溅 Poison Spray",
+        "id": "spell.0.PoisonSpray"
+      },
+      {
+        "name": "魔法伎俩 Prestidigitation",
+        "id": "spell.0.Prestidigitation"
+      },
+      {
+        "name": "冷冻射线 Ray of Frost",
+        "id": "spell.0.RayofFrost"
+      },
+      {
+        "name": "电爪 Shocking Grasp",
+        "id": "spell.0.ShockingGrasp"
+      },
+      {
+        "name": "克敌机先 True Strike",
+        "id": "spell.0.TrueStrike"
+      }
+    ],
+    "1": [
+      {
+        "name": "燃烧之手 Burning Hands",
+        "id": "spell.1.BurningHands"
+      },
+      {
+        "name": "魅惑人类 Charm Person",
+        "id": "spell.1.CharmPerson"
+      },
+      {
+        "name": "繁彩球 Chromatic Orb",
+        "id": "spell.1.ChromaticOrb"
+      },
+      {
+        "name": "七彩喷射 Color Spray",
+        "id": "spell.1.ColorSpray"
+      },
+      {
+        "name": "通晓语言 Comprehend Languages",
+        "id": "spell.1.ComprehendLanguages"
+      },
+      {
+        "name": "侦测魔法 Detect Magic",
+        "id": "spell.1.DetectMagic"
+      },
+      {
+        "name": "易容术 Disguise Self",
+        "id": "spell.1.DisguiseSelf"
+      },
+      {
+        "name": "脚底抹油 Expeditious Retreat",
+        "id": "spell.1.ExpeditiousRetreat"
+      },
+      {
+        "name": "虚假生命 False Life",
+        "id": "spell.1.FalseLife"
+      },
+      {
+        "name": "羽落术 Feather Fall",
+        "id": "spell.1.FeatherFall"
+      },
+      {
+        "name": "云雾术 Fog Cloud",
+        "id": "spell.1.FogCloud"
+      },
+      {
+        "name": "跳跃术 Jump",
+        "id": "spell.1.Jump"
+      },
+      {
+        "name": "魔法飞弹 Magic Missile",
+        "id": "spell.1.MagicMissile"
+      },
+      {
+        "name": "致病射线 Ray of Sickness",
+        "id": "spell.1.RayofSickness"
+      },
+      {
+        "name": "护盾术 Shield",
+        "id": "spell.1.Shield"
+      },
+      {
+        "name": "无声幻影 Silent Image",
+        "id": "spell.1.SilentImage"
+      },
+      {
+        "name": "睡眠术 Sleep",
+        "id": "spell.1.Sleep"
+      },
+      {
+        "name": "雷鸣波 Thunderwave",
+        "id": "spell.1.Thunderwave"
+      },
+      {
+        "name": "巫术箭 Witch Bolt",
+        "id": "spell.1.WitchBolt"
+      }
+    ],
+    "2": [
+      {
+        "name": "变身术 Alter Self",
+        "id": "spell.2.AlterSelf"
+      },
+      {
+        "name": "朦胧术 Blur",
+        "id": "spell.2.Blur"
+      },
+      {
+        "name": "匕首之云 Cloud of Daggers",
+        "id": "spell.2.CloudofDaggers"
+      },
+      {
+        "name": "疯狂冠冕 Crown of Madness",
+        "id": "spell.2.CrownofMadness"
+      },
+      {
+        "name": "黑暗术 Darkness",
+        "id": "spell.2.Darkness"
+      },
+      {
+        "name": "黑暗视觉 Darkvision",
+        "id": "spell.2.Darkvision"
+      },
+      {
+        "name": "侦测思想 Detect Thoughts",
+        "id": "spell.2.DetectThoughts"
+      },
+      {
+        "name": "强化属性 Enhance Ability",
+        "id": "spell.2.EnhanceAbility"
+      },
+      {
+        "name": "造风术 Gust of Wind",
+        "id": "spell.2.GustofWind"
+      },
+      {
+        "name": "人类定身术 Hold Person",
+        "id": "spell.2.HoldPerson"
+      },
+      {
+        "name": "隐形术 Invisibility",
+        "id": "spell.2.Invisibility"
+      },
+      {
+        "name": "敲击术 Knock",
+        "id": "spell.2.Knock"
+      },
+      {
+        "name": "浮空术 Levitate",
+        "id": "spell.2.Levitate"
+      },
+      {
+        "name": "镜影术 Mirror Image",
+        "id": "spell.2.MirrorImage"
+      },
+      {
+        "name": "迷踪步 Misty Step",
+        "id": "spell.2.MistyStep"
+      },
+      {
+        "name": "魅影之力 Phantasmal Force",
+        "id": "spell.2.PhantasmalForce"
+      },
+      {
+        "name": "灼热射线 Scorching Ray",
+        "id": "spell.2.ScorchingRay"
+      },
+      {
+        "name": "识破隐形 See Invisibility",
+        "id": "spell.2.SeeInvisibility"
+      },
+      {
+        "name": "粉碎音波 Shatter",
+        "id": "spell.2.Shatter"
+      },
+      {
+        "name": "蛛行术 Spider Climb",
+        "id": "spell.2.SpiderClimb"
+      },
+      {
+        "name": "暗示术 Suggestion",
+        "id": "spell.2.Suggestion"
+      },
+      {
+        "name": "蛛网术 Web",
+        "id": "spell.2.Web"
+      }
+    ],
+    "3": [
+      {
+        "name": "闪现术 Blink",
+        "id": "spell.3.Blink"
+      },
+      {
+        "name": "鹰眼术 Clairvoyance",
+        "id": "spell.3.Clairvoyance"
+      },
+      {
+        "name": "法术反制 Counterspell",
+        "id": "spell.3.Counterspell"
+      },
+      {
+        "name": "昼明术 Daylight",
+        "id": "spell.3.Daylight"
+      },
+      {
+        "name": "解除魔法 Dispel Magic",
+        "id": "spell.3.DispelMagic"
+      },
+      {
+        "name": "恐惧术 Fear",
+        "id": "spell.3.Fear"
+      },
+      {
+        "name": "火球术 Fireball",
+        "id": "spell.3.Fireball"
+      },
+      {
+        "name": "飞行术 Fly",
+        "id": "spell.3.Fly"
+      },
+      {
+        "name": "气化形体 Gaseous Form",
+        "id": "spell.3.GaseousForm"
+      },
+      {
+        "name": "加速术 Haste",
+        "id": "spell.3.Haste"
+      },
+      {
+        "name": "催眠图纹 Hypnotic Pattern",
+        "id": "spell.3.HypnoticPattern"
+      },
+      {
+        "name": "闪电束 Lightning Bolt",
+        "id": "spell.3.LightningBolt"
+      },
+      {
+        "name": "高等幻影 Major Image",
+        "id": "spell.3.MajorImage"
+      },
+      {
+        "name": "防护能量伤害 Protection from Energy",
+        "id": "spell.3.ProtectionfromEnergy"
+      },
+      {
+        "name": "雪雨暴 Sleet Storm",
+        "id": "spell.3.SleetStorm"
+      },
+      {
+        "name": "缓慢术 Slow",
+        "id": "spell.3.Slow"
+      },
+      {
+        "name": "臭云术 Stinking Cloud",
+        "id": "spell.3.StinkingCloud"
+      },
+      {
+        "name": "巧言术 Tongues",
+        "id": "spell.3.Tongues"
+      },
+      {
+        "name": "水下呼吸 Water Breathing",
+        "id": "spell.3.WaterBreathing"
+      },
+      {
+        "name": "水上行走 Water Walk",
+        "id": "spell.3.WaterWalk"
+      }
+    ],
+    "4": [
+      {
+        "name": "放逐术 Banishment",
+        "id": "spell.4.Banishment"
+      },
+      {
+        "name": "枯萎术 Blight",
+        "id": "spell.4.Blight"
+      },
+      {
+        "name": "困惑术 Confusion",
+        "id": "spell.4.Confusion"
+      },
+      {
+        "name": "任意门 Dimension Door",
+        "id": "spell.4.DimensionDoor"
+      },
+      {
+        "name": "支配野兽 Dominate Beast",
+        "id": "spell.4.DominateBeast"
+      },
+      {
+        "name": "高等隐形术 Greater Invisibility",
+        "id": "spell.4.GreaterInvisibility"
+      },
+      {
+        "name": "冰风暴 Ice Storm",
+        "id": "spell.4.IceStorm"
+      },
+      {
+        "name": "变形术 Polymorph",
+        "id": "spell.4.Polymorph"
+      },
+      {
+        "name": "石肤术 Stoneskin",
+        "id": "spell.4.Stoneskin"
+      },
+      {
+        "name": "火墙术 Wall of Fire",
+        "id": "spell.4.WallofFire"
+      }
+    ],
+    "5": [
+      {
+        "name": "活化物件 Animate Objects",
+        "id": "spell.5.AnimateObjects"
+      },
+      {
+        "name": "死云术 Cloudkill",
+        "id": "spell.5.Cloudkill"
+      },
+      {
+        "name": "寒冰锥 Cone of Cold",
+        "id": "spell.5.ConeofCold"
+      },
+      {
+        "name": "造物术 Creation",
+        "id": "spell.5.Creation"
+      },
+      {
+        "name": "支配人类 Dominate Person",
+        "id": "spell.5.DominatePerson"
+      },
+      {
+        "name": "怪物定身术 Hold Monster",
+        "id": "spell.5.HoldMonster"
+      },
+      {
+        "name": "疫病虫群 Insect Plague",
+        "id": "spell.5.InsectPlague"
+      },
+      {
+        "name": "伪装术 Seeming",
+        "id": "spell.5.Seeming"
+      },
+      {
+        "name": "心灵遥控 Telekinesis",
+        "id": "spell.5.Telekinesis"
+      },
+      {
+        "name": "传送法阵 Teleportation Circle",
+        "id": "spell.5.TeleportationCircle"
+      },
+      {
+        "name": "石墙术 Wall of Stone",
+        "id": "spell.5.WallofStone"
+      }
+    ],
+    "6": [
+      {
+        "name": "秘法门 Arcane Gate",
+        "id": "spell.6.ArcaneGate"
+      },
+      {
+        "name": "连锁闪电 Chain Lightning",
+        "id": "spell.6.ChainLightning"
+      },
+      {
+        "name": "死亡法阵 Circle of Death",
+        "id": "spell.6.CircleofDeath"
+      },
+      {
+        "name": "解离术 Disintegrate",
+        "id": "spell.6.Disintegrate"
+      },
+      {
+        "name": "摄心目光 Eyebite",
+        "id": "spell.6.Eyebite"
+      },
+      {
+        "name": "法术无效结界 Globe of Invulnerability",
+        "id": "spell.6.GlobeofInvulnerability"
+      },
+      {
+        "name": "群体暗示术 Mass Suggestion",
+        "id": "spell.6.MassSuggestion"
+      },
+      {
+        "name": "地动术 Move Earth",
+        "id": "spell.6.MoveEarth"
+      },
+      {
+        "name": "阳炎射线 Sunbeam",
+        "id": "spell.6.Sunbeam"
+      },
+      {
+        "name": "真知术 True Seeing",
+        "id": "spell.6.TrueSeeing"
+      }
+    ],
+    "7": [
+      {
+        "name": "延迟爆裂火球 Delayed Blast Fireball",
+        "id": "spell.7.DelayedBlastFireball"
+      },
+      {
+        "name": "以太化 Etherealness",
+        "id": "spell.7.Etherealness"
+      },
+      {
+        "name": "死亡一指 Finger of Death",
+        "id": "spell.7.FingerofDeath"
+      },
+      {
+        "name": "火焰风暴 Fire Storm",
+        "id": "spell.7.FireStorm"
+      },
+      {
+        "name": "异界传送 Plane Shift",
+        "id": "spell.7.PlaneShift"
+      },
+      {
+        "name": "虹光喷射 Prismatic Spray",
+        "id": "spell.7.PrismaticSpray"
+      },
+      {
+        "name": "反转重力 Reverse Gravity",
+        "id": "spell.7.ReverseGravity"
+      },
+      {
+        "name": "传送术 Teleport",
+        "id": "spell.7.Teleport"
+      }
+    ],
+    "8": [
+      {
+        "name": "支配怪物 Dominate Monster",
+        "id": "spell.8.DominateMonster"
+      },
+      {
+        "name": "地震术 Earthquake",
+        "id": "spell.8.Earthquake"
+      },
+      {
+        "name": "焚云术 Incendiary Cloud",
+        "id": "spell.8.IncendiaryCloud"
+      },
+      {
+        "name": "律令震慑 Power Word Stun",
+        "id": "spell.8.PowerWordStun"
+      },
+      {
+        "name": "阳炎爆 Sunburst",
+        "id": "spell.8.Sunburst"
+      }
+    ],
+    "9": [
+      {
+        "name": "异界之门 Gate",
+        "id": "spell.9.Gate"
+      },
+      {
+        "name": "流星爆 Meteor Swarm",
+        "id": "spell.9.MeteorSwarm"
+      },
+      {
+        "name": "律令死亡 Power Word Kill",
+        "id": "spell.9.PowerWordKill"
+      },
+      {
+        "name": "时间停止 Time Stop",
+        "id": "spell.9.TimeStop"
+      },
+      {
+        "name": "祈愿术 Wish",
+        "id": "spell.9.Wish"
+      }
+    ]
+  },
+  "邪术师": {
+    "0": [
+      {
+        "name": "剑刃防护 Blade Ward",
+        "id": "spell.0.BladeWard"
+      },
+      {
+        "name": "冻寒之触 Chill Touch",
+        "id": "spell.0.ChillTouch"
+      },
+      {
+        "name": "魔能爆 Eldritch Blast",
+        "id": "spell.0.EldritchBlast"
+      },
+      {
+        "name": "交友术 Friends",
+        "id": "spell.0.Friends"
+      },
+      {
+        "name": "法师之手 Mage Hand",
+        "id": "spell.0.MageHand"
+      },
+      {
+        "name": "次级幻影 Minor Illusion",
+        "id": "spell.0.MinorIllusion"
+      },
+      {
+        "name": "毒气喷溅 Poison Spray",
+        "id": "spell.0.PoisonSpray"
+      },
+      {
+        "name": "魔法伎俩 Prestidigitation",
+        "id": "spell.0.Prestidigitation"
+      },
+      {
+        "name": "克敌机先 True Strike",
+        "id": "spell.0.TrueStrike"
+      }
+    ],
+    "1": [
+      {
+        "name": "艾嘉西斯之铠 Armor of Agathys",
+        "id": "spell.1.ArmorofAgathys"
+      },
+      {
+        "name": "哈达之臂 Arms of Hadar",
+        "id": "spell.1.ArmsofHadar"
+      },
+      {
+        "name": "魅惑人类 Charm Person",
+        "id": "spell.1.CharmPerson"
+      },
+      {
+        "name": "通晓语言 Comprehend Languages",
+        "id": "spell.1.ComprehendLanguages"
+      },
+      {
+        "name": "脚底抹油 Expeditious Retreat",
+        "id": "spell.1.ExpeditiousRetreat"
+      },
+      {
+        "name": "炼狱叱喝 Hellish Rebuke",
+        "id": "spell.1.HellishRebuke"
+      },
+      {
+        "name": "脆弱诅咒 Hex",
+        "id": "spell.1.Hex"
+      },
+      {
+        "name": "迷幻手稿 Illusory Script",
+        "id": "spell.1.IllusoryScript"
+      },
+      {
+        "name": "防护善恶 Protection from Evil and Good",
+        "id": "spell.1.ProtectionfromEvilandGood"
+      },
+      {
+        "name": "隐形仆役 Unseen Servant",
+        "id": "spell.1.UnseenServant"
+      },
+      {
+        "name": "巫术箭 Witch Bolt",
+        "id": "spell.1.WitchBolt"
+      }
+    ],
+    "2": [
+      {
+        "name": "匕首之云 Cloud of Daggers",
+        "id": "spell.2.CloudofDaggers"
+      },
+      {
+        "name": "疯狂冠冕 Crown of Madness",
+        "id": "spell.2.CrownofMadness"
+      },
+      {
+        "name": "黑暗术 Darkness",
+        "id": "spell.2.Darkness"
+      },
+      {
+        "name": "注目术 Enthrall",
+        "id": "spell.2.Enthrall"
+      },
+      {
+        "name": "人类定身术 Hold Person",
+        "id": "spell.2.HoldPerson"
+      },
+      {
+        "name": "隐形术 Invisibility",
+        "id": "spell.2.Invisibility"
+      },
+      {
+        "name": "镜影术 Mirror Image",
+        "id": "spell.2.MirrorImage"
+      },
+      {
+        "name": "迷踪步 Misty Step",
+        "id": "spell.2.MistyStep"
+      },
+      {
+        "name": "衰弱射线 Ray of Enfeeblement",
+        "id": "spell.2.RayofEnfeeblement"
+      },
+      {
+        "name": "粉碎音波 Shatter",
+        "id": "spell.2.Shatter"
+      },
+      {
+        "name": "蛛行术 Spider Climb",
+        "id": "spell.2.SpiderClimb"
+      },
+      {
+        "name": "暗示术 Suggestion",
+        "id": "spell.2.Suggestion"
+      }
+    ],
+    "3": [
+      {
+        "name": "法术反制 Counterspell",
+        "id": "spell.3.Counterspell"
+      },
+      {
+        "name": "解除魔法 Dispel Magic",
+        "id": "spell.3.DispelMagic"
+      },
+      {
+        "name": "恐惧术 Fear",
+        "id": "spell.3.Fear"
+      },
+      {
+        "name": "飞行术 Fly",
+        "id": "spell.3.Fly"
+      },
+      {
+        "name": "气化形体 Gaseous Form",
+        "id": "spell.3.GaseousForm"
+      },
+      {
+        "name": "哈达之欲 Hunger of Hadar",
+        "id": "spell.3.HungerofHadar"
+      },
+      {
+        "name": "催眠图纹 Hypnotic Pattern",
+        "id": "spell.3.HypnoticPattern"
+      },
+      {
+        "name": "防护法阵 Magic Circle",
+        "id": "spell.3.MagicCircle"
+      },
+      {
+        "name": "高等幻影 Major Image",
+        "id": "spell.3.MajorImage"
+      },
+      {
+        "name": "移除诅咒 Remove Curse",
+        "id": "spell.3.RemoveCurse"
+      },
+      {
+        "name": "巧言术 Tongues",
+        "id": "spell.3.Tongues"
+      },
+      {
+        "name": "吸血鬼之触 Vampiric Touch",
+        "id": "spell.3.VampiricTouch"
+      }
+    ],
+    "4": [
+      {
+        "name": "放逐术 Banishment",
+        "id": "spell.4.Banishment"
+      },
+      {
+        "name": "枯萎术 Blight",
+        "id": "spell.4.Blight"
+      },
+      {
+        "name": "任意门 Dimension Door",
+        "id": "spell.4.DimensionDoor"
+      },
+      {
+        "name": "幻景 Hallucinatory Terrain",
+        "id": "spell.4.HallucinatoryTerrain"
+      }
+    ],
+    "5": [
+      {
+        "name": "异界探知 Contact Other Plane",
+        "id": "spell.5.ContactOtherPlane"
+      },
+      {
+        "name": "托梦术 Dream",
+        "id": "spell.5.Dream"
+      },
+      {
+        "name": "怪物定身术 Hold Monster",
+        "id": "spell.5.HoldMonster"
+      },
+      {
+        "name": "探知 Scrying",
+        "id": "spell.5.Scrying"
+      }
+    ],
+    "6": [
+      {
+        "name": "秘法门 Arcane Gate",
+        "id": "spell.6.ArcaneGate"
+      },
+      {
+        "name": "死亡法阵 Circle of Death",
+        "id": "spell.6.CircleofDeath"
+      },
+      {
+        "name": "精类咒唤术 Conjure Fey",
+        "id": "spell.6.ConjureFey"
+      },
+      {
+        "name": "唤起死灵 Create Undead",
+        "id": "spell.6.CreateUndead"
+      },
+      {
+        "name": "摄心目光 Eyebite",
+        "id": "spell.6.Eyebite"
+      },
+      {
+        "name": "石化术 Flesh to Stone",
+        "id": "spell.6.FleshtoStone"
+      },
+      {
+        "name": "群体暗示术 Mass Suggestion",
+        "id": "spell.6.MassSuggestion"
+      },
+      {
+        "name": "真知术 True Seeing",
+        "id": "spell.6.TrueSeeing"
+      }
+    ],
+    "7": [
+      {
+        "name": "以太化 Etherealness",
+        "id": "spell.7.Etherealness"
+      },
+      {
+        "name": "死亡一指 Finger of Death",
+        "id": "spell.7.FingerofDeath"
+      },
+      {
+        "name": "力场监牢 Forcecage",
+        "id": "spell.7.Forcecage"
+      },
+      {
+        "name": "异界传送 Plane Shift",
+        "id": "spell.7.PlaneShift"
+      }
+    ],
+    "8": [
+      {
+        "name": "创造半位面 Demiplane",
+        "id": "spell.8.Demiplane"
+      },
+      {
+        "name": "支配怪物 Dominate Monster",
+        "id": "spell.8.DominateMonster"
+      },
+      {
+        "name": "弱智术 Feeblemind",
+        "id": "spell.8.Feeblemind"
+      },
+      {
+        "name": "花言巧语 Glibness",
+        "id": "spell.8.Glibness"
+      },
+      {
+        "name": "律令震慑 Power Word Stun",
+        "id": "spell.8.PowerWordStun"
+      }
+    ],
+    "9": [
+      {
+        "name": "星界投影 Astral Projection",
+        "id": "spell.9.AstralProjection"
+      },
+      {
+        "name": "预警术 Foresight",
+        "id": "spell.9.Foresight"
+      },
+      {
+        "name": "禁锢术 Imprisonment",
+        "id": "spell.9.Imprisonment"
+      },
+      {
+        "name": "律令死亡 Power Word Kill",
+        "id": "spell.9.PowerWordKill"
+      },
+      {
+        "name": "完全变形术 True Polymorph",
+        "id": "spell.9.TruePolymorph"
+      }
+    ]
+  },
+  "法师": {
+    "0": [
+      {
+        "name": "酸液飞溅 Acid Splash",
+        "id": "spell.0.AcidSplash"
+      },
+      {
+        "name": "剑刃防护 Blade Ward",
+        "id": "spell.0.BladeWard"
+      },
+      {
+        "name": "冻寒之触 Chill Touch",
+        "id": "spell.0.ChillTouch"
+      },
+      {
+        "name": "舞光术 Dancing Lights",
+        "id": "spell.0.DancingLights"
+      },
+      {
+        "name": "火焰箭 Fire Bolt",
+        "id": "spell.0.Firebolt"
+      },
+      {
+        "name": "交友术 Friends",
+        "id": "spell.0.Friends"
+      },
+      {
+        "name": "光亮术 Light",
+        "id": "spell.0.Light"
+      },
+      {
+        "name": "法师之手 Mage Hand",
+        "id": "spell.0.MageHand"
+      },
+      {
+        "name": "修复术 Mending",
+        "id": "spell.0.Mending"
+      },
+      {
+        "name": "传讯术 Message",
+        "id": "spell.0.Message"
+      },
+      {
+        "name": "次级幻影 Minor Illusion",
+        "id": "spell.0.MinorIllusion"
+      },
+      {
+        "name": "毒气喷溅 Poison Spray",
+        "id": "spell.0.PoisonSpray"
+      },
+      {
+        "name": "魔法伎俩 Prestidigitation",
+        "id": "spell.0.Prestidigitation"
+      },
+      {
+        "name": "冷冻射线 Ray of Frost",
+        "id": "spell.0.RayofFrost"
+      },
+      {
+        "name": "电爪 Shocking Grasp",
+        "id": "spell.0.ShockingGrasp"
+      },
+      {
+        "name": "克敌机先 True Strike",
+        "id": "spell.0.TrueStrike"
+      }
+    ],
+    "1": [
+      {
+        "name": "警报术 Alarm",
+        "id": "spell.1.Alarm"
+      },
+      {
+        "name": "燃烧之手 Burning Hands",
+        "id": "spell.1.BurningHands"
+      },
+      {
+        "name": "魅惑人类 Charm Person",
+        "id": "spell.1.CharmPerson"
+      },
+      {
+        "name": "繁彩球 Chromatic Orb",
+        "id": "spell.1.ChromaticOrb"
+      },
+      {
+        "name": "七彩喷射 Color Spray",
+        "id": "spell.1.ColorSpray"
+      },
+      {
+        "name": "通晓语言 Comprehend Languages",
+        "id": "spell.1.ComprehendLanguages"
+      },
+      {
+        "name": "侦测魔法 Detect Magic",
+        "id": "spell.1.DetectMagic"
+      },
+      {
+        "name": "易容术 Disguise Self",
+        "id": "spell.1.DisguiseSelf"
+      },
+      {
+        "name": "脚底抹油 Expeditious Retreat",
+        "id": "spell.1.ExpeditiousRetreat"
+      },
+      {
+        "name": "虚假生命 False Life",
+        "id": "spell.1.FalseLife"
+      },
+      {
+        "name": "羽落术 Feather Fall",
+        "id": "spell.1.FeatherFall"
+      },
+      {
+        "name": "寻获魔宠 Find Familiar",
+        "id": "spell.1.FindFamiliar"
+      },
+      {
+        "name": "云雾术 Fog Cloud",
+        "id": "spell.1.FogCloud"
+      },
+      {
+        "name": "油腻术 Grease",
+        "id": "spell.1.Grease"
+      },
+      {
+        "name": "鉴定术 Identify",
+        "id": "spell.1.Identify"
+      },
+      {
+        "name": "迷幻手稿 Illusory Script",
+        "id": "spell.1.IllusoryScript"
+      },
+      {
+        "name": "跳跃术 Jump",
+        "id": "spell.1.Jump"
+      },
+      {
+        "name": "大步奔行 Longstrider",
+        "id": "spell.1.Longstrider"
+      },
+      {
+        "name": "魔法飞弹 Magic Missile",
+        "id": "spell.1.MagicMissile"
+      },
+      {
+        "name": "防护善恶 Protection from Evil and Good",
+        "id": "spell.1.ProtectionfromEvilandGood"
+      },
+      {
+        "name": "致病射线 Ray of Sickness",
+        "id": "spell.1.RayofSickness"
+      },
+      {
+        "name": "护盾术 Shield",
+        "id": "spell.1.Shield"
+      },
+      {
+        "name": "无声幻影 Silent Image",
+        "id": "spell.1.SilentImage"
+      },
+      {
+        "name": "睡眠术 Sleep",
+        "id": "spell.1.Sleep"
+      },
+      {
+        "name": "塔莎狂笑术 Tasha’s Hideous Laughter",
+        "id": "spell.1.TashasHideousLaughter"
+      },
+      {
+        "name": "谭森浮碟术 Tenser’s Floating Disk",
+        "id": "spell.1.TensersFloatingDisk"
+      },
+      {
+        "name": "雷鸣波 Thunderwave",
+        "id": "spell.1.Thunderwave"
+      },
+      {
+        "name": "隐形仆役 Unseen Servant",
+        "id": "spell.1.UnseenServant"
+      },
+      {
+        "name": "巫术箭 Witch Bolt",
+        "id": "spell.1.WitchBolt"
+      }
+    ],
+    "2": [
+      {
+        "name": "变身术 Alter Self",
+        "id": "spell.2.AlterSelf"
+      },
+      {
+        "name": "秘法锁 Arcane Lock",
+        "id": "spell.2.ArcaneLock"
+      },
+      {
+        "name": "朦胧术 Blur",
+        "id": "spell.2.Blur"
+      },
+      {
+        "name": "匕首之云 Cloud of Daggers",
+        "id": "spell.2.CloudofDaggers"
+      },
+      {
+        "name": "不灭明焰 Continual Flame",
+        "id": "spell.2.ContinualFlame"
+      },
+      {
+        "name": "疯狂冠冕 Crown of Madness",
+        "id": "spell.2.CrownofMadness"
+      },
+      {
+        "name": "黑暗术 Darkness",
+        "id": "spell.2.Darkness"
+      },
+      {
+        "name": "黑暗视觉 Darkvision",
+        "id": "spell.2.Darkvision"
+      },
+      {
+        "name": "侦测思想 Detect Thoughts",
+        "id": "spell.2.DetectThoughts"
+      },
+      {
+        "name": "炽焰法球 Flaming Sphere",
+        "id": "spell.2.FlamingSphere"
+      },
+      {
+        "name": "遗体防腐 Gentle Repose",
+        "id": "spell.2.GentleRepose"
+      },
+      {
+        "name": "造风术 Gust of Wind",
+        "id": "spell.2.GustofWind"
+      },
+      {
+        "name": "人类定身术 Hold Person",
+        "id": "spell.2.HoldPerson"
+      },
+      {
+        "name": "隐形术 Invisibility",
+        "id": "spell.2.Invisibility"
+      },
+      {
+        "name": "敲击术 Knock",
+        "id": "spell.2.Knock"
+      },
+      {
+        "name": "浮空术 Levitate",
+        "id": "spell.2.Levitate"
+      },
+      {
+        "name": "物件定位术 Locate Object",
+        "id": "spell.2.LocateObject"
+      },
+      {
+        "name": "魔嘴术 Magic Mouth",
+        "id": "spell.2.MagicMouth"
+      },
+      {
+        "name": "马友夫强酸箭 Melf’s Acid Arrow",
+        "id": "spell.2.MelfsAcidArrow"
+      },
+      {
+        "name": "镜影术 Mirror Image",
+        "id": "spell.2.MirrorImage"
+      },
+      {
+        "name": "迷踪步 Misty Step",
+        "id": "spell.2.MistyStep"
+      },
+      {
+        "name": "涅斯图魔法灵光 Nystul’s Magic Aura",
+        "id": "spell.2.NystulsMagicAura"
+      },
+      {
+        "name": "魅影之力 Phantasmal Force",
+        "id": "spell.2.PhantasmalForce"
+      },
+      {
+        "name": "衰弱射线 Ray of Enfeeblement",
+        "id": "spell.2.RayofEnfeeblement"
+      },
+      {
+        "name": "魔绳术 Rope Trick",
+        "id": "spell.2.RopeTrick"
+      },
+      {
+        "name": "灼热射线 Scorching Ray",
+        "id": "spell.2.ScorchingRay"
+      },
+      {
+        "name": "识破隐形 See Invisibility",
+        "id": "spell.2.SeeInvisibility"
+      },
+      {
+        "name": "粉碎音波 Shatter",
+        "id": "spell.2.Shatter"
+      },
+      {
+        "name": "蛛行术 Spider Climb",
+        "id": "spell.2.SpiderClimb"
+      },
+      {
+        "name": "暗示术 Suggestion",
+        "id": "spell.2.Suggestion"
+      },
+      {
+        "name": "蛛网术 Web",
+        "id": "spell.2.Web"
+      }
+    ],
+    "3": [
+      {
+        "name": "活化死尸 Animate Dead",
+        "id": "spell.3.AnimateDead"
+      },
+      {
+        "name": "降咒 Bestow Curse",
+        "id": "spell.3.BestowCurse"
+      },
+      {
+        "name": "闪现术 Blink",
+        "id": "spell.3.Blink"
+      },
+      {
+        "name": "鹰眼术 Clairvoyance",
+        "id": "spell.3.Clairvoyance"
+      },
+      {
+        "name": "法术反制 Counterspell",
+        "id": "spell.3.Counterspell"
+      },
+      {
+        "name": "解除魔法 Dispel Magic",
+        "id": "spell.3.DispelMagic"
+      },
+      {
+        "name": "恐惧术 Fear",
+        "id": "spell.3.Fear"
+      },
+      {
+        "name": "假死术 Feign Death",
+        "id": "spell.3.FeignDeath"
+      },
+      {
+        "name": "火球术 Fireball",
+        "id": "spell.3.Fireball"
+      },
+      {
+        "name": "飞行术 Fly",
+        "id": "spell.3.Fly"
+      },
+      {
+        "name": "气化形体 Gaseous Form",
+        "id": "spell.3.GaseousForm"
+      },
+      {
+        "name": "守卫刻文 Glyph of Warding",
+        "id": "spell.3.GlyphofWarding"
+      },
+      {
+        "name": "加速术 Haste",
+        "id": "spell.3.Haste"
+      },
+      {
+        "name": "催眠图纹 Hypnotic Pattern",
+        "id": "spell.3.HypnoticPattern"
+      },
+      {
+        "name": "李欧蒙小屋 Leomund’s Tiny Hut",
+        "id": "spell.3.LeomundsTinyHut"
+      },
+      {
+        "name": "闪电束 Lightning Bolt",
+        "id": "spell.3.LightningBolt"
+      },
+      {
+        "name": "防护法阵 Magic Circle",
+        "id": "spell.3.MagicCircle"
+      },
+      {
+        "name": "高等幻影 Major Image",
+        "id": "spell.3.MajorImage"
+      },
+      {
+        "name": "回避侦测 Nondetection",
+        "id": "spell.3.Nondetection"
+      },
+      {
+        "name": "魅影驹 Phantom Steed",
+        "id": "spell.3.PhantomSteed"
+      },
+      {
+        "name": "防护能量伤害 Protection from Energy",
+        "id": "spell.3.ProtectionfromEnergy"
+      },
+      {
+        "name": "移除诅咒 Remove Curse",
+        "id": "spell.3.RemoveCurse"
+      },
+      {
+        "name": "短讯术 Sending",
+        "id": "spell.3.Sending"
+      },
+      {
+        "name": "雪雨暴 Sleet Storm",
+        "id": "spell.3.SleetStorm"
+      },
+      {
+        "name": "缓慢术 Slow",
+        "id": "spell.3.Slow"
+      },
+      {
+        "name": "臭云术 Stinking Cloud",
+        "id": "spell.3.StinkingCloud"
+      },
+      {
+        "name": "巧言术 Tongues",
+        "id": "spell.3.Tongues"
+      },
+      {
+        "name": "吸血鬼之触 Vampiric Touch",
+        "id": "spell.3.VampiricTouch"
+      },
+      {
+        "name": "水下呼吸 Water Breathing",
+        "id": "spell.3.WaterBreathing"
+      }
+    ],
+    "4": [
+      {
+        "name": "秘法眼 Arcane Eye",
+        "id": "spell.4.ArcaneEye"
+      },
+      {
+        "name": "放逐术 Banishment",
+        "id": "spell.4.Banishment"
+      },
+      {
+        "name": "枯萎术 Blight",
+        "id": "spell.4.Blight"
+      },
+      {
+        "name": "困惑术 Confusion",
+        "id": "spell.4.Confusion"
+      },
+      {
+        "name": "次级元素咒唤术 Conjure Minor Elementals",
+        "id": "spell.4.ConjureMinorElementals"
+      },
+      {
+        "name": "操控水体 Control Water",
+        "id": "spell.4.ControlWater"
+      },
+      {
+        "name": "任意门 Dimension Door",
+        "id": "spell.4.DimensionDoor"
+      },
+      {
+        "name": "艾伐黑触手 Evard’s Black Tentacles",
+        "id": "spell.4.EvardsBlackTentacles"
+      },
+      {
+        "name": "鬼斧神工 Fabricate",
+        "id": "spell.4.Fabricate"
+      },
+      {
+        "name": "火焰护盾 Fire Shield",
+        "id": "spell.4.FireShield"
+      },
+      {
+        "name": "高等隐形术 Greater Invisibility",
+        "id": "spell.4.GreaterInvisibility"
+      },
+      {
+        "name": "幻景 Hallucinatory Terrain",
+        "id": "spell.4.HallucinatoryTerrain"
+      },
+      {
+        "name": "冰风暴 Ice Storm",
+        "id": "spell.4.IceStorm"
+      },
+      {
+        "name": "李欧蒙秘藏箱 Leomund’s Secret Chest",
+        "id": "spell.4.LeomundsSecretChest"
+      },
+      {
+        "name": "生物定位术 Locate Creature",
+        "id": "spell.4.LocateCreature"
+      },
+      {
+        "name": "魔邓肯忠犬 Mordenkainen’s Faithful Hound",
+        "id": "spell.4.MordenkainensFaithfulHound"
+      },
+      {
+        "name": "魔邓肯私人密室 Mordenkainen’s Private Sanctum",
+        "id": "spell.4.MordenkainensPrivateSanctum"
+      },
+      {
+        "name": "欧提路克弹力法球 Otiluke’s Resilient Sphere",
+        "id": "spell.4.OtilukesResilientSphere"
+      },
+      {
+        "name": "魅影杀手 Phantasmal Killer",
+        "id": "spell.4.PhantasmalKiller"
+      },
+      {
+        "name": "变形术 Polymorph",
+        "id": "spell.4.Polymorph"
+      },
+      {
+        "name": "塑石术 Stone Shape",
+        "id": "spell.4.StoneShape"
+      },
+      {
+        "name": "石肤术 Stoneskin",
+        "id": "spell.4.Stoneskin"
+      },
+      {
+        "name": "火墙术 Wall of Fire",
+        "id": "spell.4.WallofFire"
+      }
+    ],
+    "5": [
+      {
+        "name": "活化物件 Animate Objects",
+        "id": "spell.5.AnimateObjects"
+      },
+      {
+        "name": "毕格比之手 Bigby’s Hand",
+        "id": "spell.5.BigbysHand"
+      },
+      {
+        "name": "死云术 Cloudkill",
+        "id": "spell.5.Cloudkill"
+      },
+      {
+        "name": "寒冰锥 Cone of Cold",
+        "id": "spell.5.ConeofCold"
+      },
+      {
+        "name": "元素咒唤术 Conjure Elemental",
+        "id": "spell.5.ConjureElemental"
+      },
+      {
+        "name": "异界探知 Contact Other Plane",
+        "id": "spell.5.ContactOtherPlane"
+      },
+      {
+        "name": "造物术 Creation",
+        "id": "spell.5.Creation"
+      },
+      {
+        "name": "支配人类 Dominate Person",
+        "id": "spell.5.DominatePerson"
+      },
+      {
+        "name": "托梦术 Dream",
+        "id": "spell.5.Dream"
+      },
+      {
+        "name": "指使术 Geas",
+        "id": "spell.5.Geas"
+      },
+      {
+        "name": "怪物定身术 Hold Monster",
+        "id": "spell.5.HoldMonster"
+      },
+      {
+        "name": "通晓传奇 Legend Lore",
+        "id": "spell.5.LegendLore"
+      },
+      {
+        "name": "假象术 Mislead",
+        "id": "spell.5.Mislead"
+      },
+      {
+        "name": "篡改记忆 Modify Memory",
+        "id": "spell.5.ModifyMemory"
+      },
+      {
+        "name": "穿墙术 Passwall",
+        "id": "spell.5.Passwall"
+      },
+      {
+        "name": "异界誓缚 Planar Binding",
+        "id": "spell.5.PlanarBinding"
+      },
+      {
+        "name": "拉瑞心灵联结 Rary’s Telepathic Bond",
+        "id": "spell.5.RarysTelepathicBond"
+      },
+      {
+        "name": "探知 Scrying",
+        "id": "spell.5.Scrying"
+      },
+      {
+        "name": "伪装术 Seeming",
+        "id": "spell.5.Seeming"
+      },
+      {
+        "name": "心灵遥控 Telekinesis",
+        "id": "spell.5.Telekinesis"
+      },
+      {
+        "name": "传送法阵 Teleportation Circle",
+        "id": "spell.5.TeleportationCircle"
+      },
+      {
+        "name": "力场墙 Wall of Force",
+        "id": "spell.5.WallofForce"
+      },
+      {
+        "name": "石墙术 Wall of Stone",
+        "id": "spell.5.WallofStone"
+      }
+    ],
+    "6": [
+      {
+        "name": "秘法门 Arcane Gate",
+        "id": "spell.6.ArcaneGate"
+      },
+      {
+        "name": "连锁闪电 Chain Lightning",
+        "id": "spell.6.ChainLightning"
+      },
+      {
+        "name": "死亡法阵 Circle of Death",
+        "id": "spell.6.CircleofDeath"
+      },
+      {
+        "name": "触发术 Contingency",
+        "id": "spell.6.Contingency"
+      },
+      {
+        "name": "唤起死灵 Create Undead",
+        "id": "spell.6.CreateUndead"
+      },
+      {
+        "name": "解离术 Disintegrate",
+        "id": "spell.6.Disintegrate"
+      },
+      {
+        "name": "卓姆吉瞬间召唤 Drawmij’s Instant Summons",
+        "id": "spell.6.DrawmijsInstantSummons"
+      },
+      {
+        "name": "摄心目光 Eyebite",
+        "id": "spell.6.Eyebite"
+      },
+      {
+        "name": "石化术 Flesh to Stone",
+        "id": "spell.6.FleshtoStone"
+      },
+      {
+        "name": "法术无效结界 Globe of Invulnerability",
+        "id": "spell.6.GlobeofInvulnerability"
+      },
+      {
+        "name": "铜墙铁壁 Guards and Wards",
+        "id": "spell.6.GuardsandWards"
+      },
+      {
+        "name": "魔魂壶 Magic Jar",
+        "id": "spell.6.MagicJar"
+      },
+      {
+        "name": "群体暗示术 Mass Suggestion",
+        "id": "spell.6.MassSuggestion"
+      },
+      {
+        "name": "地动术 Move Earth",
+        "id": "spell.6.MoveEarth"
+      },
+      {
+        "name": "欧提路克冰封法球 Otiluke’s Freezing Sphere",
+        "id": "spell.6.OtilukesFreezingSphere"
+      },
+      {
+        "name": "奥图迷舞 Otto’s Irresistible Dance",
+        "id": "spell.6.OttosIrresistibleDance"
+      },
+      {
+        "name": "预置幻影 Programmed Illusion",
+        "id": "spell.6.ProgrammedIllusion"
+      },
+      {
+        "name": "阳炎射线 Sunbeam",
+        "id": "spell.6.Sunbeam"
+      },
+      {
+        "name": "真知术 True Seeing",
+        "id": "spell.6.TrueSeeing"
+      },
+      {
+        "name": "冰墙术 Wall of Ice",
+        "id": "spell.6.WallofIce"
+      }
+    ],
+    "7": [
+      {
+        "name": "延迟爆裂火球 Delayed Blast Fireball",
+        "id": "spell.7.DelayedBlastFireball"
+      },
+      {
+        "name": "以太化 Etherealness",
+        "id": "spell.7.Etherealness"
+      },
+      {
+        "name": "死亡一指 Finger of Death",
+        "id": "spell.7.FingerofDeath"
+      },
+      {
+        "name": "力场监牢 Forcecage",
+        "id": "spell.7.Forcecage"
+      },
+      {
+        "name": "海市蜃楼 Mirage Arcane",
+        "id": "spell.7.MirageArcane"
+      },
+      {
+        "name": "魔邓肯豪宅术 Mordenkainen’s Magnificent Mansion",
+        "id": "spell.7.MordenkainensMagnificentMansion"
+      },
+      {
+        "name": "魔邓肯之剑 Mordenkainen’s Sword",
+        "id": "spell.7.MordenkainensSword"
+      },
+      {
+        "name": "异界传送 Plane Shift",
+        "id": "spell.7.PlaneShift"
+      },
+      {
+        "name": "虹光喷射 Prismatic Spray",
+        "id": "spell.7.PrismaticSpray"
+      },
+      {
+        "name": "投影术 Project Image",
+        "id": "spell.7.ProjectImage"
+      },
+      {
+        "name": "反转重力 Reverse Gravity",
+        "id": "spell.7.ReverseGravity"
+      },
+      {
+        "name": "隔离术 Sequester",
+        "id": "spell.7.Sequester"
+      },
+      {
+        "name": "拟像术 Simulacrum",
+        "id": "spell.7.Simulacrum"
+      },
+      {
+        "name": "徽记术 Symbol",
+        "id": "spell.7.Symbol"
+      },
+      {
+        "name": "传送术 Teleport",
+        "id": "spell.7.Teleport"
+      }
+    ],
+    "8": [
+      {
+        "name": "反魔法场 Antimagic Field",
+        "id": "spell.8.AntimagicField"
+      },
+      {
+        "name": "克隆术 Clone",
+        "id": "spell.8.Clone"
+      },
+      {
+        "name": "操控天气 Control Weather",
+        "id": "spell.8.ControlWeather"
+      },
+      {
+        "name": "创造半位面 Demiplane",
+        "id": "spell.8.Demiplane"
+      },
+      {
+        "name": "支配怪物 Dominate Monster",
+        "id": "spell.8.DominateMonster"
+      },
+      {
+        "name": "弱智术 Feeblemind",
+        "id": "spell.8.Feeblemind"
+      },
+      {
+        "name": "焚云术 Incendiary Cloud",
+        "id": "spell.8.IncendiaryCloud"
+      },
+      {
+        "name": "迷宫术 Maze",
+        "id": "spell.8.Maze"
+      },
+      {
+        "name": "心灵屏障 Mind Blank",
+        "id": "spell.8.MindBlank"
+      },
+      {
+        "name": "律令震慑 Power Word Stun",
+        "id": "spell.8.PowerWordStun"
+      },
+      {
+        "name": "阳炎爆 Sunburst",
+        "id": "spell.8.Sunburst"
+      },
+      {
+        "name": "心灵感应 Telepathy",
+        "id": "spell.8.Telepathy"
+      }
+    ],
+    "9": [
+      {
+        "name": "星界投影 Astral Projection",
+        "id": "spell.9.AstralProjection"
+      },
+      {
+        "name": "预警术 Foresight",
+        "id": "spell.9.Foresight"
+      },
+      {
+        "name": "异界之门 Gate",
+        "id": "spell.9.Gate"
+      },
+      {
+        "name": "禁锢术 Imprisonment",
+        "id": "spell.9.Imprisonment"
+      },
+      {
+        "name": "流星爆 Meteor Swarm",
+        "id": "spell.9.MeteorSwarm"
+      },
+      {
+        "name": "律令死亡 Power Word Kill",
+        "id": "spell.9.PowerWordKill"
+      },
+      {
+        "name": "虹光法墙 Prismatic Wall",
+        "id": "spell.9.PrismaticWall"
+      },
+      {
+        "name": "形体变化 Shapechange",
+        "id": "spell.9.Shapechange"
+      },
+      {
+        "name": "时间停止 Time Stop",
+        "id": "spell.9.TimeStop"
+      },
+      {
+        "name": "完全变形术 True Polymorph",
+        "id": "spell.9.TruePolymorph"
+      },
+      {
+        "name": "怪影杀手 Weird",
+        "id": "spell.9.Weird"
+      },
+      {
+        "name": "祈愿术 Wish",
+        "id": "spell.9.Wish"
+      }
+    ]
+  }
+}

@@ -13,6 +13,7 @@ import BuildIcon from '@mui/icons-material/Build';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import NotesIcon from '@mui/icons-material/Notes';
 import { useCharacterContext } from '../context';
 import { TabType } from '../../../types/character';
 import { GameDataService } from '../../../services/GameDataService';
@@ -32,6 +33,7 @@ const Navigation: React.FC = () => {
     { id: 'spells', label: '法术', icon: <AutoFixHighIcon /> },
     { id: 'level', label: '升级', icon: <TrendingUpIcon /> },
     { id: 'inventory', label: '所持物', icon: <BackpackIcon /> },
+    { id: 'notes', label: '备注', icon: <NotesIcon /> },
   ];
 
   // 处理导航项

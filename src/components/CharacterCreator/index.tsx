@@ -15,6 +15,7 @@ import MasteryProficiencies from './steps/MasteryProficiencies';
 import LevelSelection from './steps/LevelSelection';
 import InventorySelection from './steps/InventorySelection';
 import SpellSelection from './steps/SpellSelection';
+import Notes from './steps/Notes';
 import { TabType } from '../../types/character';
 import { useCharacterContext } from './context';
 import AppearancePreview from './layout/AppearancePreview';
@@ -79,8 +80,8 @@ const Divider = styled('div')(({ theme }) => ({
 
 const CharacterCreator: React.FC = () => {
   const { activeTab } = useCharacterContext();
-  const [contentWidth, setContentWidth] = useState<number>(50); // 内容区域宽度百分比
-  const [previewWidth, setPreviewWidth] = useState<number>(25); // 预览区域宽度百分比
+  const [contentWidth, setContentWidth] = useState<number>(50);
+  const [previewWidth, setPreviewWidth] = useState<number>(25);
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const [activeDivider, setActiveDivider] = useState<number | null>(null);
 
@@ -122,27 +123,31 @@ const CharacterCreator: React.FC = () => {
       case 'origin':
         return <Origin />;
       case 'race':
-      case 'subrace':
         return <RaceSelection />;
+      case 'subrace':
+          return <RaceSelection />;
       case 'class':
+        return <ClassSelection />;
       case 'subclass':
         return <ClassSelection />;
+      case 'background':
+        return <BackgroundSelection />;
       case 'abilities':
         return <AbilityScoreAllocation />;
       case 'skills':
         return <SkillProficiencies />;
       case 'proficiencies':
         return <MasteryProficiencies />;
-      case 'background':
-        return <BackgroundSelection />;
       case 'level':
         return <LevelSelection />;
       case 'inventory':
         return <InventorySelection />;
       case 'spells':
         return <SpellSelection />;
+      case 'notes':
+        return <Notes />;
       default:
-        return <Typography>该功能正在开发中...</Typography>;
+        return null;
     }
   };
 
@@ -151,9 +156,9 @@ const CharacterCreator: React.FC = () => {
       <Box
         sx={{
           display: 'flex',
-          height: '100vh',
+          height: 'calc(100vh - 48px)',
           cursor: isDragging ? 'col-resize' : 'default',
-          overflow: 'hidden', // 防止整体出现滚动条
+          overflow: 'hidden',
         }}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
@@ -185,10 +190,10 @@ const CharacterCreator: React.FC = () => {
             borderRadius: 1,
             padding: 2,
             boxShadow: 1,
-            display: 'flex',  
-            flexDirection: 'column',  
-            height: '100%',  
-            overflow: 'hidden'  
+            display: 'flex',
+            flexDirection: 'column',
+            height: '100%',
+            overflow: 'hidden'
           }}
         >
           <AppearancePreview />

@@ -4,6 +4,7 @@ import { GameDataService } from '../../services/GameDataService';
 import { RaceData } from '../../types/race';
 import { MasteryProficienciesService } from '../../services/MasteryProficienciesService';
 import { LocalStorageService } from '../../services/LocalStorageService';
+import { useCharacterManager } from '../CharacterManager/context';
 
 interface CharacterContextType {
   character: Character;
@@ -14,7 +15,7 @@ interface CharacterContextType {
   resetCharacter: () => void;
 }
 
-const initialCharacter: Character = {
+export const initialCharacter: Character = {
   id: '',
   name: '',
   race: null,
@@ -75,48 +76,41 @@ const initialCharacter: Character = {
 const CharacterContext = createContext<CharacterContextType | undefined>(undefined);
 
 export const CharacterProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [character, setCharacter] = useState<Character>(() => {
-    const storageService = LocalStorageService.getInstance();
-    const savedCharacter = storageService.loadCharacter();
-    return savedCharacter || initialCharacter;
-  });
+  const { activeCharacter, updateActiveCharacter } = useCharacterManager();
   const [activeTab, setActiveTab] = useState<TabType>('origin');
 
-  // 保存角色数据到本地存储
-  useEffect(() => {
-    const storageService = LocalStorageService.getInstance();
-    storageService.saveCharacter(character);
-  }, [character]);
+  // 使用 CharacterManager 中的角色数据
+  const character = activeCharacter || initialCharacter;
+
+  const setCharacter = (newCharacter: Character) => {
+    updateActiveCharacter(newCharacter);
+  };
 
   const updateCharacter = (updates: Partial<Character>) => {
-    setCharacter(prevCharacter => {
-      const updatedCharacter = { ...prevCharacter, ...updates };
-      
-      // 如果更新涉及种族或职业，则更新熟练项
-      if (updates.race || updates.classes) {
-        const masteryService = MasteryProficienciesService.getInstance();
-        const weaponProfs = masteryService.getWeaponProficiencies(updatedCharacter);
-        const armorProfs = masteryService.getArmorProficiencies(updatedCharacter);
-        const toolProfs = masteryService.getToolProficiencies(updatedCharacter);
-        const savingThrowProfs = masteryService.getsavingThrowProficiencies(updatedCharacter);
+    const updatedCharacter = { ...character, ...updates };
+    
+    // 如果更新涉及种族或职业，则更新熟练项
+    if (updates.race || updates.classes) {
+      const masteryService = MasteryProficienciesService.getInstance();
+      const weaponProfs = masteryService.getWeaponProficiencies(updatedCharacter);
+      const armorProfs = masteryService.getArmorProficiencies(updatedCharacter);
+      const toolProfs = masteryService.getToolProficiencies(updatedCharacter);
+      const savingThrowProfs = masteryService.getsavingThrowProficiencies(updatedCharacter);
 
-        updatedCharacter.proficiencies = {
-          ...updatedCharacter.proficiencies,
-          weapons: weaponProfs.map(p => p.id),
-          armor: armorProfs.map(p => p.id),
-          tools: toolProfs.map(p => p.id),
-          savingThrows: savingThrowProfs.map(p => p.id),
-        };
-      }
-      
-      return updatedCharacter;
-    });
+      updatedCharacter.proficiencies = {
+        ...updatedCharacter.proficiencies,
+        weapons: weaponProfs.map(p => p.id),
+        armor: armorProfs.map(p => p.id),
+        tools: toolProfs.map(p => p.id),
+        savingThrows: savingThrowProfs.map(p => p.id),
+      };
+    }
+    
+    updateActiveCharacter(updatedCharacter);
   };
 
   const resetCharacter = () => {
-    const storageService = LocalStorageService.getInstance();
-    storageService.clearCharacter();
-    setCharacter(initialCharacter);
+    updateActiveCharacter(initialCharacter);
     setActiveTab('origin');
   };
 
@@ -125,8 +119,6 @@ export const CharacterProvider: React.FC<{ children: React.ReactNode }> = ({ chi
       try {
         const gameDataService = GameDataService.getInstance();
         await gameDataService.initialize();
-        const racesData = gameDataService.getRaces();
-        console.log('Loaded races:', racesData);
       } catch (error) {
         console.error('Failed to initialize game data:', error);
       }
@@ -140,8 +132,7 @@ export const CharacterProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     if (character.race) {
       // 创建基础属性值的副本（不包含任何种族加值）
       const baseScores = {
-        ...character.baseAbilityScores, // 先展开已有的基础值
-        // 如果没有基础值，使用默认值
+        ...character.baseAbilityScores,
         strength: character.baseAbilityScores?.strength ?? 8,
         dexterity: character.baseAbilityScores?.dexterity ?? 8,
         constitution: character.baseAbilityScores?.constitution ?? 8,
@@ -152,7 +143,6 @@ export const CharacterProvider: React.FC<{ children: React.ReactNode }> = ({ chi
 
       // 保存基础属性值
       updateCharacter({
-        ...character,
         baseAbilityScores: baseScores
       });
 
@@ -178,10 +168,9 @@ export const CharacterProvider: React.FC<{ children: React.ReactNode }> = ({ chi
           }
         });
       }
-      
+
       // 更新角色属性值
       updateCharacter({
-        ...character,
         abilityScores: newAbilityScores
       });
     }

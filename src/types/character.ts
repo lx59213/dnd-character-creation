@@ -3,7 +3,7 @@ import { Class, ClassData } from './Class';
 import { Background } from './background';
 import { Inventory } from './equipment';
 
-export type TabType = 'origin' | 'race' | 'subrace' | 'class' | 'subclass' | 'abilities' | 'skills' | 'proficiencies' | 'background' | 'level' | 'inventory' | 'spells';
+export type TabType = 'origin' | 'race' | 'subrace' | 'class' | 'subclass' | 'abilities' | 'skills' | 'proficiencies' | 'background' | 'level' | 'inventory' | 'spells' | 'notes';
 
 export type AbilityName = 'strength' | 'dexterity' | 'constitution' | 'intelligence' | 'wisdom' | 'charisma';
 
@@ -232,6 +232,7 @@ export interface Character {
     inventory?: Inventory;
     asiSystem?: ASISystemState;
     selectedFeats?: Record<number, string>;
+    notes?: string;
 }
 
 export interface CharacterClassData {

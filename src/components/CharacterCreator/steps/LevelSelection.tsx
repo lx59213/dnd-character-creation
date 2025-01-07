@@ -739,7 +739,7 @@ const LevelSelection: React.FC = () => {
                     .join('，');
             }
             
-            return '';
+                return '';
         };
 
         return (
@@ -749,29 +749,29 @@ const LevelSelection: React.FC = () => {
                         <Typography variant="subtitle1" gutterBottom>
                             {level}级属性值提升
                         </Typography>
-                        <ASISelection
-                            level={level}
-                            asiSystem={{
-                                levels: [level],
-                                choices: {
-                                    standardASI: {
-                                        type: 'ability_score_increase',
-                                        description: '提升一项属性值2点，或者两项属性值各提升1点',
-                                        options: [
-                                            { type: 'single', points: 2 },
-                                            { type: 'double', points: 1 }
-                                        ]
-                                    },
-                                    featOption: {
-                                        type: 'feat',
-                                        description: '获得一个专长'
-                                    }
+                    <ASISelection
+                        level={level}
+                        asiSystem={{
+                            levels: [level],
+                            choices: {
+                                standardASI: {
+                                    type: 'ability_score_increase',
+                                    description: '提升一项属性值2点，或者两项属性值各提升1点',
+                                    options: [
+                                        { type: 'single', points: 2 },
+                                        { type: 'double', points: 1 }
+                                    ]
+                                },
+                                featOption: {
+                                    type: 'feat',
+                                    description: '获得一个专长'
                                 }
-                            }}
-                            currentAbilityScores={character.abilityScores}
-                            onSelectionComplete={(state) => handleASIComplete(level, state)}
-                            availableFeats={getAvailableFeats()}
-                        />
+                            }
+                        }}
+                        currentAbilityScores={character.abilityScores}
+                        onSelectionComplete={(state) => handleASIComplete(level, state)}
+                        availableFeats={getAvailableFeats()}
+                    />
                     </>
                 ) : (
                     <Typography variant="body1" sx={{ 

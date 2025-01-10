@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
     Box,
     Typography,
@@ -46,7 +46,10 @@ export const ASISelection: React.FC<ASISelectionProps> = ({
     currentAbilityScores,
     availableFeats
 }) => {
-    const [state, setState] = useState<ASISelectionState>(initialState(level));
+    const [state, setState] = useState<ASISelectionState>(() => {
+        const savedState = localStorage.getItem(`asi-state-${level}`);
+        return savedState ? JSON.parse(savedState) : initialState(level);
+    });
 
     const MAX_ABILITY_SCORE = 20;
 
@@ -65,18 +68,17 @@ export const ASISelection: React.FC<ASISelectionProps> = ({
     };
 
     const handleAbilityChange = (ability: AbilityName, value: number) => {
-        // 检查新的属性值是否超过上限
         if (!isAbilityScoreValid(ability, value)) {
             return;
         }
 
-        setState({
-            ...state,
+        setState(prev => ({
+            ...prev,
             selectedAbilities: {
-                ...state.selectedAbilities,
-                [ability]: value,
-            },
-        });
+                ...prev.selectedAbilities,
+                [ability]: value
+            }
+        }));
     };
 
     const handleFeatChange = (featName: string) => {
@@ -106,6 +108,7 @@ export const ASISelection: React.FC<ASISelectionProps> = ({
     const handleConfirm = () => {
         if (isSelectionValid()) {
             onSelectionComplete(state);
+            localStorage.setItem(`asi-state-${level}`, JSON.stringify(state));
         }
     };
 
@@ -219,9 +222,10 @@ export const ASISelection: React.FC<ASISelectionProps> = ({
                 </Box>
             )}
             
-            <Box sx={{ mt: 2 }}>
-                <Button
-                    variant="contained"
+            <Box sx={{ mt: 2, display: 'flex', justifyContent: 'flex-end' }}>
+                <Button 
+                    variant="contained" 
+                    color="primary"
                     onClick={handleConfirm}
                     disabled={!isSelectionValid()}
                 >

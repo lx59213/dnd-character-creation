@@ -200,7 +200,7 @@ export interface Character {
     classes: CharacterClass[];
     level: number;
     experiencePoints: number;
-    abilityScores: AbilityScores;
+    finalAbilityScores: AbilityScores;
     baseAbilityScores: AbilityScores;
     hitPoints: number;
     armorClass: number;

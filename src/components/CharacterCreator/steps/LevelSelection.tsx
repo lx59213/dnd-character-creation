@@ -68,8 +68,42 @@ interface Feat {
     effects: any;
 }
 
+// 计算新的属性值
+const calculateNewAbilityScores = (baseScores: AbilityScores, choices: Record<number, ASIChoice>): AbilityScores => {
+    const newScores = { ...baseScores };
+    
+    Object.values(choices).forEach(choice => {
+        if (choice.abilities) {
+            Object.entries(choice.abilities).forEach(([ability, increase]) => {
+                const abilityName = ability as AbilityName;
+                newScores[abilityName] = Math.min(20, (newScores[abilityName] || 0) + (increase || 0));
+            });
+        }
+    });
+    
+    return newScores;
+};
+
+// 提取选择的专长
+const extractSelectedFeats = (choices: Record<number, ASIChoice>): Record<number, string> => {
+    const feats: Record<number, string> = {};
+    
+    Object.entries(choices).forEach(([level, choice]) => {
+        if (choice.feat) {
+            feats[parseInt(level)] = choice.feat;
+        }
+    });
+    
+    return feats;
+};
+
 const LevelSelection: React.FC = () => {
-    const { character, updateCharacter } = useCharacterContext();
+    const {
+        character,
+        updateCharacter,
+        updateTemporaryASI,
+        confirmASI
+    } = useCharacterContext();
     const [experiencePoints, setExperiencePoints] = useState<string>(character.experiencePoints?.toString() || '0');
     const [error, setError] = useState<string | null>(null);
     const [selectedLevel, setSelectedLevel] = useState<number>(character.level || 1);
@@ -100,100 +134,238 @@ const LevelSelection: React.FC = () => {
         isUserAction.current = true;
         const newCharacter: Partial<Character> = {
             asiSystem: newASISystem,
-            abilityScores: calculateNewAbilityScores(character.abilityScores, newASISystem.choices),
+            finalAbilityScores: calculateNewAbilityScores(character.finalAbilityScores, newASISystem.choices),
             selectedFeats: extractSelectedFeats(newASISystem.choices)
         };
         updateCharacter(newCharacter);
-    }, [updateCharacter, character.abilityScores]);
+    }, [updateCharacter, character.finalAbilityScores]);
+
+    // 获取职业的ASI等级
+    const getClassASILevels = useCallback(async (className: string): Promise<number[]> => {
+        try {
+            const gameDataService = GameDataService.getInstance();
+            await gameDataService.ensureDataLoaded();
+            const classData = gameDataService.getClass(className);
+            return classData?.abilityScoreImprovements?.levels || [];
+        } catch (error) {
+            console.error('Error getting ASI levels:', error);
+            return [];
+        }
+    }, []);
+
+    // 检查当前等级是否有ASI
+    const hasASIAtLevel = useCallback(async (level: number): Promise<boolean> => {
+        try {
+            if (!character.classes || character.classes.length === 0) return false;
+            const characterClass = character.classes[0];
+            const asiLevels = await getClassASILevels(characterClass.name);
+            return Array.isArray(asiLevels) && asiLevels.includes(level);
+        } catch (error) {
+            console.error('Error checking ASI at level:', error);
+            return false;
+        }
+    }, [character.classes, getClassASILevels]);
+
+    // 初始化待处理的ASI
+    useEffect(() => {
+        const initializeASIs = async () => {
+            try {
+                if (!character.classes?.[0]?.name) return;
+                
+                const asiLevels = await getClassASILevels(character.classes[0].name);
+                if (!Array.isArray(asiLevels)) return;
+
+                const newPendingASIs = asiLevels
+                    .filter((level: number) => level <= selectedLevel)
+                    .map((level: number) => ({
+                        level,
+                        completed: false
+                    }));
+                setPendingASIs(newPendingASIs);
+            } catch (error) {
+                console.error('Error initializing ASIs:', error);
+            }
+        };
+
+        initializeASIs();
+    }, [selectedLevel, character.classes, getClassASILevels]);
 
     // 检查等级变化和职业变化
     useEffect(() => {
-        const currentClass = character.classes?.[0]?.name;
-        
-        // 如果职业发生变化，重置ASI系统和属性值
-        if (currentClass !== previousClassRef.current) {
-            console.log('职业变化，重置ASI系统和属性值', { current: currentClass, prev: previousClassRef.current });
-            previousClassRef.current = currentClass;
-            const newASISystem: ASISystemState = {
-                choices: {},
-                completed: {}
-            };
-            setASISystem(newASISystem);
+        const checkLevelChange = async () => {
+            const currentClass = character.classes?.[0]?.name;
             
-            // 重置角色属性到基础值
-            const resetCharacter: Partial<Character> = {
-                asiSystem: newASISystem,
-                abilityScores: { ...character.baseAbilityScores }, // 重置为基础属性值
-                selectedFeats: {}
-            };
-            updateCharacter(resetCharacter);
-            return;
-        }
-
-        // 获取当前职业的ASI等级
-        const asiLevels = currentClass ? getClassASILevels(currentClass) : [];
-        
-        // 检查是否需要重置ASI系统
-        const shouldResetASI = () => {
-            if (Object.keys(asiSystem.choices).length === 0) return false;
-            
-            return Object.keys(asiSystem.choices).some(level => {
-                const levelNum = parseInt(level);
-                if (levelNum > selectedLevel) return true;
-                if (!asiLevels.includes(levelNum)) return true;
-                return false;
-            });
-        };
-
-        if (shouldResetASI()) {
-            console.log('等级变化，重置ASI系统和属性值');
-            const newASISystem: ASISystemState = {
-                choices: {},
-                completed: {}
-            };
-            setASISystem(newASISystem);
-            
-            // 重置角色属性到基础值
-            const resetCharacter: Partial<Character> = {
-                asiSystem: newASISystem,
-                abilityScores: { ...character.baseAbilityScores }, // 重置为基础属性值
-                selectedFeats: {}
-            };
-            updateCharacter(resetCharacter);
-        }
-    }, [character.classes, selectedLevel, asiSystem.choices, updateASISystem, character.baseAbilityScores]);
-
-    // 处理 ASI 完成
-    const handleASIComplete = (level: number, state: ASISelectionState) => {
-        const currentClass = character.classes?.[0]?.name;
-        const asiLevels = currentClass ? getClassASILevels(currentClass) : [];
-        
-        if (!asiLevels.includes(level) || level > selectedLevel) {
-            setError('当前等级或职业无法获得此属性值提升');
-            return;
-        }
-
-        // 检查专长是否已被选择
-        if (state.selectedFeat) {
-            const gameDataService = GameDataService.getInstance();
-            const feats = gameDataService.getFeats() as GameFeat[];
-            const selectedFeat = feats.find(f => f.id === state.selectedFeat);
-            
-            const isAlreadySelected = Object.values(asiSystem.choices).some(choice => 
-                choice.feat === state.selectedFeat
-            );
-
-            if (isAlreadySelected) {
-                setError('该专长已被选择，请选择其他专长');
+            // 如果职业发生变化，重置ASI系统和属性值
+            if (currentClass !== previousClassRef.current) {
+                console.log('职业变化，重置ASI系统和属性值', { current: currentClass, prev: previousClassRef.current });
+                previousClassRef.current = currentClass;
+                const newASISystem: ASISystemState = {
+                    choices: {},
+                    completed: {}
+                };
+                setASISystem(newASISystem);
+                
+                // 重置角色属性到基础值
+                const resetCharacter: Partial<Character> = {
+                    asiSystem: newASISystem,
+                    finalAbilityScores: { ...character.baseAbilityScores }, // 重置为基础属性值
+                    selectedFeats: {}
+                };
+                updateCharacter(resetCharacter);
                 return;
             }
-        }
 
-        setASISystem(prev => {
+            // 获取当前职业的ASI等级
+            let asiLevels: number[] = [];
+            if (currentClass) {
+                asiLevels = await getClassASILevels(currentClass);
+            }
+            
+            // 检查是否需要重置ASI系统
+            const shouldResetASI = () => {
+                console.log('检查是否需要重置ASI', {
+                    currentLevel: selectedLevel,
+                    currentChoices: asiSystem.choices,
+                    currentCompleted: asiSystem.completed
+                });
+
+                if (Object.keys(asiSystem.choices).length === 0) {
+                    console.log('ASI选择为空，不需要重置');
+                    return false;
+                }
+                
+                // 只重置高于当前等级的ASI选择
+                const choicesToReset = Object.entries(asiSystem.choices).filter(([level, choice]) => {
+                    const levelNum = parseInt(level);
+                    const shouldReset = levelNum > selectedLevel;
+                    console.log(`检查等级${levelNum}是否需要重置:`, {
+                        currentLevel: selectedLevel,
+                        shouldReset,
+                        choice
+                    });
+                    return shouldReset;
+                });
+
+                console.log('需要重置的选择:', choicesToReset);
+
+                if (choicesToReset.length === 0) {
+                    console.log('没有需要重置的选择');
+                    return false;
+                }
+
+                // 创建新的ASI系统状态，保留低于或等于当前等级的选择
+                const newChoices: Record<number, ASIChoice> = {};
+                const newCompleted: Record<number, boolean> = {};
+                
+                Object.entries(asiSystem.choices).forEach(([level, choice]) => {
+                    const levelNum = parseInt(level);
+                    console.log(`处理等级${levelNum}的选择:`, {
+                        isKeeping: levelNum <= selectedLevel,
+                        choice,
+                        completed: asiSystem.completed[levelNum]
+                    });
+                    
+                    if (levelNum <= selectedLevel) {
+                        newChoices[levelNum] = choice;
+                        newCompleted[levelNum] = asiSystem.completed[levelNum] || false;
+                    }
+                });
+
+                console.log('重置后的ASI状态:', {
+                    newChoices,
+                    newCompleted,
+                    baseScores: character.baseAbilityScores,
+                    calculatedScores: calculateNewAbilityScores(character.baseAbilityScores, newChoices)
+                });
+
+                setASISystem({
+                    choices: newChoices,
+                    completed: newCompleted
+                });
+
+                // 更新角色属性
+                const resetCharacter: Partial<Character> = {
+                    asiSystem: {
+                        choices: newChoices,
+                        completed: newCompleted
+                    },
+                    finalAbilityScores: calculateNewAbilityScores(character.baseAbilityScores, newChoices),
+                    selectedFeats: extractSelectedFeats(newChoices)
+                };
+                console.log('更新角色状态:', resetCharacter);
+                
+                updateCharacter(resetCharacter);
+
+                return false; // 返回false因为我们已经处理了重置
+            };
+
+            if (shouldResetASI()) {
+                console.log('等级变化，重置ASI系统和属性值');
+                const newASISystem: ASISystemState = {
+                    choices: {},
+                    completed: {}
+                };
+                setASISystem(newASISystem);
+                
+                // 重置角色属性到基础值
+                const resetCharacter: Partial<Character> = {
+                    asiSystem: newASISystem,
+                    finalAbilityScores: { ...character.baseAbilityScores }, // 重置为基础属性值
+                    selectedFeats: {}
+                };
+                updateCharacter(resetCharacter);
+            }
+        };
+
+        checkLevelChange();
+    }, [character.classes, selectedLevel, asiSystem.choices, updateASISystem, character.baseAbilityScores, getClassASILevels]);
+
+    const handleASICompleteWrapper = (level: number) => async (asiState: ASISelectionState) => {
+        console.log('ASI selection completed for level:', level, 'with state:', asiState);
+        
+        // 先处理ASI完成
+        await handleASIComplete(level, asiState);
+        
+        // 然后根据选择类型更新状态
+        if (asiState.selectedChoice === 'standardASI' && asiState.selectedAbilities) {
+            // 更新临时ASI
+            updateTemporaryASI(asiState.selectedAbilities);
+            // 确认ASI
+            confirmASI();
+        }
+    };
+
+    // 处理 ASI 完成
+    const handleASIComplete = async (level: number, state: ASISelectionState) => {
+        try {
+            const currentClass = character.classes?.[0]?.name;
+            const asiLevels = currentClass ? await getClassASILevels(currentClass) : [];
+            
+            if (!asiLevels.includes(level) || level > selectedLevel) {
+                setError('当前等级或职业无法获得此属性值提升');
+                return;
+            }
+
+            // 检查专长是否已被选择
+            if (state.selectedFeat) {
+                const gameDataService = GameDataService.getInstance();
+                const feats = gameDataService.getFeats() as GameFeat[];
+                const selectedFeat = feats.find(f => f.id === state.selectedFeat);
+                
+                const isAlreadySelected = Object.values(asiSystem.choices).some(choice => 
+                    choice.feat === state.selectedFeat
+                );
+
+                if (isAlreadySelected) {
+                    setError('该专长已被选择，请选择其他专长');
+                    return;
+                }
+            }
+
             const updatedASISystem: ASISystemState = {
-                ...prev,
+                ...asiSystem,
                 choices: {
-                    ...prev.choices,
+                    ...asiSystem.choices,
                     [level]: {
                         level,
                         abilities: state.selectedAbilities,
@@ -201,85 +373,29 @@ const LevelSelection: React.FC = () => {
                     }
                 },
                 completed: {
-                    ...prev.completed,
+                    ...asiSystem.completed,
                     [level]: true
                 }
             };
             
-            // 更新全局状态
+            // 一次性更新所有状态
             const newCharacter: Partial<Character> = {
                 asiSystem: updatedASISystem,
-                abilityScores: calculateNewAbilityScores(character.baseAbilityScores, updatedASISystem.choices),
+                finalAbilityScores: calculateNewAbilityScores(character.baseAbilityScores, updatedASISystem.choices),
                 selectedFeats: extractSelectedFeats(updatedASISystem.choices)
             };
+            
+            setASISystem(updatedASISystem);
             updateCharacter(newCharacter);
             
-            return updatedASISystem;
-        });
-    };
-
-    // 计算新的属性值
-    const calculateNewAbilityScores = (baseScores: AbilityScores, choices: Record<number, ASIChoice>): AbilityScores => {
-        const newScores = { ...baseScores };
-        
-        Object.values(choices).forEach(choice => {
-            if (choice.abilities) {
-                Object.entries(choice.abilities).forEach(([ability, increase]) => {
-                    const abilityName = ability as AbilityName;
-                    newScores[abilityName] = Math.min(20, (newScores[abilityName] || 0) + (increase || 0));
-                });
-            }
-        });
-        
-        return newScores;
-    };
-
-    // 获取已选择的专长
-    const selectedFeats = character.selectedFeats || {};
-
-    // 提取选择的专长
-    const extractSelectedFeats = (choices: Record<number, ASIChoice>): Record<number, string> => {
-        const feats: Record<number, string> = {};
-        
-        Object.entries(choices).forEach(([level, choice]) => {
-            if (choice.feat) {
-                feats[parseInt(level)] = choice.feat;
-            }
-        });
-        
-        return feats;
+        } catch (error) {
+            console.error('Error in handleASIComplete:', error);
+            setError('处理ASI选择时发生错误');
+        }
     };
 
     const levelingService = LevelingService.getInstance();
     const gameDataService = GameDataService.getInstance();
-
-    // 获取职业的ASI等级
-    const getClassASILevels = (className: string): number[] => {
-        const classData = gameDataService.getClass(className);
-        return classData?.abilityScoreImprovements?.levels || [];
-    };
-
-    // 检查当前等级是否有ASI
-    const hasASIAtLevel = (level: number): boolean => {
-        if (!character.classes || character.classes.length === 0) return false;
-        const characterClass = character.classes[0];
-        const asiLevels = getClassASILevels(characterClass.name);
-        return asiLevels.includes(level);
-    };
-
-    // 初始化待处理的ASI
-    useEffect(() => {
-        if (!character.classes?.[0]?.name) return;
-        
-        const asiLevels = getClassASILevels(character.classes[0].name);
-        const newPendingASIs = asiLevels
-            .filter(level => level <= selectedLevel)
-            .map(level => ({
-                level,
-                completed: false
-            }));
-        setPendingASIs(newPendingASIs);
-    }, [selectedLevel, character.classes]);
 
     // 获取属性的中文名称
     const getAbilityDisplayName = (ability: string): string => {
@@ -417,7 +533,7 @@ const LevelSelection: React.FC = () => {
         // 检查属性要求
         if (feat.prerequisites.ability) {
             for (const [ability, minValue] of Object.entries(feat.prerequisites.ability)) {
-                const abilityScore = character.abilityScores[ability as AbilityName] || 0;
+                const abilityScore = character.finalAbilityScores[ability as AbilityName] || 0;
                 if (abilityScore < minValue) {
                     return false;
                 }
@@ -434,7 +550,7 @@ const LevelSelection: React.FC = () => {
     };
 
     const isAbilityScoreValid = (ability: AbilityName, increase: number): boolean => {
-        const currentScore = character.abilityScores[ability] || 0;
+        const currentScore = character.finalAbilityScores[ability] || 0;
         return currentScore + increase <= MAX_ABILITY_SCORE;
     };
 
@@ -464,14 +580,6 @@ const LevelSelection: React.FC = () => {
             return false;
         }
         return true;
-    };
-
-    const handleASICompleteWrapper = (state: ASISelectionState) => {
-        const stateWithLevel = {
-            ...state,
-            level: selectedLevel
-        };
-        handleASIComplete(selectedLevel, stateWithLevel);
     };
 
     const calculateLevelFromXP = (xp: number): number => {
@@ -510,8 +618,8 @@ const LevelSelection: React.FC = () => {
 
     const renderDerivedStats = () => {
         // 获取各项属性的调整值
-        const dexMod = Math.floor((character.abilityScores.dexterity - 10) / 2);
-        const conMod = Math.floor((character.abilityScores.constitution - 10) / 2);
+        const dexMod = Math.floor((character.finalAbilityScores.dexterity - 10) / 2);
+        const conMod = Math.floor((character.finalAbilityScores.constitution - 10) / 2);
         
         // 获取职业数据
         const gameDataService = GameDataService.getInstance();
@@ -768,8 +876,8 @@ const LevelSelection: React.FC = () => {
                                 }
                             }
                         }}
-                        currentAbilityScores={character.abilityScores}
-                        onSelectionComplete={(state) => handleASIComplete(level, state)}
+                        currentAbilityScores={character.finalAbilityScores}
+                        onSelectionComplete={handleASICompleteWrapper(level)}
                         availableFeats={getAvailableFeats()}
                     />
                     </>
@@ -788,15 +896,16 @@ const LevelSelection: React.FC = () => {
         );
     };
 
-    const renderASISelection = () => {
-        if (!hasASIAtLevel(selectedLevel)) return null;
+    const renderASISelection = async () => {
+        const hasASI = await hasASIAtLevel(selectedLevel);
+        if (!hasASI) return null;
 
         return (
             <Box sx={{ mt: 2 }}>
                 <ASISelection
                     level={selectedLevel}
-                    onSelectionComplete={handleASICompleteWrapper}
-                    currentAbilityScores={character.abilityScores}
+                    onSelectionComplete={handleASICompleteWrapper(selectedLevel)}
+                    currentAbilityScores={character.finalAbilityScores}
                     availableFeats={getAvailableFeats()}
                 />
             </Box>

@@ -76,17 +76,27 @@ export class GameDataService {
         this.classSpellLists = new Map();
         this.errorMonitor = new ErrorMonitorImpl();
         this.features = new Map();
-        this.loadAllData().catch(error => {
-            console.error('Failed to load game data:', error);
-            this.errorMonitor.log('error', '游戏数据加载失败', error);
+        this.initialize().catch(error => {
+            console.error('Failed to initialize GameDataService:', error);
+            this.errorMonitor.log('error', '游戏数据初始化失败', error);
         });
     }
 
     // 就像是图书馆开馆前的准备工作
     private async loadAllData(): Promise<void> {
         try {
-            await this.loadSpellData();
+            await Promise.all([
+                this.loadSpellData(),
+                this.loadProficiencyData(),
+                this.loadLevelingRules(),
+                this.loadAbilityRules(),
+                this.loadRaceData(),
+                this.loadClassData(),
+                this.loadBackgrounds(),
+                this.loadFeats()
+            ]);
             this.dataLoaded = true;
+            this.initialized = true;
             console.log('所有游戏数据加载完成');
         } catch (error) {
             console.error('Failed to load all game data:', error);
@@ -97,9 +107,9 @@ export class GameDataService {
 
     // 就像是检查图书馆是否准备好开放
     public async ensureDataLoaded(): Promise<void> {
-        if (!this.dataLoaded) {
-            console.log('等待数据加载完成...');
-            await this.loadAllData();
+        if (!this.initialized) {
+            console.log('等待数据初始化完成...');
+            await this.initialize();
         }
     }
 
@@ -117,21 +127,7 @@ export class GameDataService {
         }
 
         try {
-            // 首先加载基础数据
-            await this.loadProficiencyData();
-            
-            // 然后加载其他数据
-            await Promise.all([
-                this.loadLevelingRules(),
-                this.loadAbilityRules(),
-                this.loadRaceData(),
-                this.loadClassData(),
-                this.loadBackgrounds(),
-                this.loadFeats(),
-                this.loadSpellData()
-            ]);
-
-            this.initialized = true;
+            await this.loadAllData();
         } catch (error) {
             this.errorMonitor.log('error', 'Failed to initialize GameDataService', error);
             throw error;

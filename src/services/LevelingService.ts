@@ -33,15 +33,32 @@ export class LevelingService {
                 }
             }
         };
-        this.loadLevelingRules();
+        this.initialize().catch(error => {
+            console.error('Failed to initialize LevelingService:', error);
+        });
+    }
+
+    private async initialize(): Promise<void> {
+        try {
+            // 确保GameDataService已初始化
+            await this.gameDataService.ensureDataLoaded();
+            await this.loadLevelingRules();
+        } catch (error) {
+            console.error('Failed to initialize LevelingService:', error);
+            throw error;
+        }
     }
 
     private async loadLevelingRules() {
         try {
             const response = await fetch('./data/rules/leveling.json');
+            if (!response.ok) {
+                throw new Error(`Failed to load leveling rules: ${response.statusText}`);
+            }
             this.levelingRules = await response.json();
         } catch (error) {
             console.error('Failed to load leveling rules:', error);
+            throw error;
         }
     }
 
@@ -50,6 +67,10 @@ export class LevelingService {
             this.instance = new LevelingService();
         }
         return this.instance;
+    }
+
+    public async ensureInitialized(): Promise<void> {
+        await this.initialize();
     }
 
     /**
@@ -65,7 +86,7 @@ export class LevelingService {
         if (!classData) return 0;
 
         // 计算体质调整值
-        const conModifier = Math.floor((character.abilityScores.constitution - 10) / 2);
+        const conModifier = Math.floor((character.finalAbilityScores.constitution - 10) / 2);
 
         // 1级时获得最大生命值
         if (mainClass.level >= 1) {
@@ -89,7 +110,7 @@ export class LevelingService {
         let ac = 10;
 
         // 敏捷调整值
-        const dexModifier = Math.floor((character.abilityScores.dexterity - 10) / 2);
+        const dexModifier = Math.floor((character.finalAbilityScores.dexterity - 10) / 2);
         ac += dexModifier;
 
         // TODO: 添加护甲和盾牌的加值
@@ -102,7 +123,7 @@ export class LevelingService {
      */
     public calculateInitiative(character: Character): number {
         // 先攻等于敏捷调整值
-        return Math.floor((character.abilityScores.dexterity - 10) / 2);
+        return Math.floor((character.finalAbilityScores.dexterity - 10) / 2);
     }
 
     /**

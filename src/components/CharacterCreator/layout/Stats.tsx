@@ -13,7 +13,9 @@ import {
   Tooltip,
   Fade,
   Snackbar,
-  Alert
+  Alert,
+  Menu,
+  MenuItem
 } from '@mui/material';
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import FileUploadIcon from '@mui/icons-material/FileUpload';
@@ -69,6 +71,8 @@ const Stats: React.FC = () => {
   const levelingService = LevelingService.getInstance();
   const gameDataService = GameDataService.getInstance();
   const exportService = CharacterExportService.getInstance();
+
+  const [exportAnchorEl, setExportAnchorEl] = useState<null | HTMLElement>(null);
 
   const getAbilityModifier = (score: number): string => {
     const modifier = Math.floor((score - 10) / 2);
@@ -140,9 +144,17 @@ const Stats: React.FC = () => {
     setResetDialogOpen(false);
   };
 
-  const handleExportClick = async () => {
+  const handleExportClick = (event: React.MouseEvent<HTMLElement>) => {
+    setExportAnchorEl(event.currentTarget);
+  };
+
+  const handleExportClose = () => {
+    setExportAnchorEl(null);
+  };
+
+  const handleExportFormat = async (format: 'json' | 'markdown') => {
     try {
-      await exportService.exportCharacter(character);
+      await exportService.exportCharacter(character, format);
       setSnackbar({
         open: true,
         message: '角色数据导出成功',
@@ -151,10 +163,11 @@ const Stats: React.FC = () => {
     } catch (error) {
       setSnackbar({
         open: true,
-        message: '导出失败，请重试',
+        message: '导出失败，请稍后重试',
         severity: 'error'
       });
     }
+    handleExportClose();
   };
 
   const handleImportClick = () => {
@@ -195,22 +208,22 @@ const Stats: React.FC = () => {
       <StatSection title="属性">
         <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 1 }}>
           <Typography>
-            力量：{character.abilityScores.strength} ({getAbilityModifier(character.abilityScores.strength)})
+            力量：{character.finalAbilityScores.strength} ({getAbilityModifier(character.finalAbilityScores.strength)})
           </Typography>
           <Typography>
-            敏捷：{character.abilityScores.dexterity} ({getAbilityModifier(character.abilityScores.dexterity)})
+            敏捷：{character.finalAbilityScores.dexterity} ({getAbilityModifier(character.finalAbilityScores.dexterity)})
           </Typography>
           <Typography>
-            体质：{character.abilityScores.constitution} ({getAbilityModifier(character.abilityScores.constitution)})
+            体质：{character.finalAbilityScores.constitution} ({getAbilityModifier(character.finalAbilityScores.constitution)})
           </Typography>
           <Typography>
-            智力：{character.abilityScores.intelligence} ({getAbilityModifier(character.abilityScores.intelligence)})
+            智力：{character.finalAbilityScores.intelligence} ({getAbilityModifier(character.finalAbilityScores.intelligence)})
           </Typography>
           <Typography>
-            感知：{character.abilityScores.wisdom} ({getAbilityModifier(character.abilityScores.wisdom)})
+            感知：{character.finalAbilityScores.wisdom} ({getAbilityModifier(character.finalAbilityScores.wisdom)})
           </Typography>
           <Typography>
-            魅力：{character.abilityScores.charisma} ({getAbilityModifier(character.abilityScores.charisma)})
+            魅力：{character.finalAbilityScores.charisma} ({getAbilityModifier(character.finalAbilityScores.charisma)})
           </Typography>
         </Box>
         {renderRacialAbilityScores()}
@@ -297,56 +310,49 @@ const Stats: React.FC = () => {
           gap: 1,
         }}
       >
+        <IconButton
+          onClick={handleExportClick}
+          size="small"
+          sx={{
+            bgcolor: 'background.paper',
+            boxShadow: 1,
+            '&:hover': { bgcolor: 'background.default' },
+            color: 'primary.main'
+          }}
+        >
+          <FileDownloadIcon />
+        </IconButton>
+        <Menu
+          anchorEl={exportAnchorEl}
+          open={Boolean(exportAnchorEl)}
+          onClose={handleExportClose}
+        >
+          <MenuItem onClick={() => handleExportFormat('json')}>
+            导出为 JSON
+          </MenuItem>
+          <MenuItem onClick={() => handleExportFormat('markdown')}>
+            导出为 Markdown
+          </MenuItem>
+        </Menu>
+        <IconButton
+          onClick={handleImportClick}
+          size="small"
+          sx={{
+            bgcolor: 'background.paper',
+            boxShadow: 1,
+            '&:hover': { bgcolor: 'background.default' },
+            color: 'primary.main'
+          }}
+        >
+          <FileUploadIcon />
+        </IconButton>
         <input
           type="file"
           ref={fileInputRef}
-          style={{ display: 'none' }}
-          accept=".json"
           onChange={handleFileChange}
+          style={{ display: 'none' }}
+          accept=".json,.md"
         />
-        
-        <Tooltip 
-          title="导入角色" 
-          placement="top" 
-          TransitionComponent={Fade}
-          TransitionProps={{ timeout: 600 }}
-        >
-          <IconButton
-            onClick={handleImportClick}
-            color="primary"
-            sx={{
-              backgroundColor: 'background.paper',
-              boxShadow: 2,
-              '&:hover': {
-                backgroundColor: 'background.default',
-              },
-            }}
-          >
-            <FileUploadIcon />
-          </IconButton>
-        </Tooltip>
-
-        <Tooltip 
-          title="导出角色" 
-          placement="top" 
-          TransitionComponent={Fade}
-          TransitionProps={{ timeout: 600 }}
-        >
-          <IconButton
-            onClick={handleExportClick}
-            color="primary"
-            sx={{
-              backgroundColor: 'background.paper',
-              boxShadow: 2,
-              '&:hover': {
-                backgroundColor: 'background.default',
-              },
-            }}
-          >
-            <FileDownloadIcon />
-          </IconButton>
-        </Tooltip>
-
         <Tooltip 
           title="重置角色" 
           placement="top" 

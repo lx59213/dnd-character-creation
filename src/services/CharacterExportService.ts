@@ -12,13 +12,37 @@ export class CharacterExportService {
         return CharacterExportService.instance;
     }
 
-    public async exportCharacter(character: Character): Promise<void> {
+    private generateMarkdownContent(character: Character): string {
+        const jsonData = JSON.stringify(character, null, 2);
+        
+        // 只包含 JSON 数据和标记
+        let markdown = '<!-- CHARACTER_DATA_START -->\n';
+        markdown += '```json\n';
+        markdown += jsonData;
+        markdown += '\n```\n';
+        markdown += '<!-- CHARACTER_DATA_END -->';
+
+        return markdown;
+    }
+
+    public async exportCharacter(character: Character, format: 'json' | 'markdown' = 'json'): Promise<void> {
         try {
-            const blob = new Blob(
-                [JSON.stringify(character, null, 2)], 
-                { type: 'application/json' }
-            );
-            await this.saveFileWithPicker(blob, `${character.name || 'character'}.json`);
+            let blob: Blob;
+            let fileExtension: string;
+            
+            if (format === 'markdown') {
+                const markdownContent = this.generateMarkdownContent(character);
+                blob = new Blob([markdownContent], { type: 'text/markdown' });
+                fileExtension = '.md';
+            } else {
+                blob = new Blob(
+                    [JSON.stringify(character, null, 2)],
+                    { type: 'application/json' }
+                );
+                fileExtension = '.json';
+            }
+
+            await this.saveFileWithPicker(blob, `${character.name || 'character'}${fileExtension}`);
         } catch (error) {
             console.error('导出失败:', error);
             throw error;
@@ -27,28 +51,28 @@ export class CharacterExportService {
 
     private async saveFileWithPicker(blob: Blob, suggestedName: string): Promise<void> {
         try {
-            // 检查是否支持 showSaveFilePicker API
             if ('showSaveFilePicker' in window) {
+                const fileType = {
+                    description: suggestedName.endsWith('.md') ? 'Markdown Files' : 'JSON Files',
+                    accept: {
+                        [suggestedName.endsWith('.md') ? 'text/markdown' : 'application/json']: 
+                            [suggestedName.endsWith('.md') ? '.md' : '.json']
+                    }
+                };
+
                 const handle = await window.showSaveFilePicker({
                     suggestedName,
-                    types: [{
-                        description: 'JSON Files',
-                        accept: {
-                            'application/json': ['.json']
-                        }
-                    }]
+                    types: [fileType]
                 });
                 
                 const writable = await handle.createWritable();
                 await writable.write(blob);
                 await writable.close();
             } else {
-                // 降级方案：使用传统的下载方式
                 this.downloadFile(URL.createObjectURL(blob), suggestedName);
             }
         } catch (error) {
             if ((error as Error).name === 'AbortError') {
-                // 用户取消了保存操作，不需要抛出错误
                 return;
             }
             throw error;
@@ -68,14 +92,43 @@ export class CharacterExportService {
     public async importCharacter(file: File): Promise<Character> {
         const text = await file.text();
         try {
-            const character = JSON.parse(text);
-            // 简单验证是否是有效的角色数据
-            if (!character.abilityScores || !character.classes) {
-                throw new Error('无效的角色数据');
+            let jsonData: string;
+            if (file.name.endsWith('.md')) {
+                const match = text.match(/<!-- CHARACTER_DATA_START -->\n```json\n([\s\S]*?)\n```\n<!-- CHARACTER_DATA_END -->/);
+                if (!match) {
+                    throw new Error('无法从 Markdown 中提取角色数据');
+                }
+                jsonData = match[1];
+            } else {
+                jsonData = text;
             }
+
+            const character = JSON.parse(jsonData);
+            if (!this.validateCharacter(character)) {
+                throw new Error('无效的角色数据格式');
+            }
+
+            // 确保ASI状态被正确保留
+            if (character.asiSystem) {
+                character.asiSystem = {
+                    choices: character.asiSystem.choices || {},
+                    completed: character.asiSystem.completed || {}
+                };
+            }
+
             return character;
         } catch (error) {
+            console.error('导入失败:', error);
             throw new Error('无法解析角色数据');
         }
+    }
+
+    private validateCharacter(character: any): character is Character {
+        return (
+            character &&
+            typeof character === 'object' &&
+            'finalAbilityScores' in character &&
+            'classes' in character
+        );
     }
 }

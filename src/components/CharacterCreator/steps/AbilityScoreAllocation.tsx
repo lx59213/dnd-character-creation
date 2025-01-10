@@ -391,7 +391,7 @@ export const AbilityScoreAllocation: React.FC = () => {
         updateCharacter({
             ...character,
             baseAbilityScores: initialScores,
-            abilityScores: finalScores
+            finalAbilityScores: finalScores
         });
     };
 
@@ -436,7 +436,7 @@ export const AbilityScoreAllocation: React.FC = () => {
         updateCharacter({
             ...character,
             baseAbilityScores: newBaseScores,
-            abilityScores: finalScores
+            finalAbilityScores: finalScores
         });
     };
 
@@ -453,7 +453,7 @@ export const AbilityScoreAllocation: React.FC = () => {
         updateCharacter({
             ...character,
             baseAbilityScores: newScores,
-            abilityScores: finalScores
+            finalAbilityScores: finalScores
         });
     };
 
@@ -501,7 +501,7 @@ export const AbilityScoreAllocation: React.FC = () => {
         updateCharacter({
             ...character,
             baseAbilityScores: newScores,
-            abilityScores: finalScores
+            finalAbilityScores: finalScores
         });
     };
 

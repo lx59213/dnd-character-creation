@@ -127,7 +127,7 @@ export class SpellService {
         }
 
         // 获取属性调整值
-        const abilityScore = character.abilityScores[spellcastingAbility as keyof typeof character.abilityScores];
+        const abilityScore = character.finalAbilityScores[spellcastingAbility as keyof typeof character.finalAbilityScores];
         const abilityModifier = this.getAbilityModifier(abilityScore);
 
         // 基础公式：职业等级 + 属性调整值

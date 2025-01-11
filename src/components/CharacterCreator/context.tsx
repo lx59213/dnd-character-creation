@@ -106,45 +106,63 @@ export const CharacterProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   const { updateActiveCharacter } = useCharacterManager();
 
   const calculateFinalScores = (state: AbilityScoreState): AbilityScores => {
-    console.log('Calculating final scores with state:', state);
+    console.log('Starting final score calculation with state:', {
+      base: state.base,
+      race: state.race,
+      subrace: state.subrace,
+      asiTemp: state.asiTemp,
+      asiConfirmed: state.asiConfirmed
+    });
+    
     // 从基础值开始
     const finalScores: AbilityScores = { ...state.base };
+    console.log('Starting with base scores:', finalScores);
     
     // 应用所有加值
     (Object.keys(finalScores) as AbilityName[]).forEach(ability => {
       const original = finalScores[ability];
+      console.log(`\nCalculating ${ability}:`);
+      console.log(`- Starting value: ${original}`);
       
       // 种族加值
       if (state.race[ability]) {
         finalScores[ability] += state.race[ability] || 0;
+        console.log(`- After race bonus (${state.race[ability]}): ${finalScores[ability]}`);
       }
       
       // 亚种加值
       if (state.subrace[ability]) {
         finalScores[ability] += state.subrace[ability] || 0;
+        console.log(`- After subrace bonus (${state.subrace[ability]}): ${finalScores[ability]}`);
       }
       
       // 已确认的ASI
       const confirmedBonus = state.asiConfirmed[ability];
       if (confirmedBonus) {
         finalScores[ability] += confirmedBonus;
+        console.log(`- After confirmed ASI (${confirmedBonus}): ${finalScores[ability]}`);
       }
       
       // 临时ASI
       const tempBonus = state.asiTemp?.[ability];
       if (tempBonus) {
         finalScores[ability] += tempBonus;
+        console.log(`- After temp ASI (${tempBonus}): ${finalScores[ability]}`);
       }
 
       // 确保不超过20
+      const beforeCap = finalScores[ability];
       finalScores[ability] = Math.min(20, finalScores[ability]);
+      if (beforeCap !== finalScores[ability]) {
+        console.log(`- Capped at 20 (was ${beforeCap}): ${finalScores[ability]}`);
+      }
       
       if (finalScores[ability] !== original) {
-        console.log(`${ability}: ${original} -> ${finalScores[ability]} (race: ${state.race[ability] || 0}, subrace: ${state.subrace[ability] || 0}, confirmed: ${confirmedBonus || 0}, temp: ${tempBonus || 0})`);
+        console.log(`Final ${ability}: ${original} -> ${finalScores[ability]}`);
       }
     });
 
-    console.log('Final ability scores:', finalScores);
+    console.log('\nFinal ability scores:', finalScores);
     return finalScores;
   };
 
@@ -164,18 +182,28 @@ export const CharacterProvider: React.FC<{ children: React.ReactNode }> = ({ chi
 
   // 更新种族加值
   const updateRaceBonus = (bonus: Partial<AbilityScores>) => {
-    setAbilityState(prev => ({
-      ...prev,
-      race: bonus
-    }));
+    console.log('Updating race bonus with:', bonus);
+    setAbilityState(prev => {
+      const newState = {
+        ...prev,
+        race: bonus
+      };
+      console.log('New ability state after race bonus update:', newState);
+      return newState;
+    });
   };
 
   // 更新亚种加值
   const updateSubraceBonus = (bonus: Partial<AbilityScores>) => {
-    setAbilityState(prev => ({
-      ...prev,
-      subrace: bonus
-    }));
+    console.log('Updating subrace bonus with:', bonus);
+    setAbilityState(prev => {
+      const newState = {
+        ...prev,
+        subrace: bonus
+      };
+      console.log('New ability state after subrace bonus update:', newState);
+      return newState;
+    });
   };
 
   // 更新临时ASI
@@ -242,19 +270,39 @@ export const CharacterProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   }, [character.baseAbilityScores]);
 
   const updateCharacter = (updates: Partial<Character>) => {
+    console.log('updateCharacter called with updates:', updates);
+    
+    // 创建一个新的abilityState用于计算
+    let newAbilityState = { ...abilityState };
+    
     // 先处理种族和亚种的属性加值
     if (updates.race) {
+      console.log('Processing race update:', updates.race);
       const raceBonus = updates.race.abilityScoreIncrease || {};
-      updateRaceBonus(raceBonus);
+      console.log('Race ability score increase:', raceBonus);
+      
+      if (Object.keys(raceBonus).length === 0) {
+        console.warn('Warning: Race ability score increase is empty');
+      }
+      
+      // 直接更新newAbilityState
+      newAbilityState.race = raceBonus;
     }
     
     if (updates.subrace) {
+      console.log('Processing subrace update:', updates.subrace);
       const subraceBonus = updates.subrace.abilityScoreIncrease || {};
-      updateSubraceBonus(subraceBonus);
+      console.log('Subrace ability score increase:', subraceBonus);
+      
+      if (Object.keys(subraceBonus).length === 0) {
+        console.warn('Warning: Subrace ability score increase is empty');
+      }
+      
+      // 直接更新newAbilityState
+      newAbilityState.subrace = subraceBonus;
     }
 
-    // 创建一个新的abilityState用于计算
-    let newAbilityState = { ...abilityState };
+    console.log('Current ability state before update:', newAbilityState);
 
     // 如果更新包含ASI系统的更新
     if (updates.asiSystem) {
@@ -290,15 +338,13 @@ export const CharacterProvider: React.FC<{ children: React.ReactNode }> = ({ chi
         calculated: newASIConfirmed
       });
       
-      newAbilityState = {
-        ...newAbilityState,
-        asiConfirmed: newASIConfirmed,
-        asiTemp: undefined
-      };
+      newAbilityState.asiConfirmed = newASIConfirmed;
+      newAbilityState.asiTemp = undefined;
     }
 
     // 使用新的abilityState计算最终属性值
     const finalScores = calculateFinalScores(newAbilityState);
+    console.log('Calculated final scores:', finalScores);
 
     // 批量更新所有状态
     setAbilityState(newAbilityState);
@@ -332,11 +378,11 @@ export const CharacterProvider: React.FC<{ children: React.ReactNode }> = ({ chi
         };
       }
       
+      console.log('Updated character:', updatedCharacter);
       return updatedCharacter;
     });
 
     // 将updateActiveCharacter移到setState回调外部
-    // 使用Promise.resolve().then确保在状态更新后执行
     Promise.resolve().then(() => {
       if (updatedCharacter) {
         updateActiveCharacter(updatedCharacter);

@@ -152,64 +152,64 @@ const AppearancePreview: React.FC = () => {
   // 获取种族图片路径
   const getRaceImagePath = () => {
     if (!character.race) {
-      console.log('No race selected');
       return '';
     }
 
-    console.log('Current character race:', character.race);
-    console.log('Current character race name:', character.race.name);
-    console.log('Current character race display name:', character.race.displayName);
-    console.log('Current character subrace:', character.subrace);
-
     // 如果有子种族，优先使用子种族的图片
     if (character.subrace) {
-      console.log('Processing subrace image path...');
       // 优先使用显示名称，因为它是中文的
       const originalSubraceKey = character.subrace.displayName || character.subrace.name;
       const displaySubraceKey = character.subrace.displayName;
       const normalizedSubraceKey = normalizeRaceName(character.subrace.name);
       
-      console.log('Original subrace key:', originalSubraceKey);
-      console.log('Display subrace key:', displaySubraceKey);
-      console.log('Normalized subrace key:', normalizedSubraceKey);
-      
       // 优先使用显示名称进行映射
       const subraceKey = subraceNameMap[displaySubraceKey] || 
-                        subraceNameMap[originalSubraceKey] || 
-                        subraceNameMap[normalizedSubraceKey] ||
-                        normalizedSubraceKey;
-      
-      console.log('Final subrace key after mapping:', subraceKey);
-      console.log('Mapped image file name:', raceImageMap[subraceKey]);
+                      subraceNameMap[originalSubraceKey] || 
+                      subraceNameMap[normalizedSubraceKey] ||
+                      normalizedSubraceKey;
       
       // 构建完整的图片路径
       const imagePath = buildImagePath(raceImageMap[subraceKey] || '');
-      console.log('Constructed subrace image path:', imagePath);
-      console.log('Image file exists check:', raceImageMap[subraceKey] ? 'Yes' : 'No');
       
       if (raceImageMap[subraceKey]) {
-        console.log('Found matching subrace image, returning path');
         return imagePath;
-      } else {
-        console.log('No matching subrace image found in raceImageMap');
       }
     }
 
     // 如果没有子种族或子种族图片不存在，使用主种族图片
     const raceKey = normalizeRaceName(character.race.name);
-    console.log('Race original name:', character.race.name);
-    console.log('Race display name:', character.race.displayName);
-    console.log('Normalized race name:', raceKey);
-    console.log('Looking for race image with key:', raceKey);
-    console.log('Available race keys:', Object.keys(raceImageMap));
     
     // 构建完整的图片路径
     const imagePath = buildImagePath(raceImageMap[raceKey] || '');
-    console.log('Constructed race image path:', imagePath);
-    console.log('Image file name:', raceImageMap[raceKey]);
     
     return imagePath;
   };
+
+  // 将日志逻辑移到 useEffect 中
+  React.useEffect(() => {
+    if (character.race) {
+      console.log('Current character race:', character.race);
+      console.log('Current character race name:', character.race.name);
+      console.log('Current character race display name:', character.race.displayName);
+      console.log('Current character subrace:', character.subrace);
+
+      const raceKey = normalizeRaceName(character.race.name);
+      console.log('Race original name:', character.race.name);
+      console.log('Race display name:', character.race.displayName);
+      console.log('Normalized race name:', raceKey);
+      console.log('Looking for race image with key:', raceKey);
+      console.log('Available race keys:', Object.keys(raceImageMap));
+
+      const imagePath = getRaceImagePath();
+      // 将路径构建的日志也移到这里，只在种族变化时打印一次
+      if (imagePath) {
+        console.log('Building image path for:', raceImageMap[raceKey]);
+        console.log('Public URL:', process.env.PUBLIC_URL || '');
+        console.log('Normalized path:', imagePath);
+        console.log('Final image path:', imagePath);
+      }
+    }
+  }, [character.race, character.subrace]);
 
   const handleImageError = (error: React.SyntheticEvent<HTMLImageElement, Event>) => {
     console.error('Image failed to load:', error);
@@ -228,14 +228,10 @@ const AppearancePreview: React.FC = () => {
     // 在 Create React App 中，需要使用 process.env.PUBLIC_URL
     const publicUrl = process.env.PUBLIC_URL || '';
     const normalizedPath = `${publicUrl}/data/image/races/${fileName}`.replace(/\\/g, '/');
-    console.log('Building image path for:', fileName);
-    console.log('Public URL:', publicUrl);
-    console.log('Normalized path:', normalizedPath);
     return normalizedPath;
   };
 
   const imagePath = getRaceImagePath();
-  console.log('Final image path:', imagePath);
 
   // 当种族改变时重置错误状态
   React.useEffect(() => {

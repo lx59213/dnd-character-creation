@@ -67,31 +67,55 @@ const RaceSelection: React.FC = () => {
   };
 
   const handleRaceSelect = (raceData: RaceData) => {
+    console.log('Selecting race:', raceData);
+    const convertedRace = convertRaceDataToCharacterRace(raceData);
+    console.log('Converted race data:', convertedRace);
     updateCharacter({
-      race: raceData,
+      race: convertedRace,
       subrace: undefined // 清除之前选择的亚种
     });
   };
 
   const handleSubraceSelect = (subrace: Subrace) => {
     if (!character.race) return;
+    console.log('Selecting subrace:', subrace);
+    console.log('Current race:', character.race);
+    
+    // 确保亚种的属性加值被正确传递
+    const subraceWithAbilities = {
+      ...subrace,
+      abilityScoreIncrease: subrace.abilityScoreIncrease || {}
+    };
+    
+    console.log('Subrace with abilities:', subraceWithAbilities);
     updateCharacter({
-      subrace
+      subrace: subraceWithAbilities
     });
   };
 
   const convertRaceDataToCharacterRace = (raceData: RaceData): Race => {
+    console.log('Converting race data:', {
+      original: raceData,
+      abilityScoreIncrease: raceData.abilityScoreIncrease
+    });
+
     const race: Race = {
       name: raceData.name,
       displayName: raceData.displayName,
       description: raceData.description,
       size: raceData.size,
       speed: raceData.speed,
-      abilityScoreIncrease: raceData.abilityScoreIncrease,
-      racialTraits: raceData.racialTraits,
-      languages: raceData.languages,
-      subraces: raceData.subraces
+      abilityScoreIncrease: raceData.abilityScoreIncrease || {},
+      racialTraits: raceData.racialTraits || [],
+      languages: raceData.languages || [],
+      subraces: raceData.subraces || []
     };
+
+    console.log('Converted race:', {
+      race,
+      abilityScoreIncrease: race.abilityScoreIncrease
+    });
+
     return race;
   };
 

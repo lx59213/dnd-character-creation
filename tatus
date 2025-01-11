@@ -1,0 +1,3 @@
+[33m06399b0[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m fix: complete ASI state management updates and add documentation
+[33me544642[m trigger vercel deploy
+[33mf0203d9[m[33m ([m[1;32mfeature/asi-fixes[m[33m)[m fix: ASI state management and infinite loop issues - Fixed ASI doubling issue at level 4, resolved infinite update loop in notes page, improved state management in CharacterContext, optimized character updates and ASI confirmation logic

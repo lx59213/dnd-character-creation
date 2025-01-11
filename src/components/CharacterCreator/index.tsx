@@ -175,7 +175,7 @@ const CharacterCreator: React.FC = () => {
             borderRadius: 1,
             padding: 2,
             boxShadow: 1,
-            overflow: 'auto',
+            overflow: 'hidden',
           }}
         >
           <Content>{renderContent()}</Content>

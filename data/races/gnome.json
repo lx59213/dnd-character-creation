@@ -1,0 +1,65 @@
+{
+  "name": "Gnome",
+  "displayName": "侏儒",
+  "description": "侏儒的能量和热情与他们的体型形成鲜明对比。他们以惊人的热情投入自己感兴趣的事业中，无论是发明、探索、收藏还是恶作剧。侏儒喜欢宝石和其他精美工艺品，也热衷于机械装置。",
+  "size": "小型",
+  "speed": 7.5,
+  "abilityScoreIncrease": {
+    "intelligence": 2
+  },
+  "racialTraits": [
+    {
+      "name": "黑暗视觉",
+      "description": "习惯了地下生活的你在黑暗和微光环境下有着优异的视力。在微光环境下，你可以视物如同在明亮光照下一般；在黑暗环境下，你可以视物如同在微光环境下一般，但你在黑暗中只能看到灰色。",
+      "mechanicalEffect": "黑暗视觉范围12格（60尺）"
+    },
+    {
+      "name": "侏儒狡黠",
+      "description": "你在对抗魔法的智力、感知和魅力豁免检定上具有优势。",
+      "mechanicalEffect": "对抗魔法的智力、感知和魅力豁免检定具有优势"
+    }
+  ],
+  "languages": ["通用语", "侏儒语"],
+  "subraces": [
+    {
+      "name": "ForestGnome",
+      "displayName": "林地侏儒",
+      "description": "作为林地侏儒，你拥有敏锐的感知能力和神秘的自然魔法。在费伦，林地侏儒十分罕见，他们居住在与世隔绝的森林社群中。",
+      "abilityScoreIncrease": {
+        "dexterity": 1
+      },
+      "traits": [
+        {
+          "name": "自然幻术",
+          "description": "你掌握次级幻影戏法。使用该法术时，智力是你的施法关键属性。",
+          "mechanicalEffect": "获得次级幻影戏法，使用智力作为施法关键属性"
+        },
+        {
+          "name": "与小动物交谈",
+          "description": "通过声音和手势，你可以与小型或更小的野兽交流简单的概念。",
+          "mechanicalEffect": "可与小型或更小的野兽进行简单交流"
+        }
+      ]
+    },
+    {
+      "name": "RockGnome",
+      "displayName": "岩地侏儒",
+      "description": "作为岩地侏儒，你拥有超凡的发明才能和坚韧的体魄。在费伦，岩地侏儒也被称为宝石侏儒，他们是最常见的侏儒亚种。",
+      "abilityScoreIncrease": {
+        "constitution": 1
+      },
+      "traits": [
+        {
+          "name": "工匠知识",
+          "description": "每当你对魔法物品或科技装置进行历史检定时，你可以加入你的熟练加值两次。",
+          "mechanicalEffect": "对魔法物品或科技装置的历史检定获得双倍熟练加值"
+        },
+        {
+          "name": "巧匠",
+          "description": "你熟练使用工匠工具。使用这些工具时，你可以花费1小时和10金币的材料制造一个微型机械装置。",
+          "mechanicalEffect": "熟练使用工匠工具，可制造微型机械装置"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "name": "Elf",
+  "displayName": "精灵",
+  "description": "精灵是一个优雅的长寿种族，在世界上留下深远的印记。他们热爱自然、艺术、魔法、自由与冒险。虽然他们可以活几百年，但精灵们保持着对世界永恒的好奇心。",
+  "size": "中型",
+  "speed": 30,
+  "abilityScoreIncrease": {
+    "dexterity": 2
+  },
+  "proficiencies": [
+    {
+      "id": "perception",
+      "type": "skill"
+    }
+  ],
+  "racialTraits": [
+    {
+      "name": "黑暗视觉",
+      "description": "得益于你的精灵血统，你在黑暗和微光环境下有着优异的视力。在微光环境下，你可以视物如同在明亮光照下一般；在黑暗环境下，你可以视物如同在微光环境下一般，但你在黑暗中只能看到灰色。",
+      "mechanicalEffect": "60尺黑暗视觉"
+    },
+    {
+      "name": "敏锐感官",
+      "description": "你在感知（察觉）检定上具有熟练项加值。",
+      "mechanicalEffect": ""
+    },
+    {
+      "name": "精类血统",
+      "description": "你在对抗魅惑的豁免检定上具有优势，并且魔法不会使你入睡。",
+      "mechanicalEffect": ["对抗魅惑豁免优势", "魔法免疫睡眠"]
+    },
+    {
+      "name": "出神",
+      "description": "精灵不需要睡眠。相反，他们每天需要花费4小时进行深度冥想，在此期间保持半清醒状态。",
+      "mechanicalEffect": "冥想代替睡眠"
+    }
+  ],
+  "languages": ["通用语", "精灵语"],
+  "subraces": [
+    {
+      "name": "HighElf",
+      "displayName": "高精灵",
+      "description": "作为高精灵，你具有敏锐的思维和精通至少基础魔法。在许多DND世界中，有两种高等精灵。一种更傲慢和隐居，相信他们比所有其他种族都优越。另一种则更常见和友善，经常在非精灵种族中被发现。",
+      "abilityScoreIncrease": {
+        "intelligence": 1
+      },
+      "traits": [
+        {
+          "name": "精灵武器训练",
+          "description": "你擅长使用长剑、短剑、短弓和长弓。",
+          "mechanicalEffect": ["熟练使用长剑", "熟练使用短剑", "熟练使用短弓", "熟练使用长弓"]
+        },
+        {
+          "name": "戏法",
+          "description": "你了解一个戏法，从法师法术列表中选择。智力是你施展该法术的关键属性。",
+          "mechanicalEffect": "获得一个法师戏法"
+        },
+        {
+          "name": "额外语言",
+          "description": "你可以说、读、写一门额外的语言，由你选择。",
+          "mechanicalEffect": "获得一门额外语言"
+        }
+      ],
+      "Other proficiencies": {
+        "weapons": [
+          { "id": "proficiency.weapon.longsword" },
+          { "id": "proficiency.weapon.shortsword" },
+          { "id": "proficiency.weapon.shortbow" },
+          { "id": "proficiency.weapon.longbow" }
+        ]
+      }
+    },
+    {
+      "name": "WoodElf",
+      "displayName": "木精灵",
+      "description": "作为木精灵，你具有敏锐的感官和直觉，你的双脚轻快，让你能够在茂密的森林中悄无声息地穿行。",
+      "abilityScoreIncrease": {
+        "wisdom": 1
+      },
+      "proficiencies": [
+        {
+          "id": "stealth",
+          "type": "skill"
+        }
+      ],
+      "traits": [
+        {
+          "name": "精灵武器训练",
+          "description": "你擅长使用长剑、短剑、短弓和长弓。",
+          "mechanicalEffect": ["熟练使用长剑", "熟练使用短剑", "熟练使用短弓", "熟练使用长弓"]
+        },
+        {
+          "name": "轻捷步伐",
+          "description": "你的基础步行速度增加10尺。",
+          "mechanicalEffect": "速度+10尺"
+        },
+        {
+          "name": "野性面具",
+          "description": "你可以尝试在仅有轻度遮蔽的自然现象（下雨、下雪、雾气、落叶、灌木等）环境下进行隐藏。",
+          "mechanicalEffect": "自然环境轻度遮蔽可隐藏"
+        },
+        {
+          "name": "自然隐者",
+          "description": "你精通隐匿技能。",
+          "mechanicalEffect": ""
+        }
+      ],
+      "Other proficiencies": {
+        "weapons": [
+          { "id": "proficiency.weapon.longsword" },
+          { "id": "proficiency.weapon.shortsword" },
+          { "id": "proficiency.weapon.shortbow" },
+          { "id": "proficiency.weapon.longbow" }
+        ]
+      }
+    },
+    {
+      "name": "Drow",
+      "displayName": "卓尔",
+      "description": "后裔自远古分裂时期选择追随邪恶女神罗丝的精灵，卓尔或称黑暗精灵被迫迁入幽暗地域。在那里，他们适应了黑暗环境。",
+      "abilityScoreIncrease": {
+        "charisma": 1
+      },
+      "traits": [
+        {
+          "name": "高等黑暗视觉",
+          "description": "你的黑暗视觉范围有120尺。",
+          "mechanicalEffect": "120尺黑暗视觉"
+        },
+        {
+          "name": "日光敏感",
+          "description": "你在阳光下进行攻击检定和感知（察觉）检定时具有劣势。",
+          "mechanicalEffect": "日光劣势"
+        },
+        {
+          "name": "卓尔魔法",
+          "description": "你掌握舞光术戏法。当你达到3级时，你可以每天使用一次妖火术。当你达到5级时，你可以每天使用一次黑暗术。魅力是你施展这些法术的关键属性。",
+          "mechanicalEffect": ["舞光术戏法", "3级：每日1次妖火术", "5级：每日1次黑暗术"]
+        },
+        {
+          "name": "卓尔武器训练",
+          "description": "你擅长使用刺剑、短剑和手弩。",
+          "mechanicalEffect": ["熟练使用刺剑", "熟练使用短剑", "熟练使用手弩"]
+        }
+      ],
+      "Other proficiencies": {
+        "weapons": [
+          { "id": "proficiency.weapon.rapier" },
+          { "id": "proficiency.weapon.shortsword" },
+          { "id": "proficiency.weapon.handcrossbow" }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Halfling",
+  "displayName": "半身人",
+  "description": "半身人以其乐观和热情而闻名。他们热爱简单的生活乐趣，比如美食、饮品和温馨的家。尽管体型娇小，但半身人的勇气和决心丝毫不逊于更高大的种族。",
+  "size": "小型",
+  "speed": 7.5,
+  "abilityScoreIncrease": {
+    "dexterity": 2
+  },
+  "racialTraits": [
+    {
+      "name": "幸运",
+      "description": "当你进行攻击检定、属性检定或豁免检定时，如果你掷出了1，你可以重骰该骰子，但必须使用新的结果。",
+      "mechanicalEffect": "攻击、属性和豁免检定掷出1时可以重骰"
+    },
+    {
+      "name": "勇敢",
+      "description": "你在对抗恐慌的豁免检定上具有优势。",
+      "mechanicalEffect": "对抗恐慌的豁免检定具有优势"
+    },
+    {
+      "name": "灵活",
+      "description": "你可以穿过任何体型比你大的生物所占据的空间。",
+      "mechanicalEffect": "可以穿过比自己大一个体型的生物空间"
+    }
+  ],
+  "languages": ["通用语", "半身人语"],
+  "subraces": [
+    {
+      "name": "LightfootHalfling",
+      "displayName": "轻足半身人",
+      "description": "作为轻足半身人，你可以轻易地躲藏起来，甚至使用其他人作为掩护。你比其他半身人更具魅力。",
+      "abilityScoreIncrease": {
+        "charisma": 1
+      },
+      "proficiencies": [
+        {
+          "id": "stealth",
+          "type": "skill"
+        }
+      ],
+      "traits": [
+        {
+          "name": "天生隐匿",
+          "description": "你精通隐匿技能，并且可以尝试躲藏，即使只有一个体型比你大的生物提供掩护。",
+          "mechanicalEffect": "可以以大一号生物作为掩护进行躲藏"
+        }
+      ]
+    },
+    {
+      "name": "StoutHalfling",
+      "displayName": "刚毅半身人",
+      "description": "作为刚毅半身人，你比你的轻足表亲更能抵抗毒素。据说刚毅半身人具有矮人血统。在费伦，这些半身人也被称为强心半身人。",
+      "abilityScoreIncrease": {
+        "constitution": 1
+      },
+      "traits": [
+        {
+          "name": "刚毅抗性",
+          "description": "你在对抗毒素的豁免检定上具有优势，且你对毒素伤害具有抗性。",
+          "mechanicalEffect": ["对抗毒素的豁免检定具有优势", "对毒素伤害具有抗性"]
+        }
+      ]
+    }
+  ]
+}

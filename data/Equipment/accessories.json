@@ -1,0 +1,132 @@
+{
+  "accessory.amulet": {
+    "id": "accessory.amulet",
+    "name": "护身符",
+    "displayName": "护身符 Amulet",
+    "description": "一个可以戴在脖子上的装饰品。",
+    "weight": 1,
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "slot": "neck",
+    "rarity": "common"
+  },
+  "accessory.ring": {
+    "id": "accessory.ring",
+    "name": "戒指",
+    "displayName": "戒指 Ring",
+    "description": "一个普通的金属戒指。",
+    "weight": 0.1,
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "slot": "finger",
+    "rarity": "common"
+  },
+  "accessory.bracelet": {
+    "id": "accessory.bracelet",
+    "name": "手镯",
+    "displayName": "手镯 Bracelet",
+    "description": "一个装饰性的手镯。",
+    "weight": 0.5,
+    "cost": {
+      "amount": 3,
+      "unit": "gp"
+    },
+    "slot": "wrist",
+    "rarity": "common"
+  },
+  "accessory.circlet": {
+    "id": "accessory.circlet",
+    "name": "头环",
+    "displayName": "头环 Circlet",
+    "description": "一个金属制成的头饰。",
+    "weight": 1,
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "slot": "head",
+    "rarity": "common"
+  },
+  "accessory.brooch": {
+    "id": "accessory.brooch",
+    "name": "胸针",
+    "displayName": "胸针 Brooch",
+    "description": "一个精美的装饰性胸针，可以固定斗篷或其他衣物。",
+    "weight": 0.2,
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "slot": "chest",
+    "rarity": "common"
+  },
+  "accessory.pendant": {
+    "id": "accessory.pendant",
+    "name": "吊坠",
+    "displayName": "吊坠 Pendant",
+    "description": "一个可以挂在项链上的装饰物。",
+    "weight": 0.3,
+    "cost": {
+      "amount": 4,
+      "unit": "gp"
+    },
+    "slot": "neck",
+    "rarity": "common"
+  },
+  "accessory.earrings": {
+    "id": "accessory.earrings",
+    "name": "耳环",
+    "displayName": "耳环 Earrings",
+    "description": "一对装饰性耳环。",
+    "weight": 0.1,
+    "cost": {
+      "amount": 3,
+      "unit": "gp"
+    },
+    "slot": "ears",
+    "rarity": "common"
+  },
+  "accessory.crown": {
+    "id": "accessory.crown",
+    "name": "王冠",
+    "displayName": "王冠 Crown",
+    "description": "一个象征地位的头饰。",
+    "weight": 2,
+    "cost": {
+      "amount": 100,
+      "unit": "gp"
+    },
+    "slot": "head",
+    "rarity": "uncommon"
+  },
+  "accessory.belt": {
+    "id": "accessory.belt",
+    "name": "腰带",
+    "displayName": "腰带 Belt",
+    "description": "一条装饰性腰带，可以用来固定衣物或携带物品。",
+    "weight": 1,
+    "cost": {
+      "amount": 4,
+      "unit": "gp"
+    },
+    "slot": "waist",
+    "rarity": "common"
+  },
+  "accessory.anklet": {
+    "id": "accessory.anklet",
+    "name": "脚链",
+    "displayName": "脚链 Anklet",
+    "description": "一个戴在脚踝上的装饰品。",
+    "weight": 0.2,
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "slot": "ankle",
+    "rarity": "common"
+  }
+}

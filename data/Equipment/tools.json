@@ -1,0 +1,268 @@
+{
+  "tool.thieves": {
+    "id": "tool.thieves",
+    "name": "盗贼工具",
+    "displayName": "盗贼工具 Thieves' Tools",
+    "description": "一套开锁和解除陷阱的工具。",
+    "weight": 1,
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "type": "other",
+    "proficiencyProvided": "thieves_tools",
+    "rarity": "common"
+  },
+  "tool.herbalism": {
+    "id": "tool.herbalism",
+    "name": "药草工具",
+    "displayName": "药草工具 Herbalism Kit",
+    "description": "用于采集和制作药剂的工具。",
+    "weight": 3,
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "type": "artisan",
+    "proficiencyProvided": "herbalism_kit",
+    "rarity": "common"
+  },
+  "tool.alchemist": {
+    "id": "tool.alchemist",
+    "name": "炼金工具",
+    "displayName": "炼金工具 Alchemist's Supplies",
+    "description": "用于制作药水和其他炼金产品的工具。",
+    "weight": 8,
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "type": "artisan",
+    "proficiencyProvided": "alchemists_supplies",
+    "rarity": "common"
+  },
+  "tool.smith": {
+    "id": "tool.smith",
+    "name": "铁匠工具",
+    "displayName": "铁匠工具 Smith's Tools",
+    "description": "用于制作和修理金属物品的工具。",
+    "weight": 8,
+    "cost": {
+      "amount": 20,
+      "unit": "gp"
+    },
+    "type": "artisan",
+    "proficiencyProvided": "smiths_tools",
+    "rarity": "common"
+  },
+  "tool.carpenter": {
+    "id": "tool.carpenter",
+    "name": "木匠工具",
+    "displayName": "木匠工具 Carpenter's Tools",
+    "description": "用于制作和修理木制品的工具。",
+    "weight": 6,
+    "cost": {
+      "amount": 8,
+      "unit": "gp"
+    },
+    "type": "artisan",
+    "proficiencyProvided": "carpenters_tools",
+    "rarity": "common"
+  },
+  "tool.leatherworker": {
+    "id": "tool.leatherworker",
+    "name": "制革工具",
+    "displayName": "制革工具 Leatherworker's Tools",
+    "description": "用于制作和修理皮革制品的工具。",
+    "weight": 5,
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "type": "artisan",
+    "proficiencyProvided": "leatherworkers_tools",
+    "rarity": "common"
+  },
+  "tool.disguise": {
+    "id": "tool.disguise",
+    "name": "伪装工具",
+    "displayName": "伪装工具 Disguise Kit",
+    "description": "用于改变外貌的化妆品和道具。",
+    "weight": 3,
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "type": "other",
+    "proficiencyProvided": "disguise_kit",
+    "rarity": "common"
+  },
+  "tool.forgery": {
+    "id": "tool.forgery",
+    "name": "制假工具",
+    "displayName": "制假工具 Forgery Kit",
+    "description": "用于复制文件和制作假文书的工具。",
+    "weight": 5,
+    "cost": {
+      "amount": 15,
+      "unit": "gp"
+    },
+    "type": "other",
+    "proficiencyProvided": "forgery_kit",
+    "rarity": "common"
+  },
+  "tool.poisoner": {
+    "id": "tool.poisoner",
+    "name": "制毒工具",
+    "displayName": "制毒工具 Poisoner's Kit",
+    "description": "用于制作和使用毒药的工具。",
+    "weight": 2,
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "type": "other",
+    "proficiencyProvided": "poisoner_kit",
+    "rarity": "common"
+  },
+  "tool.dice": {
+    "id": "tool.dice",
+    "name": "骰子套装",
+    "displayName": "骰子套装 Dice Set",
+    "description": "一套用于赌博游戏的骰子。",
+    "weight": 0.1,
+    "cost": {
+      "amount": 1,
+      "unit": "sp"
+    },
+    "type": "gaming",
+    "proficiencyProvided": "dice_set",
+    "rarity": "common"
+  },
+  "tool.cards": {
+    "id": "tool.cards",
+    "name": "纸牌",
+    "displayName": "纸牌 Playing Card Set",
+    "description": "一副标准扑克牌。",
+    "weight": 0.1,
+    "cost": {
+      "amount": 5,
+      "unit": "sp"
+    },
+    "type": "gaming",
+    "proficiencyProvided": "playing_card_set",
+    "rarity": "common"
+  },
+  "tool.chess": {
+    "id": "tool.chess",
+    "name": "棋子套装",
+    "displayName": "棋子套装 Chess Set",
+    "description": "一套精美的棋子和棋盘。",
+    "weight": 0.5,
+    "cost": {
+      "amount": 1,
+      "unit": "gp"
+    },
+    "type": "gaming",
+    "proficiencyProvided": "chess_set",
+    "rarity": "common"
+  },
+  "tool.lute": {
+    "id": "tool.lute",
+    "name": "鲁特琴",
+    "displayName": "鲁特琴 Lute",
+    "description": "一种弦乐器。",
+    "weight": 2,
+    "cost": {
+      "amount": 35,
+      "unit": "gp"
+    },
+    "type": "musical",
+    "proficiencyProvided": "lute",
+    "rarity": "common"
+  },
+  "tool.flute": {
+    "id": "tool.flute",
+    "name": "长笛",
+    "displayName": "长笛 Flute",
+    "description": "一种木制管乐器。",
+    "weight": 1,
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "type": "musical",
+    "proficiencyProvided": "flute",
+    "rarity": "common"
+  },
+  "tool.drum": {
+    "id": "tool.drum",
+    "name": "鼓",
+    "displayName": "鼓 Drum",
+    "description": "一面手持鼓。",
+    "weight": 3,
+    "cost": {
+      "amount": 6,
+      "unit": "gp"
+    },
+    "type": "musical",
+    "proficiencyProvided": "drum",
+    "rarity": "common"
+  },
+  "tool.pan_flute": {
+    "id": "tool.pan_flute",
+    "name": "排笛",
+    "displayName": "排笛 Pan Flute",
+    "description": "一种由多根管子组成的吹奏乐器。",
+    "weight": 2,
+    "cost": {
+      "amount": 12,
+      "unit": "gp"
+    },
+    "type": "musical",
+    "proficiencyProvided": "pan_flute",
+    "rarity": "common"
+  },
+  "tool.horn": {
+    "id": "tool.horn",
+    "name": "号角",
+    "displayName": "号角 Horn",
+    "description": "一种铜制管乐器。",
+    "weight": 2,
+    "cost": {
+      "amount": 3,
+      "unit": "gp"
+    },
+    "type": "musical",
+    "proficiencyProvided": "horn",
+    "rarity": "common"
+  },
+  "tool.navigator": {
+    "id": "tool.navigator",
+    "name": "航海工具",
+    "displayName": "航海工具 Navigator's Tools",
+    "description": "用于航海导航的工具，包括六分仪、罗盘等。",
+    "weight": 2,
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "type": "other",
+    "proficiencyProvided": "navigators_tools",
+    "rarity": "common"
+  },
+  "tool.cartographer": {
+    "id": "tool.cartographer",
+    "name": "制图工具",
+    "displayName": "制图工具 Cartographer's Tools",
+    "description": "用于绘制地图的工具。",
+    "weight": 6,
+    "cost": {
+      "amount": 15,
+      "unit": "gp"
+    },
+    "type": "artisan",
+    "proficiencyProvided": "cartographers_tools",
+    "rarity": "common"
+  }
+}

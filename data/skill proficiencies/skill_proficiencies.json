@@ -1,0 +1,350 @@
+{
+    "skills": {
+        "acrobatics": {
+            "name": "特技",
+            "type": "skill",
+            "ability": "dexterity",
+            "description": "在保持平衡、翻滚、跳跃等需要敏捷的动作中的熟练程度。"
+        },
+        "animal_handling": {
+            "name": "驯兽",
+            "type": "skill",
+            "ability": "wisdom",
+            "description": "安抚动物、判断动物意图和训练动物的能力。"
+        },
+        "arcana": {
+            "name": "奥秘",
+            "type": "skill",
+            "ability": "intelligence",
+            "description": "回忆关于法术、魔法物品、奥术符号、魔法传统、位面存在和位面居民的知识。"
+        },
+        "athletics": {
+            "name": "运动",
+            "type": "skill",
+            "ability": "strength",
+            "description": "攀爬、跳跃、游泳等需要体能的活动中的熟练程度。"
+        },
+        "deception": {
+            "name": "欺瞒",
+            "type": "skill",
+            "ability": "charisma",
+            "description": "成功地让他人相信谎言、误导他人或掩盖真相的能力。"
+        },
+        "history": {
+            "name": "历史",
+            "type": "skill",
+            "ability": "intelligence",
+            "description": "回忆关于历史事件、传奇人物、古代王国、过往争端、近代战争和失落文明的知识。"
+        },
+        "insight": {
+            "name": "洞悉",
+            "type": "skill",
+            "ability": "wisdom",
+            "description": "理解他人的真实意图，识破谎言和欺骗。通过观察肢体语言、说话方式和行为习惯来判断一个生物的真实意图。"
+        },
+        "intimidation": {
+            "name": "威吓",
+            "type": "skill",
+            "ability": "charisma",
+            "description": "通过威胁或敌对行为影响他人的能力。"
+        },
+        "investigation": {
+            "name": "调查",
+            "type": "skill",
+            "ability": "intelligence",
+            "description": "在寻找线索和推理时的能力，以及发现隐藏物品的能力。"
+        },
+        "medicine": {
+            "name": "医疗",
+            "type": "skill",
+            "ability": "wisdom",
+            "description": "诊断疾病、稳定濒死伤员和了解各种伤害的能力。"
+        },
+        "nature": {
+            "name": "自然",
+            "type": "skill",
+            "ability": "intelligence",
+            "description": "关于地形、植物、动物、天气和自然环境的知识。"
+        },
+        "perception": {
+            "name": "察觉",
+            "type": "skill",
+            "ability": "wisdom",
+            "description": "通过视觉、听觉或其他感官发现事物的能力。"
+        },
+        "performance": {
+            "name": "表演",
+            "type": "skill",
+            "ability": "charisma",
+            "description": "在音乐、舞蹈、戏剧、讲故事或其他形式娱乐中的表现能力。"
+        },
+        "persuasion": {
+            "name": "说服",
+            "type": "skill",
+            "ability": "charisma",
+            "description": "通过诚实和友善的方式影响他人的能力。"
+        },
+        "religion": {
+            "name": "宗教",
+            "type": "skill",
+            "ability": "intelligence",
+            "description": "了解神祇、仪式和祈祷。包括对神祇的教义、圣徽、教会组织结构、宗教仪式和神圣文献的认知。"
+        },
+        "sleight_of_hand": {
+            "name": "巧手",
+            "type": "skill",
+            "ability": "dexterity",
+            "description": "在隐藏小物品、偷窃或解除陷阱等需要手指灵活度的动作中的熟练程度。"
+        },
+        "stealth": {
+            "name": "隐匿",
+            "type": "skill",
+            "ability": "dexterity",
+            "description": "隐藏、潜行和避免被发现的能力。"
+        },
+        "survival": {
+            "name": "生存",
+            "type": "skill",
+            "ability": "wisdom",
+            "description": "追踪、寻找食物、辨认危险和在野外生存的能力。"
+        }
+    },
+    "languages": {
+        "abyssal": {
+            "name": "深渊语",
+            "type": "language",
+            "description": "深渊语是恶魔的语言，听起来令人不安且刺耳。"
+        },
+        "celestial": {
+            "name": "天界语",
+            "type": "language",
+            "description": "天界语是天界生物说的语言，听起来优美动听。"
+        },
+        "common": {
+            "name": "通用语",
+            "type": "language",
+            "description": "通用语是人类的语言，也是商贸、外交和学术交流中最广泛使用的语言。"
+        },
+        "draconic": {
+            "name": "龙语",
+            "type": "language",
+            "description": "龙语是最古老的语言之一，经常被用于魔法研究。"
+        },
+        "dwarvish": {
+            "name": "矮人语",
+            "type": "language",
+            "description": "矮人语以其坚实的辅音和粗犷的声调著称。这种语言在说出时就如同矮人们本身一样坚韧不拔。"
+        },
+        "elvish": {
+            "name": "精灵语",
+            "type": "language",
+            "description": "精灵语流畅优雅，有着复杂的语法和丰富的词汇。精灵的文学作品在其他种族中广受欢迎。"
+        },
+        "giant": {
+            "name": "巨人语",
+            "type": "language",
+            "description": "巨人语是一种古老的语言，常被巨人、食人魔和其他巨型生物使用。"
+        },
+        "gnomish": {
+            "name": "侏儒语",
+            "type": "language",
+            "description": "侏儒语充满了技术术语和关于自然的描述，反映了侏儒对发明和自然的热爱。"
+        },
+        "goblin": {
+            "name": "地精语",
+            "type": "language",
+            "description": "地精语是一种粗糙的语言，包含了许多硬音和爆破音。"
+        },
+        "halfling": {
+            "name": "半身人语",
+            "type": "language",
+            "description": "半身人语是一种柔和的语言，借鉴了通用语的许多词汇。"
+        },
+        "infernal": {
+            "name": "炼狱语",
+            "type": "language",
+            "description": "炼狱语是魔鬼的语言，具有严格的语法规则。"
+        },
+        "orc": {
+            "name": "兽人语",
+            "type": "language",
+            "description": "兽人语是一种粗犷的语言，充满了硬辅音。它没有自己的文字，使用矮人文字书写。"
+        },
+        "sylvan": {
+            "name": "木族语",
+            "type": "language",
+            "description": "木族语是精类生物的语言，听起来如同林间的微风。"
+        },
+        "undercommon": {
+            "name": "地底通用语",
+            "type": "language",
+            "description": "地底通用语是幽暗地域的贸易语言，主要由地底种族使用。"
+        }
+    },
+    "tools": {
+        "alchemist": {
+            "name": "炼金工具",
+            "type": "tool",
+            "description": "用于制作药水和其他炼金产品的工具组。包括各种玻璃器皿、过滤器和加热装置。"
+        },
+        "brewer": {
+            "name": "酿酒工具",
+            "type": "tool",
+            "description": "用于酿造啤酒、蜜酒和其他酒类的工具组。"
+        },
+        "calligrapher": {
+            "name": "书法工具",
+            "type": "tool",
+            "description": "用于创作优美文字的工具组，包括特制的笔和墨水。"
+        },
+        "carpenter": {
+            "name": "木匠工具",
+            "type": "tool",
+            "description": "用于木工制作的工具组，包括锯子、凿子、刨子等。"
+        },
+        "cartographer": {
+            "name": "制图工具",
+            "type": "tool",
+            "description": "用于绘制地图和制作航海图的工具组。"
+        },
+        "cobbler": {
+            "name": "制鞋工具",
+            "type": "tool",
+            "description": "用于制作和修理鞋子的工具组。"
+        },
+        "cook": {
+            "name": "厨师工具",
+            "type": "tool",
+            "description": "用于准备食物的工具组，包括各种刀具、锅具等。"
+        },
+        "disguise": {
+            "name": "伪装工具",
+            "type": "tool",
+            "description": "用于改变外貌的工具组，包括化妆品、假发等。"
+        },
+        "forgery": {
+            "name": "制假工具",
+            "type": "tool",
+            "description": "用于复制文件和制作伪造品的精密工具组。"
+        },
+        "gaming": {
+            "name": "赌博工具",
+            "type": "tool",
+            "description": "各种游戏用具，包括骰子、卡牌等。"
+        },
+        "glassblower": {
+            "name": "吹玻璃工具",
+            "type": "tool",
+            "description": "用于制作玻璃制品的工具组。"
+        },
+        "herbalism": {
+            "name": "药草师工具",
+            "type": "tool",
+            "description": "用于采集和制备草药的工具组，包括剪刀、研钵和药瓶。"
+        },
+        "jeweler": {
+            "name": "珠宝匠工具",
+            "type": "tool",
+            "description": "用于制作和鉴定珠宝的工具组。"
+        },
+        "leatherworker": {
+            "name": "制革工具",
+            "type": "tool",
+            "description": "用于处理皮革和制作皮革制品的工具组。"
+        },
+        "mason": {
+            "name": "石匠工具",
+            "type": "tool",
+            "description": "用于加工石材的工具组。"
+        },
+        "navigator": {
+            "name": "导航工具",
+            "type": "tool",
+            "description": "用于确定位置和航向的工具组，包括六分仪、罗盘等。"
+        },
+        "painter": {
+            "name": "画家工具",
+            "type": "tool",
+            "description": "用于绘画的工具组，包括画笔、颜料等。"
+        },
+        "poisoner": {
+            "name": "制毒工具",
+            "type": "tool",
+            "description": "用于制作毒药的工具组，包括特殊的容器和提取器具。"
+        },
+        "potter": {
+            "name": "陶匠工具",
+            "type": "tool",
+            "description": "用于制作陶器的工具组。"
+        },
+        "smith": {
+            "name": "锻造工具",
+            "type": "tool",
+            "description": "用于加工金属的工具组，包括锤子、钳子、铁砧等。"
+        },
+        "thieves": {
+            "name": "盗贼工具",
+            "type": "tool",
+            "description": "用于开锁和解除陷阱的精密工具组，包括撬锁器、钳子等。"
+        },
+        "tinker": {
+            "name": "修理工具",
+            "type": "tool",
+            "description": "用于修理小型机械装置的工具组。"
+        },
+        "weaver": {
+            "name": "编织工具",
+            "type": "tool",
+            "description": "用于纺织和编织的工具组。"
+        },
+        "woodcarver": {
+            "name": "木雕工具",
+            "type": "tool",
+            "description": "用于雕刻木制品的工具组。"
+        }
+    },
+    "weapons": {
+        "simple_melee": {
+            "name": "简单近战武器",
+            "type": "weapon",
+            "description": "包括短棒、匕首、大棒、手斧、标枪、轻锤、木棒、长矛等易于使用的近战武器。"
+        },
+        "simple_ranged": {
+            "name": "简单远程武器",
+            "type": "weapon",
+            "description": "包括轻弩、飞镖、短弓、投石索等易于使用的远程武器。"
+        },
+        "martial_melee": {
+            "name": "军用近战武器",
+            "type": "weapon",
+            "description": "包括战斧、链枷、巨斧、大剑、长剑、刺剑、短剑、钉头锤、长矛、战镐、战锤等需要专门训练的近战武器。"
+        },
+        "martial_ranged": {
+            "name": "军用远程武器",
+            "type": "weapon",
+            "description": "包括手弩、重弩、长弓、吹箭等需要专门训练的远程武器。"
+        }
+    },
+    "armor": {
+        "light": {
+            "name": "轻型护甲",
+            "type": "armor",
+            "description": "包括皮甲、镶钉皮甲等轻便的护甲。这些护甲提供基础防护，同时保持较高的机动性。"
+        },
+        "medium": {
+            "name": "中型护甲",
+            "type": "armor",
+            "description": "包括兽皮甲、锁甲衫、鳞甲等平衡了防护和灵活性的护甲。"
+        },
+        "heavy": {
+            "name": "重型护甲",
+            "type": "armor",
+            "description": "包括戒指甲、链甲、板甲等提供最强防护的护甲。这些护甲能够提供最佳的防护，但会限制使用者的灵活性。"
+        },
+        "shields": {
+            "name": "盾牌",
+            "type": "armor",
+            "description": "各种类型的盾牌，用于增加防护能力。包括木盾、金属盾等。"
+        }
+    }
+}

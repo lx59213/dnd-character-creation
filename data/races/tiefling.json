@@ -1,0 +1,67 @@
+{
+  "name": "tiefling",
+  "displayName": "提夫林",
+  "description": "提夫林继承了远古恶魔的血脉，这使他们带有明显的恶魔特征。他们的外表各异，但通常都有角、尾巴和异色的眼睛。尽管有着这样的血统，提夫林仍然可以选择自己的命运。",
+  "size": "中型",
+  "speed": 9,
+  "abilityScoreIncrease": {
+    "charisma": 2,
+    "intelligence": 1
+  },
+  "racialTraits": [
+    {
+      "name": "黑暗视觉",
+      "description": "得益于你的恶魔血统，你在黑暗和微光环境下有着优异的视力。在微光环境下，你可以视物如同在明亮光照下一般；在黑暗环境下，你可以视物如同在微光环境下一般，但你在黑暗中只能看到灰色。",
+      "mechanicalEffect": "60尺黑暗视觉"
+    },
+    {
+      "name": "地狱抗性",
+      "description": "你对火焰伤害具有抗性。",
+      "mechanicalEffect": "火焰伤害抗性"
+    },
+    {
+      "name": "地狱遗赠",
+      "description": "你掌握邪术戏法。当你达到3级时，你可以每天使用一次炼狱之火。当你达到5级时，你可以每天使用一次黑暗术。魅力是你施展这些法术的关键属性。",
+      "mechanicalEffect": ["邪术戏法", "炼狱之火", "黑暗术"]
+    }
+  ],
+  "languages": ["通用语", "炼狱语"],
+  "subraces": [
+    {
+      "name": "Asmodeus Tiefling",
+      "displayName": "阿斯莫德斯血裔",
+      "description": "你的血统可以追溯到九层地狱之主阿斯莫德斯。你继承了他的狡诈和权力欲望。",
+      "traits": [
+        {
+          "name": "阿斯莫德斯遗赠",
+          "description": "你的法术列表使用阿斯莫德斯赐予的法术。",
+          "mechanicalEffect": "阿斯莫德斯法术"
+        }
+      ]
+    },
+    {
+      "name": "Mephistopheles Tiefling",
+      "displayName": "梅菲斯特血裔",
+      "description": "你的血统源自梅菲斯特，一位精通奥术的大魔鬼。你继承了他对奥术知识的渴望。",
+      "traits": [
+        {
+          "name": "梅菲斯特遗赠",
+          "description": "你的法术列表使用梅菲斯特赐予的法术，更侧重于奥术魔法。",
+          "mechanicalEffect": "梅菲斯特法术"
+        }
+      ]
+    },
+    {
+      "name": "Zariel Tiefling",
+      "displayName": "扎瑞尔血裔",
+      "description": "你的血统来自扎瑞尔，一位堕落的天使。你继承了她的战斗天赋和领导能力。",
+      "traits": [
+        {
+          "name": "扎瑞尔遗赠",
+          "description": "你的法术列表使用扎瑞尔赐予的法术，更侧重于战斗魔法。",
+          "mechanicalEffect": "扎瑞尔法术"
+        }
+      ]
+    }
+  ]
+}

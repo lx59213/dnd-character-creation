@@ -1,0 +1,118 @@
+{
+  "starting_wealth": {
+    "commoner": {
+      "cp": 50,
+      "sp": 0,
+      "gp": 0,
+      "pp": 0
+    },
+    "noble": {
+      "cp": 0,
+      "sp": 0,
+      "gp": 25,
+      "pp": 0
+    }
+  },
+  "exchange_rates": {
+    "cp_to_sp": 10,
+    "sp_to_gp": 10,
+    "gp_to_pp": 10
+  },
+  "class_starting_wealth": {
+    "barbarian": {
+      "dice": {
+        "count": 2,
+        "type": 4
+      },
+      "multiplier": 10,
+      "unit": "gp"
+    },
+    "bard": {
+      "dice": {
+        "count": 5,
+        "type": 4
+      },
+      "multiplier": 10,
+      "unit": "gp"
+    },
+    "cleric": {
+      "dice": {
+        "count": 5,
+        "type": 4
+      },
+      "multiplier": 10,
+      "unit": "gp"
+    },
+    "druid": {
+      "dice": {
+        "count": 2,
+        "type": 4
+      },
+      "multiplier": 10,
+      "unit": "gp"
+    },
+    "fighter": {
+      "dice": {
+        "count": 5,
+        "type": 4
+      },
+      "multiplier": 10,
+      "unit": "gp"
+    },
+    "monk": {
+      "dice": {
+        "count": 5,
+        "type": 4
+      },
+      "unit": "gp"
+    },
+    "paladin": {
+      "dice": {
+        "count": 5,
+        "type": 4
+      },
+      "multiplier": 10,
+      "unit": "gp"
+    },
+    "ranger": {
+      "dice": {
+        "count": 5,
+        "type": 4
+      },
+      "multiplier": 10,
+      "unit": "gp"
+    },
+    "rogue": {
+      "dice": {
+        "count": 4,
+        "type": 4
+      },
+      "multiplier": 10,
+      "unit": "gp"
+    },
+    "sorcerer": {
+      "dice": {
+        "count": 3,
+        "type": 4
+      },
+      "multiplier": 10,
+      "unit": "gp"
+    },
+    "warlock": {
+      "dice": {
+        "count": 4,
+        "type": 4
+      },
+      "multiplier": 10,
+      "unit": "gp"
+    },
+    "wizard": {
+      "dice": {
+        "count": 4,
+        "type": 4
+      },
+      "multiplier": 10,
+      "unit": "gp"
+    }
+  }
+}

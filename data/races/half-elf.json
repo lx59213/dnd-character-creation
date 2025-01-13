@@ -1,0 +1,100 @@
+{
+  "name": "half-elf",
+  "displayName": "半精灵",
+  "description": "半精灵结合了人类的好奇心、创造力和野心，以及精灵的优雅、敏锐感官和艺术修养。他们生活在两个世界却不完全属于任何一方，这使他们能够以独特的视角看待世界。",
+  "size": "中型",
+  "speed": 30,
+  "abilityScoreIncrease": {
+    "charisma": 2,
+    "choice": [
+      {
+        "count": 2,
+        "value": 1
+      }
+    ]
+  },
+  "proficiencies": [],
+  "skillChoices": {
+    "count": 2,
+    "from": ["运动", "杂技", "巧手", "隐匿", 
+             "奥秘", "历史", "调查", "自然", "宗教",
+             "驯兽", "洞悉", "医疗", "察觉", "生存",
+             "欺诈", "威吓", "表演", "说服"]
+  },
+  "racialTraits": [
+    {
+      "name": "黑暗视觉",
+      "description": "你习惯了微光环境和黑暗。在微光环境下，你可以看清60尺内的东西，如同在明亮光照下一样。在黑暗中，你可以将该范围内的东西视作处于微光环境下。你无法在黑暗中分辨颜色，只能看到灰色的明暗变化。",
+      "mechanicalEffect": "60尺黑暗视觉"
+    },
+    {
+      "name": "精类血统",
+      "description": "你在对抗魅惑的豁免检定上具有优势，且魔法无法使你入睡。",
+      "mechanicalEffect": ["对抗魅惑豁免优势", "魔法免疫睡眠"]
+    },
+    {
+      "name": "多才多艺",
+      "description": "你可以选择两个技能获得熟练项。",
+      "mechanicalEffect": ""
+    }
+  ],
+  "languages": ["通用语", "精灵语", "自选一种"],
+  "subraces": [
+    {
+      "name": "半木精灵",
+      "displayName": "半木精灵",
+      "description": "你的血管中流淌着木精灵的血液，继承了他们在自然环境中的敏捷。",
+      "abilityScoreIncrease": {
+        "wisdom": 1
+      },
+      "proficiencies": [
+        {
+          "id": "生存",
+          "type": "skill"
+        }
+      ],
+      "traits": [
+        {
+          "name": "野性直觉",
+          "description": "你精通生存技能。",
+          "mechanicalEffect": ""
+        }
+      ]
+    },
+    {
+      "name": "半高精灵",
+      "displayName": "半高精灵",
+      "description": "你继承了高等精灵对魔法的天赋。",
+      "abilityScoreIncrease": {
+        "intelligence": 1
+      },
+      "traits": [
+        {
+          "name": "戏法",
+          "description": "你了解一个戏法，从法师法术列表中选择。智力是你施展该法术的关键属性。",
+          "mechanicalEffect": "获得一个法师戏法"
+        }
+      ]
+    },
+    {
+      "name": "半卓尔",
+      "displayName": "半卓尔",
+      "description": "你的血脉中流淌着幽暗地域精灵的力量。",
+      "abilityScoreIncrease": {
+        "dexterity": 1
+      },
+      "traits": [
+        {
+          "name": "高等黑暗视觉",
+          "description": "你的黑暗视觉范围扩展至120尺。",
+          "mechanicalEffect": "120尺黑暗视觉"
+        },
+        {
+          "name": "卓尔魔法",
+          "description": "你掌握舞光术戏法。当你达到3级时，你可以每天使用一次妖火术。当你达到5级时，你可以每天使用一次黑暗术。魅力是你施展这些法术的关键属性。",
+          "mechanicalEffect": ["舞光术戏法", "3级：每日1次妖火术", "5级：每日1次黑暗术"]
+        }
+      ]
+    }
+  ]
+}

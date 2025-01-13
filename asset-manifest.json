@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dnd-character-creation/static/css/main.e6c13ad2.css",
+    "main.js": "/dnd-character-creation/static/js/main.60c6b9b0.js",
+    "index.html": "/dnd-character-creation/index.html",
+    "main.e6c13ad2.css.map": "/dnd-character-creation/static/css/main.e6c13ad2.css.map",
+    "main.60c6b9b0.js.map": "/dnd-character-creation/static/js/main.60c6b9b0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.60c6b9b0.js"
+  ]
+}

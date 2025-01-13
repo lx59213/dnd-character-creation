@@ -1,0 +1,382 @@
+{
+    "name": "ranger",
+    "displayName": "游侠",
+    "description": "游侠是荒野的守护者，擅长追踪、狩猎和生存技巧，结合战斗技巧和自然魔法。",
+    "hitDie": 10,
+    "primaryAbility": ["敏捷", "感知"],
+    
+    "Other proficiencies": {
+        "armor": [
+            { "id": "proficiency.armor.light" },
+            { "id": "proficiency.armor.medium" },
+            { "id": "proficiency.armor.shield" }
+        ],
+        "weapons": [
+            { "id": "proficiency.weapon.simple_melee" },
+            { "id": "proficiency.weapon.simple_ranged" },
+            { "id": "proficiency.weapon.martial_melee" },
+            { "id": "proficiency.weapon.martial_ranged" }
+        ],
+        "tools": [],
+        "savingThrows": [
+            { "id": "proficiency.savingThrow.strength" },
+            { "id": "proficiency.savingThrow.dexterity" }
+        ]
+    },
+
+    "multiclassing": {
+        "prerequisites": {
+            "dexterity": 13,
+            "wisdom": 13
+        },
+        "Other proficiencies": {
+            "armor": [
+                { "id": "proficiency.armor.light" },
+                { "id": "proficiency.armor.medium" },
+                { "id": "proficiency.armor.shield" }
+            ],
+            "weapons": [
+                { "id": "proficiency.weapon.simple_melee" },
+                { "id": "proficiency.weapon.simple_ranged" },
+                { "id": "proficiency.weapon.martial_melee" },
+                { "id": "proficiency.weapon.martial_ranged" }
+            ],
+            "tools": []
+        }
+    },
+
+    "skillChoices": {
+        "count": 3,
+        "from": ["驯兽", "运动", "洞悉", "调查", "自然", "察觉", "隐匿", "求生"]
+    },
+    "spellcasting": {
+        "ability": "感知",
+        "spellList": "ranger",
+        "spellsKnown": {
+            "2": 2,
+            "3": 3,
+            "5": 4,
+            "7": 5,
+            "9": 6,
+            "11": 7,
+            "13": 8,
+            "15": 9,
+            "17": 10,
+            "19": 11
+        }
+    },
+    "specialResources": [
+        {
+            "name": "宿敌数量",
+            "displayName": "宿敌",
+            "description": "你擅长对付特定类型的生物。你可以选择多个生物类型作为你的宿敌。",
+            "resourcePerLevel": {
+                "1": "1个宿敌类型",
+                "6": "2个宿敌类型",
+                "14": "3个宿敌类型"
+            }
+        },
+        {
+            "name": "野性印记",
+            "displayName": "野性印记",
+            "description": "你可以在一个生物身上留下魔法印记，更容易追踪和攻击它。每次长休息后恢复所有次数。",
+            "resourcePerLevel": {
+                "3": "感知调整值次/天",
+                "4": "感知调整值次/天",
+                "5": "感知调整值次/天",
+                "6": "感知调整值次/天",
+                "7": "感知调整值次/天",
+                "8": "感知调整值次/天",
+                "9": "感知调整值次/天",
+                "10": "感知调整值次/天",
+                "11": "感知调整值次/天",
+                "12": "感知调整值次/天",
+                "13": "感知调整值次/天",
+                "14": "感知调整值次/天",
+                "15": "感知调整值次/天",
+                "16": "感知调整值次/天",
+                "17": "感知调整值次/天",
+                "18": "感知调整值次/天",
+                "19": "感知调整值次/天",
+                "20": "感知调整值次/天"
+            }
+        }
+    ],
+    "features": [
+        {
+            "name": "宿敌",
+            "description": "你对特定类型的敌人有着丰富的研究经验。选择一种生物类型作为你的宿敌。",
+            "mechanicalEffect": ["对抗宿敌时，察觉和求生检定获得加值", "追踪宿敌时，智力检定获得加值"],
+            "level": 1
+        },
+        {
+            "name": "自然探索者",
+            "description": "你特别擅长在野外旅行和生存。",
+            "mechanicalEffect": ["不会在熟悉地形中迷失方向", "正常步调旅行时仍能保持隐匿", "双倍获得食物和水"],
+            "level": 1
+        },
+        {
+            "name": "战斗风格",
+            "description": "你采用一种特殊的战斗风格作为你的专业。",
+            "mechanicalEffect": ["双武器战斗：副手武器伤害加上属性调整值", "射术：远程武器攻击+2", "防御：穿戴护甲时AC+1"],
+            "level": 2
+        },
+        {
+            "name": "原初意识",
+            "description": "你的本能变得如此敏锐，以至于你在战斗中有了超凡的警觉性。",
+            "mechanicalEffect": ["先攻检定具有优势", "第一回合时对尚未行动的生物攻击具有优势"],
+            "level": 3
+        },
+        {
+            "name": "属性值提升",
+            "description": "你可以选择一项属性值提升2点，或是选择两项属性各提升1点。不能通过该特性让属性值超过20。",
+            "level": 4
+        },
+        {
+            "name": "额外攻击",
+            "description": "你可以在使用攻击动作时发动两次攻击，而不是一次。",
+            "mechanicalEffect": ["每回合可以攻击两次"],
+            "level": 5
+        },
+        {
+            "name": "铁腕防御",
+            "description": "你获得了额外的防御能力。",
+            "mechanicalEffect": ["可以用反应使一次攻击伤害减半"],
+            "level": 7
+        },
+        {
+            "name": "属性值提升",
+            "description": "你可以选择一项属性值提升2点，或是选择两项属性各提升1点。不能通过该特性让属性值超过20。",
+            "level": 8
+        },
+        {
+            "name": "属性值提升",
+            "description": "你可以选择一项属性值提升2点，或是选择两项属性各提升1点。不能通过该特性让属性值超过20。",
+            "level": 12
+        },
+        {
+            "name": "消失",
+            "description": "你可以使用附赠动作进行躲藏。",
+            "mechanicalEffect": ["使用附赠动作躲藏"],
+            "level": 14
+        },
+        {
+            "name": "不死猎手",
+            "description": "你成为了追踪不死生物的大师。",
+            "mechanicalEffect": ["对不死生物的攻击额外造成智力调整值的伤害"],
+            "level": 15
+        },
+        {
+            "name": "属性值提升",
+            "description": "你可以选择一项属性值提升2点，或是选择两项属性各提升1点。不能通过该特性让属性值超过20。",
+            "level": 16
+        },
+        {
+            "name": "野性感知",
+            "description": "你获得了类似盲视的能力，能感知周围的生物。",
+            "mechanicalEffect": ["获得30尺盲视"],
+            "level": 18
+        },
+        {
+            "name": "属性值提升",
+            "description": "你可以选择一项属性值提升2点，或是选择两项属性各提升1点。不能通过该特性让属性值超过20。",
+            "level": 19
+        },
+        {
+            "name": "猎杀大师",
+            "description": "你成为了终极猎手。",
+            "mechanicalEffect": ["每回合一次，可以对宿敌造成额外4d6伤害"],
+            "level": 20
+        }
+    ],
+    "abilityScoreImprovements": {
+        "levels": [
+          4,
+          8,
+          12,
+          16,
+          19
+        ],
+        "choices": {
+          "standardASI": {
+            "type": "ability_score_increase",
+            "description": "提升一项属性值2点，或者提升两项属性值各1点",
+            "options": [
+              {
+                "type": "single",
+                "increase": 2
+              },
+              {
+                "type": "double",
+                "increase": 1
+              }
+            ]
+          },
+          "feat": {
+            "type": "feat",
+            "description": "获得一个专长"
+          }
+        }
+    },
+    "subclasses": [
+        {
+            "name": "hunter",
+            "displayName": "猎人",
+            "description": "猎人专注于对抗自然界和文明世界的威胁，掌握特殊的战斗技巧来对付不同类型的敌人。",
+            "features": [
+                {
+                    "name": "猎人的猎物",
+                    "description": "你获得一种特殊的能力来对抗特定类型的敌人。选择以下一项：\n- 巨物杀手：当你的目标比你大一个体型或更大时，你的武器攻击额外造成1d8伤害。\n- 巨群杀手：当一个生物在你的近战武器触及范围内结束其回合时，你可以用反应对其进行一次近战武器攻击。\n- 地形猎手：当你对处于你下方5尺或更多的目标进行远程攻击时，你的攻击骰获得+4加值。",
+                    "mechanicalEffect": [
+                        "巨物杀手：对大型生物额外1d8伤害",
+                        "巨群杀手：可以进行借机攻击",
+                        "地形猎手：对低处目标攻击+4"
+                    ],
+                    "level": 3
+                },
+                {
+                    "name": "防御战术",
+                    "description": "你获得额外的防御能力。选择以下一项：\n- 逃脱大师：借机攻击对你的攻击检定具有劣势。\n- 多重防御：当一个生物击中你时，你的AC对该生物的后续攻击提升4，直到你的下个回合结束。\n- 钢铁意志：你在对抗恐慌效果的豁免检定上具有优势。",
+                    "mechanicalEffect": [
+                        "逃脱大师：借机攻击对你有劣势",
+                        "多重防御：被击中后AC暂时提升",
+                        "钢铁意志：对抗恐慌有优势"
+                    ],
+                    "level": 7
+                },
+                {
+                    "name": "多重攻击",
+                    "description": "你获得一种特殊的攻击能力。选择以下一项：\n- 连射：你可以用一个动作对一个生物发动两次远程攻击。\n- 旋风攻击：你可以用一个动作对周围5尺内的所有生物进行一次近战攻击。\n- 快速打击：你可以用一个动作对一个生物发动两次近战攻击。",
+                    "mechanicalEffect": [
+                        "连射：一次行动两次远程攻击",
+                        "旋风攻击：攻击所有相邻敌人",
+                        "快速打击：一次行动两次近战攻击"
+                    ],
+                    "level": 11
+                },
+                {
+                    "name": "高等猎人防御",
+                    "description": "你的防御能力得到进一步提升。选择以下一项：\n- 灵活防御：当你被攻击命中时，你可以用反应使伤害减半。\n- 反击姿态：当一个生物对你的攻击未命中时，你可以用反应立即对其进行一次武器攻击。\n- 不屈不挠：当你被击倒至0生命值时，你可以用反应进行一次攻击。",
+                    "mechanicalEffect": [
+                        "灵活防御：可以减半伤害",
+                        "反击姿态：未命中时可以反击",
+                        "不屈不挠：濒死时可以反击"
+                    ],
+                    "level": 15
+                }
+            ]
+        },
+        {
+            "name": "beastmaster",
+            "displayName": "驯兽师",
+            "description": "驯兽师与动物伙伴建立深厚的联系，在战斗中协同作战。",
+            "features": [
+                {
+                    "name": "游侠伙伴",
+                    "description": "你获得一个野兽伙伴。这个生物的生命值为你的游侠等级×4，且它的熟练加值等于你的熟练加值。",
+                    "mechanicalEffect": [
+                        "获得一个野兽伙伴",
+                        "野兽伙伴的生命值为游侠等级×4",
+                        "野兽伙伴使用你的熟练加值"
+                    ],
+                    "level": 3
+                },
+                {
+                    "name": "特殊指令",
+                    "description": "当你使用攻击动作时，你可以命令你的野兽伙伴使用其反应进行一次攻击。",
+                    "mechanicalEffect": ["可以命令野兽伙伴进行攻击"],
+                    "level": 7
+                },
+                {
+                    "name": "野兽防御",
+                    "description": "当你的野兽伙伴受到伤害时，你可以用反应让它承受一半伤害。",
+                    "mechanicalEffect": ["可以减少野兽伙伴受到的伤害"],
+                    "level": 11
+                },
+                {
+                    "name": "共享法术",
+                    "description": "当你施放一个只以自己为目标的法术时，你也可以让你的野兽伙伴获得该法术的效果。",
+                    "mechanicalEffect": ["可以与野兽伙伴共享法术效果"],
+                    "level": 15
+                }
+            ]
+        },
+        {
+            "name": "gloomstalker",
+            "displayName": "幽暗追猎者",
+            "description": "幽暗追猎者是黑暗中的致命猎手，专精于在阴影中潜行和伏击。",
+            "features": [
+                {
+                    "name": "视界术",
+                    "description": "你获得60尺黑暗视觉。如果你已经有黑暗视觉，其范围增加30尺。",
+                    "mechanicalEffect": ["获得或增加黑暗视觉"],
+                    "level": 3
+                },
+                {
+                    "name": "伏击者",
+                    "description": "在战斗的第一回合，你的移动速度增加10尺，如果你在该回合进行攻击动作，可以进行一次额外的攻击。",
+                    "mechanicalEffect": [
+                        "第一回合移动速度+10",
+                        "第一回合可以额外攻击一次"
+                    ],
+                    "level": 3
+                },
+                {
+                    "name": "铁影",
+                    "description": "当你在黑暗中对一个还没有看到你的生物进行攻击时，你的攻击检定获得优势。",
+                    "mechanicalEffect": ["黑暗中对未察觉目标攻击有优势"],
+                    "level": 7
+                },
+                {
+                    "name": "钢铁意志",
+                    "description": "你获得对恐慌状态的豁免。",
+                    "mechanicalEffect": ["免疫恐慌"],
+                    "level": 11
+                },
+                {
+                    "name": "暗影闪避",
+                    "description": "当一个生物攻击你且未命中时，你可以用反应移动一半速度且不会触发借机攻击。",
+                    "mechanicalEffect": ["被攻击未命中时可以移动"],
+                    "level": 15
+                }
+            ]
+        },
+        {
+            "name": "horizonwalker",
+            "displayName": "视界行者",
+            "description": "视界行者是位面旅行者，专注于对抗来自其他位面的威胁。",
+            "features": [
+                {
+                    "name": "位面战士",
+                    "description": "你学会侦测传送门法术。作为附赠动作，你可以让你的攻击造成额外的力场伤害。",
+                    "mechanicalEffect": [
+                        "学会侦测传送门",
+                        "可以造成额外1d8力场伤害"
+                    ],
+                    "level": 3
+                },
+                {
+                    "name": "位面漫步",
+                    "description": "你可以用附赠动作进行短距离传送。",
+                    "mechanicalEffect": ["可以传送10尺"],
+                    "level": 7
+                },
+                {
+                    "name": "虚体防御",
+                    "description": "你可以用反应让自己部分虚体化，对抗一次攻击。",
+                    "mechanicalEffect": ["可以让一次攻击对你无效"],
+                    "level": 11
+                },
+                {
+                    "name": "位面守护者",
+                    "description": "你可以在虚体状态下自由移动。",
+                    "mechanicalEffect": [
+                        "可以穿过生物和物体",
+                        "免疫力场伤害"
+                    ],
+                    "level": 15
+                }
+            ]
+        }
+    ]
+}

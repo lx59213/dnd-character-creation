@@ -1,0 +1,50 @@
+{
+  "proficiency.savingThrow.strength": {
+    "id": "proficiency.savingThrow.strength",
+    "name": "力量豁免",
+    "displayName": "力量豁免 Strength Saving Throw",
+    "description": "你在力量豁免检定上具有熟练加值。",
+    "category": "豁免",
+    "ability": "力量"
+  },
+  "proficiency.savingThrow.dexterity": {
+    "id": "proficiency.savingThrow.dexterity",
+    "name": "敏捷豁免",
+    "displayName": "敏捷豁免 Dexterity Saving Throw",
+    "description": "你在敏捷豁免检定上具有熟练加值。",
+    "category": "豁免",
+    "ability": "敏捷"
+  },
+  "proficiency.savingThrow.constitution": {
+    "id": "proficiency.savingThrow.constitution",
+    "name": "体质豁免",
+    "displayName": "体质豁免 Constitution Saving Throw",
+    "description": "你在体质豁免检定上具有熟练加值。",
+    "category": "豁免",
+    "ability": "体质"
+  },
+  "proficiency.savingThrow.intelligence": {
+    "id": "proficiency.savingThrow.intelligence",
+    "name": "智力豁免",
+    "displayName": "智力豁免 Intelligence Saving Throw",
+    "description": "你在智力豁免检定上具有熟练加值。",
+    "category": "豁免",
+    "ability": "智力"
+  },
+  "proficiency.savingThrow.wisdom": {
+    "id": "proficiency.savingThrow.wisdom",
+    "name": "感知豁免",
+    "displayName": "感知豁免 Wisdom Saving Throw",
+    "description": "你在感知豁免检定上具有熟练加值。",
+    "category": "豁免",
+    "ability": "感知"
+  },
+  "proficiency.savingThrow.charisma": {
+    "id": "proficiency.savingThrow.charisma",
+    "name": "魅力豁免",
+    "displayName": "魅力豁免 Charisma Saving Throw",
+    "description": "你在魅力豁免检定上具有熟练加值。",
+    "category": "豁免",
+    "ability": "魅力"
+  }
+}

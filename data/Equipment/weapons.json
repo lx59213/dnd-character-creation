@@ -1,0 +1,201 @@
+{
+  "weapon.club": {
+    "id": "weapon.club",
+    "name": "棍棒",
+    "displayName": "棍棒 Club",
+    "description": "一种简单的钝器武器，由硬木制成，常被守卫和平民使用。",
+    "weight": 2,
+    "cost": {
+      "amount": 1,
+      "unit": "sp"
+    },
+    "type": "简单近战",
+    "damage": {
+      "diceCount": 1,
+      "diceType": 4,
+      "type": "钝击"
+    },
+    "properties": ["轻型"],
+    "rarity": "普通"
+  },
+
+  "weapon.dagger": {
+    "id": "weapon.dagger",
+    "name": "匕首",
+    "displayName": "匕首 Dagger",
+    "description": "一把小巧锋利的刀刃，既可以近战也可以投掷。",
+    "weight": 1,
+    "cost": {
+      "amount": 2,
+      "unit": "gp"
+    },
+    "type": "简单近战",
+    "damage": {
+      "diceCount": 1,
+      "diceType": 4,
+      "type": "穿刺"
+    },
+    "properties": ["灵巧", "轻型", "投掷(20/60)"],
+    "rarity": "普通"
+  },
+
+  "weapon.greataxe": {
+    "id": "weapon.greataxe",
+    "name": "巨斧",
+    "displayName": "巨斧 Greataxe",
+    "description": "这把重型战斧需要双手持握，能够造成毁灭性的伤害。",
+    "weight": 7,
+    "cost": {
+      "amount": 30,
+      "unit": "gp"
+    },
+    "type": "军用近战",
+    "damage": {
+      "diceCount": 1,
+      "diceType": 12,
+      "type": "挥砍"
+    },
+    "properties": ["重型", "双手"],
+    "rarity": "普通"
+  },
+
+  "weapon.longbow": {
+    "id": "weapon.longbow",
+    "name": "长弓",
+    "displayName": "长弓 Longbow",
+    "description": "一把将近人高的强力弓，需要相当的力量才能拉开。",
+    "weight": 2,
+    "cost": {
+      "amount": 50,
+      "unit": "gp"
+    },
+    "type": "军用远程",
+    "damage": {
+      "diceCount": 1,
+      "diceType": 8,
+      "type": "穿刺"
+    },
+    "properties": ["弹药(150/600)", "重型", "双手"],
+    "rarity": "普通"
+  },
+
+  "weapon.rapier": {
+    "id": "weapon.rapier",
+    "name": "细剑",
+    "displayName": "细剑 Rapier",
+    "description": "一把优雅的刺剑，常被贵族和决斗者使用。",
+    "weight": 2,
+    "cost": {
+      "amount": 25,
+      "unit": "gp"
+    },
+    "type": "军用近战",
+    "damage": {
+      "diceCount": 1,
+      "diceType": 8,
+      "type": "穿刺"
+    },
+    "properties": ["灵巧"],
+    "rarity": "普通"
+  },
+
+  "weapon.maul": {
+    "id": "weapon.maul",
+    "name": "巨锤",
+    "displayName": "巨锤 Maul",
+    "description": "这把双手大锤能够造成惊人的钝击伤害。",
+    "weight": 10,
+    "cost": {
+      "amount": 10,
+      "unit": "gp"
+    },
+    "type": "军用近战",
+    "damage": {
+      "diceCount": 2,
+      "diceType": 6,
+      "type": "钝击"
+    },
+    "properties": ["重型", "双手"],
+    "rarity": "普通"
+  },
+
+  "weapon.handcrossbow": {
+    "id": "weapon.handcrossbow",
+    "name": "手弩",
+    "displayName": "手弩 Hand Crossbow",
+    "description": "一种小型的单手弩，常被潜行者和刺客使用。",
+    "weight": 3,
+    "cost": {
+      "amount": 75,
+      "unit": "gp"
+    },
+    "type": "军用远程",
+    "damage": {
+      "diceCount": 1,
+      "diceType": 6,
+      "type": "穿刺"
+    },
+    "properties": ["弹药(30/120)", "轻型", "装填"],
+    "rarity": "普通"
+  },
+
+  "weapon.warhammer": {
+    "id": "weapon.warhammer",
+    "name": "战锤",
+    "displayName": "战锤 Warhammer",
+    "description": "这把多功能战锤既可以单手也可以双手使用。",
+    "weight": 2,
+    "cost": {
+      "amount": 15,
+      "unit": "gp"
+    },
+    "type": "军用近战",
+    "damage": {
+      "diceCount": 1,
+      "diceType": 8,
+      "type": "钝击"
+    },
+    "properties": ["多功能(1d10)"],
+    "rarity": "普通"
+  },
+
+  "weapon.trident": {
+    "id": "weapon.trident",
+    "name": "三叉戟",
+    "displayName": "三叉戟 Trident",
+    "description": "一种三叉武器，在水下战斗时特别有效。",
+    "weight": 4,
+    "cost": {
+      "amount": 5,
+      "unit": "gp"
+    },
+    "type": "军用近战",
+    "damage": {
+      "diceCount": 1,
+      "diceType": 6,
+      "type": "穿刺"
+    },
+    "properties": ["投掷(20/60)", "多功能(1d8)"],
+    "rarity": "普通"
+  },
+
+  "weapon.silvered_shortsword": {
+    "id": "weapon.silvered_shortsword",
+    "name": "镀银短剑",
+    "displayName": "镀银短剑 Silvered Shortsword",
+    "description": "这把短剑经过特殊的银化处理，对某些超自然生物特别有效。",
+    "weight": 2,
+    "cost": {
+      "amount": 110,
+      "unit": "gp"
+    },
+    "type": "军用近战",
+    "damage": {
+      "diceCount": 1,
+      "diceType": 6,
+      "type": "穿刺"
+    },
+    "properties": ["轻型", "灵巧", "镀银"],
+    "rarity": "非普通"
+  }
+}

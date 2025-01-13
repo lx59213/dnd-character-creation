@@ -1,0 +1,615 @@
+{
+  "name": "wizard",
+  "displayName": "法师",
+  "description": "法师是奥术魔法的大师，通过研究和练习来掌握法术，他们的法术书记录着强大的魔法知识。",
+  "hitDie": 6,
+  "primaryAbility": [
+    "智力"
+  ],
+  
+  "Other proficiencies": {
+    "armor": [],
+    "weapons": [
+      { "id": "proficiency.weapon.dagger" },
+      { "id": "proficiency.weapon.dart" },
+      { "id": "proficiency.weapon.sling" },
+      { "id": "proficiency.weapon.quarterstaff" },
+      { "id": "proficiency.weapon.light_crossbow" }
+    ],
+    "tools": [],
+    "savingThrows": [
+      { "id": "proficiency.savingThrow.intelligence" },
+      { "id": "proficiency.savingThrow.wisdom" }
+    ]
+  },
+  "multiclassing": {
+    "prerequisites": {
+      "intelligence": 13
+    },
+    "Other proficiencies": {
+      "armor": [],
+      "weapons": [],
+      "tools": []
+    }
+  },
+  "skillChoices": {
+    "count": 2,
+    "from": [
+      "奥秘",
+      "历史",
+      "洞悉",
+      "调查",
+      "医疗",
+      "宗教"
+    ]
+  },
+  "spellcasting": {
+    "ability": "智力",
+    "type": "full",
+    "spellList": "wizard",
+    "cantripsKnown": {
+      "1": 3,
+      "4": 4,
+      "10": 5
+    },
+    "spellbook": {
+      "initial": 6,
+      "perLevel": 2,
+      "copyRules": {
+        "timePerLevel": "2小时",
+        "costPerLevel": "50金币"
+      }
+    },
+    "prepared": "等级 + 智力调整值",
+    "spellSlots": {
+      "1": { "1": 2 },
+      "2": { "1": 3 },
+      "3": { "1": 4, "2": 2 },
+      "4": { "1": 4, "2": 3 },
+      "5": { "1": 4, "2": 3, "3": 2 },
+      "6": { "1": 4, "2": 3, "3": 3 },
+      "7": { "1": 4, "2": 3, "3": 3, "4": 1 },
+      "8": { "1": 4, "2": 3, "3": 3, "4": 2 },
+      "9": { "1": 4, "2": 3, "3": 3, "4": 3, "5": 1 },
+      "10": { "1": 4, "2": 3, "3": 3, "4": 3, "5": 2 },
+      "11": { "1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1 },
+      "12": { "1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1 },
+      "13": { "1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1 },
+      "14": { "1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1 },
+      "15": { "1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1, "8": 1 },
+      "16": { "1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1, "8": 1 },
+      "17": { "1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1, "8": 1, "9": 1 },
+      "18": { "1": 4, "2": 3, "3": 3, "4": 3, "5": 3, "6": 1, "7": 1, "8": 1, "9": 1 },
+      "19": { "1": 4, "2": 3, "3": 3, "4": 3, "5": 3, "6": 2, "7": 1, "8": 1, "9": 1 },
+      "20": { "1": 4, "2": 3, "3": 3, "4": 3, "5": 3, "6": 2, "7": 2, "8": 1, "9": 1 }
+    }
+  },
+  "features": [
+    {
+      "name": "奥术回复",
+      "description": "你可以在短休息时恢复一些法术位。",
+      "mechanicalEffect": [
+        "短休息时可恢复法术位总环级等于智力调整值+法师等级的一半",
+        "每次长休息后才能再次使用"
+      ],
+      "level": 1
+    },
+    {
+      "name": "奥术传统",
+      "description": "选择一个奥术传统，这代表了你专注研究的魔法学派。",
+      "mechanicalEffect": "获得传统特性和法术",
+      "level": 2
+    },
+    {
+      "name": "法术掌握",
+      "description": "你已经掌握了足够的法术知识，可以更快地准备法术。",
+      "mechanicalEffect": "准备法术的时间减半",
+      "level": 3
+    },
+    {
+      "name": "属性值提升",
+      "description": "你可以提升一项属性值2点，或者提升两项属性值各1点。",
+      "mechanicalEffect": "提升属性值",
+      "level": 4
+    },
+    {
+      "name": "属性值提升",
+      "description": "你可以提升一项属性值2点，或者提升两项属性值各1点。",
+      "mechanicalEffect": "提升属性值",
+      "level": 8
+    },
+    {
+      "name": "法术专精",
+      "description": "你选择的两个法术学派的法术变得更加强大。",
+      "mechanicalEffect": [
+        "选择两个法术学派",
+        "施展这些学派的法术时豁免DC+2"
+      ],
+      "level": 10
+    },
+    {
+      "name": "属性值提升",
+      "description": "你可以提升一项属性值2点，或者提升两项属性值各1点。",
+      "mechanicalEffect": "提升属性值",
+      "level": 12
+    },
+    {
+      "name": "法术大师",
+      "description": "你完全掌握了某些法术的奥秘。",
+      "mechanicalEffect": [
+        "选择两个1环或2环法术作为法术大师法术",
+        "这些法术永远准备，且每天各可以施展一次而不消耗法术位"
+      ],
+      "level": 14
+    },
+    {
+      "name": "属性值提升",
+      "description": "你可以提升一项属性值2点，或者提升两项属性值各1点。",
+      "mechanicalEffect": "提升属性值",
+      "level": 16
+    },
+    {
+      "name": "法术印记",
+      "description": "你掌握了将法术刻印在物体上的能力。",
+      "mechanicalEffect": [
+        "可以将一个5环或更低环级的法术永久刻印在物体上",
+        "任何生物触碰该物体都会触发该法术"
+      ],
+      "level": 18
+    },
+    {
+      "name": "属性值提升",
+      "description": "你可以提升一项属性值2点，或者提升两项属性值各1点。",
+      "mechanicalEffect": "提升属性值",
+      "level": 19
+    },
+    {
+      "name": "高等法术掌握",
+      "description": "你完全掌握了某些强大法术的奥秘。",
+      "mechanicalEffect": [
+        "选择两个3环法术作为法术大师法术",
+        "这些法术永远准备，且每天各可以施展一次而不消耗法术位"
+      ],
+      "level": 20
+    }
+  ],
+  "abilityScoreImprovements": {
+    "levels": [
+      4,
+      8,
+      12,
+      16,
+      19
+    ],
+    "choices": {
+      "standardASI": {
+        "type": "ability_score_increase",
+        "description": "提升一项属性值2点，或者提升两项属性值各1点",
+        "options": [
+          {
+            "type": "single",
+            "increase": 2
+          },
+          {
+            "type": "double",
+            "increase": 1
+          }
+        ]
+      },
+      "feat": {
+        "type": "feat",
+        "description": "获得一个专长"
+      }
+    }
+  },
+  "subclasses": [
+    {
+      "name": "evocation",
+      "displayName": "塑能学派",
+      "description": "塑能师专精于操纵魔法能量来创造强大的元素效果。",
+      "features": [
+        {
+          "name": "塑能学者",
+          "description": "你的金币和时间花费在抄写塑能法术时减半。",
+          "mechanicalEffect": "抄写塑能法术的花费减半",
+          "level": 2
+        },
+        {
+          "name": "塑能专精",
+          "description": "你的塑能法术变得更加强大。",
+          "mechanicalEffect": [
+            "塑能法术伤害加上智力调整值",
+            "可以在法术范围内保护1+法术环级的生物免受伤害"
+          ],
+          "level": 2
+        },
+        {
+          "name": "强效塑能",
+          "description": "你的破坏性塑能法术变得更加强大。",
+          "mechanicalEffect": "塑能法术伤害骰结果如果是1，可以重骰",
+          "level": 6
+        },
+        {
+          "name": "强力塑能",
+          "description": "你可以在塑能法术中注入额外的能量。",
+          "mechanicalEffect": [
+            "每天智力调整值次数",
+            "塑能法术伤害骰最大化"
+          ],
+          "level": 10
+        },
+        {
+          "name": "超载塑能",
+          "description": "你的塑能法术可以突破通常的限制。",
+          "mechanicalEffect": [
+            "塑能法术伤害加倍",
+            "自身受到法术等级的力场伤害"
+          ],
+          "level": 14
+        }
+      ]
+    },
+    {
+      "name": "abjuration",
+      "displayName": "防护学派",
+      "description": "防护师专精于保护性魔法，创造魔法屏障和抵消其他法术。",
+      "features": [
+        {
+          "name": "防护学者",
+          "description": "你的金币和时间花费在抄写防护法术时减半。",
+          "mechanicalEffect": "抄写防护法术的花费减半",
+          "level": 2
+        },
+        {
+          "name": "奥术守卫",
+          "description": "你可以创造一个魔法守卫来保护你和盟友。",
+          "mechanicalEffect": [
+            "可以创造具有生命值的魔法守卫",
+            "守卫可以吸收伤害",
+            "施放防护法术时恢复守卫生命值"
+          ],
+          "level": 2
+        },
+        {
+          "name": "投射守卫",
+          "description": "你可以将奥术守卫转移给其他生物。",
+          "mechanicalEffect": [
+            "可以将守卫转移给30尺内的其他生物",
+            "守卫继续保护该生物直到你收回或重新创造"
+          ],
+          "level": 6
+        },
+        {
+          "name": "强效防护",
+          "description": "你的防护魔法变得更加强大。",
+          "mechanicalEffect": [
+            "对抗法术时具有优势",
+            "其他生物对你的法术豁免具有劣势"
+          ],
+          "level": 10
+        },
+        {
+          "name": "法术抗性",
+          "description": "你获得了对法术的抗性。",
+          "mechanicalEffect": [
+            "对法术伤害具有抗性",
+            "可以与一个盟友共享这个抗性"
+          ],
+          "level": 14
+        }
+      ]
+    },
+    {
+      "name": "divination",
+      "displayName": "预言学派",
+      "description": "预言师专精于预见未来和探知秘密。",
+      "features": [
+        {
+          "name": "预言学者",
+          "description": "你的金币和时间花费在抄写预言法术时减半。",
+          "mechanicalEffect": "抄写预言法术的花费减半",
+          "level": 2
+        },
+        {
+          "name": "预兆",
+          "description": "你可以窥视未来的片段。",
+          "mechanicalEffect": [
+            "每天两次",
+            "掷两个d20并记录结果",
+            "可以用记录的结果替换任何攻击骰、豁免骰或属性检定"
+          ],
+          "level": 2
+        },
+        {
+          "name": "专家预言",
+          "description": "你的预言能力变得更加可靠。",
+          "mechanicalEffect": [
+            "预言法术最低伤害等于法术等级",
+            "预言法术范围翻倍"
+          ],
+          "level": 6
+        },
+        {
+          "name": "第三只眼",
+          "description": "你获得了真实视觉的能力。",
+          "mechanicalEffect": [
+            "可以看穿魔法黑暗",
+            "看见隐形生物",
+            "察觉幻术",
+            "看见灵界生物"
+          ],
+          "level": 10
+        },
+        {
+          "name": "大预言术",
+          "description": "你可以预见敌人的行动。",
+          "mechanicalEffect": [
+            "每回合一次反应",
+            "当生物进行攻击前，给予其攻击劣势"
+          ],
+          "level": 14
+        }
+      ]
+    },
+    {
+      "name": "enchantment",
+      "displayName": "惑控学派",
+      "description": "惑控师专精于影响他人的思维和行为。",
+      "features": [
+        {
+          "name": "惑控学者",
+          "description": "你的金币和时间花费在抄写惑控法术时减半。",
+          "mechanicalEffect": "抄写惑控法术的花费减半",
+          "level": 2
+        },
+        {
+          "name": "催眠凝视",
+          "description": "你的凝视可以迷惑他人。",
+          "mechanicalEffect": [
+            "使用动作迷惑一个生物",
+            "目标必须进行感知豁免",
+            "失败则被魅惑1轮"
+          ],
+          "level": 2
+        },
+        {
+          "name": "本能催眠",
+          "description": "你可以快速施展催眠效果。",
+          "mechanicalEffect": [
+            "可以用附赠动作使用催眠凝视",
+            "每次长休息后恢复"
+          ],
+          "level": 6
+        },
+        {
+          "name": "分裂惑控",
+          "description": "你的惑控法术可以影响多个目标。",
+          "mechanicalEffect": [
+            "当惑控法术只影响一个生物时",
+            "可以选择第二个目标"
+          ],
+          "level": 10
+        },
+        {
+          "name": "改写记忆",
+          "description": "你可以修改他人的记忆。",
+          "mechanicalEffect": [
+            "可以修改被魅惑生物最近24小时的记忆",
+            "需要专注1分钟"
+          ],
+          "level": 14
+        }
+      ]
+    },
+    {
+      "name": "illusion",
+      "displayName": "幻术学派",
+      "description": "幻术师专精于创造虚幻的影像和声音。",
+      "features": [
+        {
+          "name": "幻术学者",
+          "description": "你的金币和时间花费在抄写幻术法术时减半。",
+          "mechanicalEffect": "抄写幻术法术的花费减半",
+          "level": 2
+        },
+        {
+          "name": "幻术小把戏",
+          "description": "你可以在幻术中加入小型视觉效果。",
+          "mechanicalEffect": [
+            "可以改变幻术的基本属性",
+            "如声音、图像、气味等"
+          ],
+          "level": 2
+        },
+        {
+          "name": "幻术塑形",
+          "description": "你可以改变幻术的形态。",
+          "mechanicalEffect": [
+            "使用动作改变幻术效果",
+            "范围不变"
+          ],
+          "level": 6
+        },
+        {
+          "name": "强效幻术",
+          "description": "你的幻术变得更加真实。",
+          "mechanicalEffect": [
+            "幻术可以造成真实伤害",
+            "目标相信幻术是真实的"
+          ],
+          "level": 10
+        },
+        {
+          "name": "幻术现实",
+          "description": "你可以使幻术部分成为现实。",
+          "mechanicalEffect": [
+            "一个幻术效果部分成为现实",
+            "持续1分钟"
+          ],
+          "level": 14
+        }
+      ]
+    },
+    {
+      "name": "conjuration",
+      "displayName": "咒法学派",
+      "description": "咒法师专精于召唤生物和物品，在空间传送方面也有独到之处。",
+      "features": [
+        {
+          "name": "咒法学者",
+          "description": "你的金币和时间花费在抄写咒法法术时减半。",
+          "mechanicalEffect": "抄写咒法法术的花费减半",
+          "level": 2
+        },
+        {
+          "name": "次级咒法",
+          "description": "你可以用动作召唤一个无生命物体。",
+          "mechanicalEffect": [
+            "召唤最大3尺边长的非魔法物品",
+            "物品价值不超过10金币",
+            "物品持续1小时",
+            "必须见过该物品"
+          ],
+          "level": 2
+        },
+        {
+          "name": "良性传送",
+          "description": "你可以在受到伤害时立即进行短距离传送。",
+          "mechanicalEffect": [
+            "受到伤害时可以用反应传送30尺",
+            "传送到可见的空地",
+            "每次长休息后恢复使用次数"
+          ],
+          "level": 6
+        },
+        {
+          "name": "专注咒法",
+          "description": "你的召唤生物更加强大和持久。",
+          "mechanicalEffect": [
+            "召唤生物获得临时生命值等于法师等级",
+            "专注于召唤法术时具有优势"
+          ],
+          "level": 10
+        },
+        {
+          "name": "持久召唤",
+          "description": "你召唤的生物不需要专注就能维持。",
+          "mechanicalEffect": [
+            "6环及以下的召唤法术不需要专注",
+            "法术持续到其持续时间结束",
+            "每次长休息后只能使用一次"
+          ],
+          "level": 14
+        }
+      ]
+    },
+    {
+      "name": "necromancy",
+      "displayName": "死灵学派",
+      "description": "死灵法师专精于操纵生死之力，能够创造不死生物为其服务。",
+      "features": [
+        {
+          "name": "死灵学者",
+          "description": "你的金币和时间花费在抄写死灵法术时减半。",
+          "mechanicalEffect": "抄写死灵法术的花费减半",
+          "level": 2
+        },
+        {
+          "name": "死亡学识",
+          "description": "你的死灵法术更加强大。",
+          "mechanicalEffect": [
+            "死灵法术击倒生物时恢复生命值",
+            "恢复量为法术环级的两倍+智力调整值"
+          ],
+          "level": 2
+        },
+        {
+          "name": "不死仆从",
+          "description": "你的不死生物仆从更加强大。",
+          "mechanicalEffect": [
+            "额外获得一具尸体的控制权",
+            "不死生物伤害和生命值加上你的法师等级"
+          ],
+          "level": 6
+        },
+        {
+          "name": "抗拒死亡",
+          "description": "你可以在濒死时恢复生命值。",
+          "mechanicalEffect": [
+            "生命值降至0时可以恢复1d8+法师等级的生命值",
+            "每次长休息后恢复使用次数"
+          ],
+          "level": 10
+        },
+        {
+          "name": "支配不死",
+          "description": "你可以永久控制不死生物。",
+          "mechanicalEffect": [
+            "可以尝试永久控制一个不死生物",
+            "目标进行魅力豁免",
+            "豁免失败则永久被控制",
+            "每24小时只能尝试一次"
+          ],
+          "level": 14
+        }
+      ]
+    },
+    {
+      "name": "transmutation",
+      "displayName": "变化学派",
+      "description": "变化师专精于改变物质的形态和性质，能够转化元素并强化生物。",
+      "features": [
+        {
+          "name": "变化学者",
+          "description": "你的金币和时间花费在抄写变化法术时减半。",
+          "mechanicalEffect": "抄写变化法术的花费减半",
+          "level": 2
+        },
+        {
+          "name": "次级炼金",
+          "description": "你可以暂时改变一个物体的物理性质。",
+          "mechanicalEffect": [
+            "可以改变一个物体的材质",
+            "持续1小时",
+            "物体体积不超过1立方尺",
+            "新材质必须是木头、石头、铜、银或铅"
+          ],
+          "level": 2
+        },
+        {
+          "name": "变化师之石",
+          "description": "你可以制造一块具有魔法效果的石头。",
+          "mechanicalEffect": [
+            "制造一块可以赋予以下效果之一的石头：",
+            "黑暗视觉60尺",
+            "10尺内游泳速度和水下呼吸",
+            "60尺内增加10尺移动速度",
+            "体质豁免具有优势"
+          ],
+          "level": 6
+        },
+        {
+          "name": "形体改造",
+          "description": "你可以暂时改变一个生物的物理属性。",
+          "mechanicalEffect": [
+            "使用动作赋予生物以下效果之一：",
+            "获得飞行或游泳速度",
+            "增加或减少体型一级",
+            "获得对某种伤害的抗性"
+          ],
+          "level": 10
+        },
+        {
+          "name": "大师变形",
+          "description": "你掌握了终极的变形能力。",
+          "mechanicalEffect": [
+            "可以施展变形术而不消耗法术位",
+            "变形后获得目标生物的所有特殊能力",
+            "每次长休息后恢复使用次数"
+          ],
+          "level": 14
+        }
+      ]
+    }
+  ]
+}

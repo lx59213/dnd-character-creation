@@ -13,7 +13,13 @@ export class CharacterExportService {
     }
 
     private generateMarkdownContent(character: Character): string {
-        const jsonData = JSON.stringify(character, null, 2);
+        // 使用 replacer 函数过滤掉 subraces 字段
+        const jsonData = JSON.stringify(character, (key, value) => {
+            if (key === 'subraces') {
+                return undefined;
+            }
+            return value;
+        }, 2);
         
         // 只包含 JSON 数据和标记
         let markdown = '<!-- CHARACTER_DATA_START -->\n';
@@ -36,7 +42,12 @@ export class CharacterExportService {
                 fileExtension = '.md';
             } else {
                 blob = new Blob(
-                    [JSON.stringify(character, null, 2)],
+                    [JSON.stringify(character, (key, value) => {
+                        if (key === 'subraces') {
+                            return undefined;
+                        }
+                        return value;
+                    }, 2)],
                     { type: 'application/json' }
                 );
                 fileExtension = '.json';

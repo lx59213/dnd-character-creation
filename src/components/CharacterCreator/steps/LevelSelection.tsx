@@ -503,17 +503,54 @@ const LevelSelection: React.FC = () => {
             feature => feature.name.includes('ASI')
         ) || [];
         
-        updatedCharacter.features = [...features, ...asiFeats];
-
-        // 显示ASI选择结果
-        if (asiFeats.length > 0) {
-            asiFeats.forEach(feat => {
-                const match = feat.name.match(/ASI: \+1 (\w+)/);
-                if (match) {
-                    const ability = match[1].toLowerCase();
-                    setAsiSelectionText(prev => `${prev}${prev ? ', ' : ''}+1 ${getAbilityDisplayName(ability)}`);
+        // 生成新的ASI特性
+        const newAsiFeats: Feature[] = [];
+        
+        // 从asiSystem中获取所有ASI选择
+        if (asiSystem.choices) {
+            Object.entries(asiSystem.choices).forEach(([asiLevel, choice]) => {
+                if (choice.abilities) {
+                    Object.entries(choice.abilities).forEach(([ability, value]) => {
+                        newAsiFeats.push({
+                            name: `ASI: +${value} ${ability}`,
+                            displayName: `属性值提升：${getAbilityDisplayName(ability)} +${value}`,
+                            description: `${asiLevel}级时选择将${getAbilityDisplayName(ability)}提升${value}点`
+                        });
+                    });
+                }
+                if (choice.feat) {
+                    const feat = getAvailableFeats().find(f => f.id === choice.feat);
+                    if (feat) {
+                        newAsiFeats.push({
+                            name: `ASI Feat: ${feat.name}`,
+                            displayName: feat.name,
+                            description: feat.description
+                        });
+                    }
                 }
             });
+        }
+        
+        updatedCharacter.features = [...features, ...newAsiFeats];
+
+        // 显示ASI选择结果
+        if (newAsiFeats.length > 0) {
+            const asiText = newAsiFeats
+                .filter(feat => feat.name.startsWith('ASI: +'))
+                .map(feat => {
+                    const match = feat.name.match(/ASI: \+(\d+) (\w+)/);
+                    if (match) {
+                        const [_, value, ability] = match;
+                        return `+${value} ${getAbilityDisplayName(ability)}`;
+                    }
+                    return '';
+                })
+                .filter(Boolean)
+                .join('，');
+            
+            if (asiText) {
+                setAsiSelectionText(asiText);
+            }
         }
 
         updateCharacter(updatedCharacter);

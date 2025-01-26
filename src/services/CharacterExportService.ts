@@ -1,9 +1,13 @@
 import { Character } from '../types/character';
+import { GameDataService } from './GameDataService';
 
 export class CharacterExportService {
     private static instance: CharacterExportService;
+    private gameDataService: GameDataService;
 
-    private constructor() {}
+    private constructor() {
+        this.gameDataService = GameDataService.getInstance();
+    }
 
     public static getInstance(): CharacterExportService {
         if (!CharacterExportService.instance) {
@@ -125,6 +129,14 @@ export class CharacterExportService {
                     choices: character.asiSystem.choices || {},
                     completed: character.asiSystem.completed || {}
                 };
+            }
+
+            // 补充完整的种族信息
+            if (character.race?.name) {
+                const fullRaceData = this.gameDataService.getRace(character.race.name);
+                if (fullRaceData) {
+                    character.race = fullRaceData;
+                }
             }
 
             return character;

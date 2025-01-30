@@ -152,7 +152,7 @@ const Stats: React.FC = () => {
     setExportAnchorEl(null);
   };
 
-  const handleExportFormat = async (format: 'json' | 'markdown') => {
+  const handleExportFormat = async (format: 'json' | 'markdown' | 'txt' | 'doc' | 'pdf') => {
     try {
       await exportService.exportCharacter(character, format);
       setSnackbar({
@@ -326,12 +326,29 @@ const Stats: React.FC = () => {
           anchorEl={exportAnchorEl}
           open={Boolean(exportAnchorEl)}
           onClose={handleExportClose}
+          anchorOrigin={{
+            vertical: 'top',
+            horizontal: 'right',
+          }}
+          transformOrigin={{
+            vertical: 'bottom',
+            horizontal: 'right',
+          }}
         >
           <MenuItem onClick={() => handleExportFormat('json')}>
             导出为 JSON
           </MenuItem>
           <MenuItem onClick={() => handleExportFormat('markdown')}>
             导出为 Markdown
+          </MenuItem>
+          <MenuItem onClick={() => handleExportFormat('txt')}>
+            导出 txt
+          </MenuItem>
+          <MenuItem onClick={() => handleExportFormat('doc')}>
+            导出为 Word
+          </MenuItem>
+          <MenuItem onClick={() => handleExportFormat('pdf')}>
+            导出为 PDF
           </MenuItem>
         </Menu>
         <IconButton

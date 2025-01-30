@@ -35,26 +35,64 @@ export class CharacterExportService {
         return markdown;
     }
 
-    public async exportCharacter(character: Character, format: 'json' | 'markdown' = 'json'): Promise<void> {
+    public async exportCharacter(character: Character, format: 'json' | 'markdown' | 'txt' | 'doc' | 'pdf' = 'json'): Promise<void> {
         try {
             let blob: Blob;
             let fileExtension: string;
             
-            if (format === 'markdown') {
-                const markdownContent = this.generateMarkdownContent(character);
-                blob = new Blob([markdownContent], { type: 'text/markdown' });
-                fileExtension = '.md';
-            } else {
-                blob = new Blob(
-                    [JSON.stringify(character, (key, value) => {
-                        if (key === 'subraces') {
-                            return undefined;
-                        }
-                        return value;
-                    }, 2)],
-                    { type: 'application/json' }
-                );
-                fileExtension = '.json';
+            // 生成角色数据内容
+            const content = format === 'markdown' 
+                ? this.generateMarkdownContent(character)
+                : JSON.stringify(character, (key, value) => {
+                    if (key === 'subraces') {
+                        return undefined;
+                    }
+                    return value;
+                }, 2);
+
+            // 根据不同格式设置对应的MIME类型和文件扩展名
+            switch (format) {
+                case 'markdown':
+                    blob = new Blob([content], { type: 'text/markdown' });
+                    fileExtension = '.md';
+                    break;
+                case 'txt':
+                    blob = new Blob([content], { type: 'text/plain' });
+                    fileExtension = '.txt';
+                    break;
+                case 'doc':
+                    blob = new Blob([content], { type: 'application/msword' });
+                    fileExtension = '.doc';
+                    break;
+                case 'pdf':
+                    // 对于 PDF，我们需要先创建一个临时的 HTML 页面，然后使用浏览器的打印功能
+                    const htmlContent = `
+                        <!DOCTYPE html>
+                        <html>
+                        <head>
+                            <meta charset="utf-8">
+                            <title>${character.name || '未命名'} - DND角色卡</title>
+                            <style>
+                                body { font-family: Arial, sans-serif; white-space: pre-wrap; }
+                            </style>
+                        </head>
+                        <body>
+                            ${content}
+                        </body>
+                        </html>
+                    `;
+                    const url = URL.createObjectURL(new Blob([htmlContent], { type: 'text/html' }));
+                    const printWindow = window.open(url);
+                    if (printWindow) {
+                        printWindow.onload = () => {
+                            printWindow.print();
+                            URL.revokeObjectURL(url);
+                        };
+                    }
+                    return; // 直接返回，不使用 saveFileWithPicker
+                default: // json
+                    blob = new Blob([content], { type: 'application/json' });
+                    fileExtension = '.json';
             }
 
             await this.saveFileWithPicker(blob, `${character.name || 'character'}${fileExtension}`);
@@ -68,10 +106,9 @@ export class CharacterExportService {
         try {
             if ('showSaveFilePicker' in window) {
                 const fileType = {
-                    description: suggestedName.endsWith('.md') ? 'Markdown Files' : 'JSON Files',
+                    description: this.getFileTypeDescription(suggestedName),
                     accept: {
-                        [suggestedName.endsWith('.md') ? 'text/markdown' : 'application/json']: 
-                            [suggestedName.endsWith('.md') ? '.md' : '.json']
+                        [this.getMimeType(suggestedName)]: [this.getFileExtension(suggestedName)]
                     }
                 };
 
@@ -92,6 +129,35 @@ export class CharacterExportService {
             }
             throw error;
         }
+    }
+
+    private getFileTypeDescription(filename: string): string {
+        const ext = filename.split('.').pop()?.toLowerCase();
+        switch (ext) {
+            case 'md': return 'Markdown Files';
+            case 'txt': return 'Text Files';
+            case 'doc': return 'Word Documents';
+            case 'pdf': return 'PDF Documents';
+            case 'json': return 'JSON Files';
+            default: return 'All Files';
+        }
+    }
+
+    private getMimeType(filename: string): string {
+        const ext = filename.split('.').pop()?.toLowerCase();
+        switch (ext) {
+            case 'md': return 'text/markdown';
+            case 'txt': return 'text/plain';
+            case 'doc': return 'application/msword';
+            case 'pdf': return 'application/pdf';
+            case 'json': return 'application/json';
+            default: return 'application/octet-stream';
+        }
+    }
+
+    private getFileExtension(filename: string): string {
+        const ext = filename.split('.').pop()?.toLowerCase();
+        return ext ? `.${ext}` : '';
     }
 
     private downloadFile(url: string, filename: string): void {

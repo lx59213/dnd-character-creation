@@ -121,6 +121,7 @@ const Appearance: React.FC = () => {
         'zariel-bloodline': '扎瑞尔血裔 (Zariel Tiefling).png',
         'mephistopheles-bloodline': '梅菲斯特血裔 (Mephistopheles Tiefling).png',
         'aasimar': '阿斯莫 (Aasimar).png',
+        'goliath': '歌利亚 (Goliath).png',
         'fire-genasi': '炎魔裔 (Fire Genasi).png',
         'earth-genasi': '土魔裔 (Earth Genasi).png'
     };

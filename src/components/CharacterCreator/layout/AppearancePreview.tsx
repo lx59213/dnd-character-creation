@@ -146,7 +146,9 @@ const AppearancePreview: React.FC = () => {
     'asmodeus-bloodline': '阿斯莫德斯血裔 (Asmodeus Tiefling).png',
     'asmodeus-tiefling': '阿斯莫德斯血裔 (Asmodeus Tiefling).png',
     'zariel-bloodline': '扎瑞尔血裔 (Zariel Tiefling).png',
-    'mephistopheles-bloodline': '梅菲斯特血裔 (Mephistopheles Tiefling).png'
+    'mephistopheles-bloodline': '梅菲斯特血裔 (Mephistopheles Tiefling).png',
+    'aasimar': '阿斯莫 (Aasimar).png',
+    'goliath': '歌利亚 (Goliath).png'
   };
 
   // 获取种族图片路径

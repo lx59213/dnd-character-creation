@@ -423,10 +423,12 @@ export class GameDataService {
 
         try {
             const raceFiles = [
+                'aasimar',
                 'dragonborn',
                 'dwarf',
                 'elf',
                 'gnome',
+                'goliath',
                 'half-elf',
                 'half-orc',
                 'halfling',

@@ -192,6 +192,10 @@ export interface ASISystemState {
   completed: Record<number, boolean>;
 }
 
+export interface AbilityScoreState {
+    // AbilityScoreState 的定义
+}
+
 export interface Character {
     id: string;
     name: string;
@@ -200,8 +204,9 @@ export interface Character {
     classes: CharacterClass[];
     level: number;
     experiencePoints: number;
-    finalAbilityScores: AbilityScores;
-    baseAbilityScores: AbilityScores;
+    baseAbilityScores: Record<AbilityName, number>;
+    finalAbilityScores: Record<AbilityName, number>;
+    abilityAllocationState?: AbilityScoreState;
     hitPoints: number;
     armorClass: number;
     initiative: number;

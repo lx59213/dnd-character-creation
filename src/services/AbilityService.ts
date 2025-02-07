@@ -30,6 +30,17 @@ interface StandardArrayState {
     usedScores: Set<number>;
 }
 
+interface DestinyRollResult {
+    scores: number[];  // 6个属性值
+    total: number;    // 总和
+}
+
+interface DestinyRollState {
+    results: DestinyRollResult[];  // 所有天命结果
+    selectedSet: number | null;    // 选中的天命序号
+    allocatedScores: Record<AbilityName, number>;  // 分配后的属性值
+}
+
 interface AbilityRules {
     pointBuy: {
         minimumScore: number;
@@ -56,6 +67,19 @@ export class AbilityService {
     private standardArrayState: StandardArrayState = {
         availableScores: [15, 14, 13, 12, 10, 8],
         usedScores: new Set()
+    };
+
+    private destinyRollState: DestinyRollState = {
+        results: [],
+        selectedSet: null,
+        allocatedScores: {
+            strength: 0,
+            dexterity: 0,
+            constitution: 0,
+            intelligence: 0,
+            wisdom: 0,
+            charisma: 0
+        }
     };
 
     private gameData: GameDataService;
@@ -296,5 +320,111 @@ export class AbilityService {
         }
 
         return finalScore;
+    }
+
+    // 投一次4d6取3
+    private rollOneAbilityScore(): number {
+        const rolls = Array(4).fill(0).map(() => Math.floor(Math.random() * 6) + 1);
+        rolls.sort((a, b) => b - a);
+        return rolls.slice(0, 3).reduce((sum, num) => sum + num, 0);
+    }
+
+    // 投一次天命（6个属性值）
+    private rollOneDestinySet(): DestinyRollResult {
+        const scores = Array(6).fill(0).map(() => this.rollOneAbilityScore());
+        const total = scores.reduce((sum, score) => sum + score, 0);
+        return { scores, total };
+    }
+
+    // 进行天命投点
+    public rollDestiny(times: number): DestinyRollResult[] {
+        // 重置所有状态
+        this.destinyRollState = {
+            results: Array(times).fill(0).map(() => this.rollOneDestinySet()),
+            selectedSet: null,
+            allocatedScores: {
+                strength: 0,
+                dexterity: 0,
+                constitution: 0,
+                intelligence: 0,
+                wisdom: 0,
+                charisma: 0
+            }
+        };
+        return this.destinyRollState.results;
+    }
+
+    // 选择一组天命值
+    public selectDestinySet(index: number): void {
+        if (index >= 0 && index < this.destinyRollState.results.length) {
+            this.destinyRollState.selectedSet = index;
+            this.resetAllocatedScores();
+        }
+    }
+
+    // 检查某个分数是否可以被分配
+    public canAllocateScore(ability: AbilityName, score: number, selectedSet: number): boolean {
+        // 如果是重置值，始终可以分配
+        if (score === 0) return true;
+
+        const selectedResult = this.destinyRollState.results[selectedSet];
+        if (!selectedResult) return false;
+
+        // 找到这个分数在结果数组中出现的所有位置
+        const scorePositions = selectedResult.scores.reduce((positions: number[], curr, idx) => {
+            if (curr === score) positions.push(idx);
+            return positions;
+        }, []);
+
+        if (scorePositions.length === 0) return false;
+
+        // 计算这个分数已经被分配的次数
+        const allocatedCount = Object.entries(this.destinyRollState.allocatedScores)
+            .filter(([key, value]) => key !== ability && value === score)
+            .length;
+
+        // 如果已分配次数小于这个分数出现的次数，则可以继续分配
+        return allocatedCount < scorePositions.length;
+    }
+
+    // 分配天命值到属性
+    public allocateDestinyScore(ability: AbilityName, score: number): void {
+        if (this.destinyRollState.selectedSet === null) {
+            throw new Error('No destiny set selected');
+        }
+
+        // 如果是重置值（score === 0）
+        if (score === 0) {
+            this.destinyRollState.allocatedScores[ability] = 0;
+            return;
+        }
+
+        // 检查是否可以分配这个分数
+        if (!this.canAllocateScore(ability, score, this.destinyRollState.selectedSet)) {
+            throw new Error('Score cannot be allocated');
+        }
+
+        this.destinyRollState.allocatedScores[ability] = score;
+    }
+
+    // 获取当前天命投点状态
+    public getDestinyRollState(): DestinyRollState {
+        return {
+            results: [...this.destinyRollState.results],
+            selectedSet: this.destinyRollState.selectedSet,
+            allocatedScores: { ...this.destinyRollState.allocatedScores }
+        };
+    }
+
+    // 重置已分配的属性值
+    private resetAllocatedScores(): void {
+        this.destinyRollState.allocatedScores = {
+            strength: 0,
+            dexterity: 0,
+            constitution: 0,
+            intelligence: 0,
+            wisdom: 0,
+            charisma: 0
+        };
     }
 }

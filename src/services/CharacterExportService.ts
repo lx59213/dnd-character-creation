@@ -104,30 +104,46 @@ export class CharacterExportService {
 
     private async saveFileWithPicker(blob: Blob, suggestedName: string): Promise<void> {
         try {
+            // 首先尝试使用 showSaveFilePicker API
             if ('showSaveFilePicker' in window) {
-                const fileType = {
-                    description: this.getFileTypeDescription(suggestedName),
-                    accept: {
-                        [this.getMimeType(suggestedName)]: [this.getFileExtension(suggestedName)]
-                    }
-                };
+                try {
+                    const fileType = {
+                        description: this.getFileTypeDescription(suggestedName),
+                        accept: {
+                            [this.getMimeType(suggestedName)]: [this.getFileExtension(suggestedName)]
+                        }
+                    };
 
-                const handle = await window.showSaveFilePicker({
-                    suggestedName,
-                    types: [fileType]
-                });
-                
-                const writable = await handle.createWritable();
-                await writable.write(blob);
-                await writable.close();
-            } else {
-                this.downloadFile(URL.createObjectURL(blob), suggestedName);
+                    const handle = await window.showSaveFilePicker({
+                        suggestedName,
+                        types: [fileType]
+                    });
+                    
+                    const writable = await handle.createWritable();
+                    await writable.write(blob);
+                    await writable.close();
+                    return;
+                } catch (error) {
+                    console.log('showSaveFilePicker failed, falling back to download:', error);
+                    // 如果 showSaveFilePicker 失败，回退到传统下载方式
+                }
             }
+
+            // 回退方案：使用传统的下载方式
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = suggestedName;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
         } catch (error) {
+            console.error('File save failed:', error);
             if ((error as Error).name === 'AbortError') {
                 return;
             }
-            throw error;
+            throw new Error('导出失败，请稍后重试');
         }
     }
 

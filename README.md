@@ -269,7 +269,11 @@ dnd-character-creation/
 
 ## 📄 许可证
 
-本项目采用 ISC 许可证。详见 [LICENSE](LICENSE) 文件。
+本项目采用 MIT 许可证。详见 [LICENSE](LICENSE) 文件。
+
+本项目包含来自 D&D 5E 系统参考文档 (SRD) 的内容，这些内容基于开放游戏许可证 (OGL) Version 1.0a 授权使用。
+
+D&D角色创建系统是一个独立产品，未与 Wizards of the Coast LLC 建立任何关联、认可、赞助或特别批准关系。本应用程序在 Wizards' Fan Site Policy 允许的范围内使用 Wizards of the Coast LLC 的商标和其他知识产权。
 
 ## 📮 联系方式
 

@@ -271,7 +271,11 @@ Please ensure before submitting a Pull Request:
 
 ## 📄 License
 
-This project is licensed under the ISC License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+This project includes content from the D&D 5E Systems Reference Document (SRD), which is licensed under the Open Game License (OGL) Version 1.0a.
+
+The D&D Character Creation System is an independent product and is not affiliated with, endorsed, sponsored, or specifically approved by Wizards of the Coast LLC. This application may use the trademarks and other intellectual property of Wizards of the Coast LLC, which is permitted under Wizards' Fan Site Policy.
 
 ## 📮 Contact
 

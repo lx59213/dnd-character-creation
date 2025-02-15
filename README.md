@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![DND Logo](docs/images/dnd-logo.png)
+<img src="docs/images/dnd-logo.png" alt="DND Logo" width="300"/>
 
 一个基于React的龙与地下城(D&D)角色创建系统，帮助玩家快速创建和管理自己的D&D角色。
 
@@ -293,4 +293,3 @@ dnd-character-creation/
 </div>
 
 **Happy Gaming! 祝您游戏愉快！**
-</div>

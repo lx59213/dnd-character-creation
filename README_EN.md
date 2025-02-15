@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![DND Logo](docs/images/dnd-logo.png)
+<img src="docs/images/dnd-logo.png" alt="DND Logo" width="300"/>
 
 A React-based D&D (Dungeons & Dragons) character creation system that helps players quickly create and manage their D&D characters.
 

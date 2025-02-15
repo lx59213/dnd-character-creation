@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![DND Logo](public/images/dnd-logo.png)
+![DND Logo](docs/images/dnd-logo.png)
 
 一个基于React的龙与地下城(D&D)角色创建系统，帮助玩家快速创建和管理自己的D&D角色。
 
@@ -70,7 +70,7 @@
   - 可视化骰点动画
 
 <div align="center">
-  <img src="docs/images/ability-generation.png" alt="属性生成系统" width="600"/>
+  <img src="docs/images/ability-generation.png" alt="属性生成系统" width="800"/>
 </div>
 
 ### 2. 高级法术系统
@@ -91,7 +91,7 @@
   - 施法关键属性提示
 
 <div align="center">
-  <img src="docs/images/spell-management.png" alt="法术管理系统" width="600"/>
+  <img src="docs/images/spell-management.png" alt="法术管理系统" width="800"/>
 </div>
 
 ### 3. 先进的导出功能
@@ -109,7 +109,7 @@
   - 跨设备兼容
 
 <div align="center">
-  <img src="docs/images/export-options.png" alt="导出选项" width="600"/>
+  <img src="docs/images/export-options.png" alt="导出选项" width="400"/>
 </div>
 
 ### 4. 技能熟练度系统
@@ -125,7 +125,7 @@
   - 熟练项整合
 
 <div align="center">
-  <img src="docs/images/skill-proficiency.png" alt="熟练项系统" width="600"/>
+  <img src="docs/images/skill-proficiency.png" alt="熟练项系统" width="800"/>
 </div>
 
 ### 5. 升级系统
@@ -141,7 +141,7 @@
   - 多选项升级路径
 
 <div align="center">
-  <img src="docs/images/leveling-system.png" alt="升级系统" width="600"/>
+  <img src="docs/images/leveling-system.png" alt="升级系统" width="800"/>
 </div>
 
 ## 🚀 快速开始
@@ -239,11 +239,7 @@ dnd-character-creation/
    - 法术位计算器
    - 已知法术追踪器
 
-### API文档
-
-详细的API文档请查看 [API文档](docs/API.md)
-
-## 🤝 贡献指南
+### 🤝 贡献指南
 
 我们欢迎所有形式的贡献，包括但不限于：
 

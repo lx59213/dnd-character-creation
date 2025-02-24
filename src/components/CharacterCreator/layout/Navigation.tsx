@@ -73,6 +73,23 @@ const Navigation: React.FC = () => {
         alignItems: 'center',
         gap: 2,
         py: 2,
+        height: '100vh', 
+        position: 'sticky', 
+        top: 0,
+        overflowY: 'auto', 
+        '&::-webkit-scrollbar': {
+          width: '6px',
+        },
+        '&::-webkit-scrollbar-track': {
+          background: 'transparent',
+        },
+        '&::-webkit-scrollbar-thumb': {
+          background: 'rgba(255, 255, 255, 0.2)',
+          borderRadius: '3px',
+          '&:hover': {
+            background: 'rgba(255, 255, 255, 0.3)',
+          },
+        },
       }}
     >
       {/* 等级和生命值显示 */}

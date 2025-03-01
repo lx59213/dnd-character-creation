@@ -84,6 +84,16 @@ export const initialCharacter: Character = {
     ideals: [],
     bonds: [],
     flaws: []
+  },
+  customContent: {
+    race: '',
+    subrace: '',
+    class: '',
+    subclass: '',
+    background: '',
+    abilities: '',
+    skills: '',
+    proficiencies: ''
   }
 };
 

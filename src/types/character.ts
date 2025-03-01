@@ -238,6 +238,16 @@ export interface Character {
     asiSystem?: ASISystemState;
     selectedFeats?: Record<number, string>;
     notes?: string;
+    customContent?: {
+        race?: string;
+        subrace?: string;
+        class?: string;
+        subclass?: string;
+        background?: string;
+        abilities?: string;
+        skills?: string;
+        proficiencies?: string;
+    };
 }
 
 export interface CharacterClassData {

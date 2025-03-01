@@ -39,8 +39,8 @@ const Navigation: React.FC = () => {
   // 处理导航项
   let navItems = [...baseNavItems];
 
-  // 如果选择的种族有亚种，则在种族后面添加亚种选项
-  if (character.race?.subraces?.length) {
+  // 如果已选择种族，则总是显示亚种选项（无论是否有预设亚种）
+  if (character.race) {
     navItems = [
       ...navItems.slice(0, 2),
       { id: 'subrace' as TabType, label: '亚种', icon: <GroupIcon /> },

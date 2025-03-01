@@ -1,7 +1,9 @@
 import React from 'react';
-import { Box, Typography, Paper } from '@mui/material';
+import { Box, Typography, Paper, IconButton, Tooltip } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { useCharacterContext } from '../context';
+import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
+import DeleteIcon from '@mui/icons-material/Delete';
 import Appearance from '../steps/Appearance';
 
 const PreviewContainer = styled(Box)(({ theme }) => ({
@@ -20,7 +22,11 @@ const ImageContainer = styled(Box)({
   alignItems: 'center',
   justifyContent: 'center',
   position: 'relative',
-  overflow: 'hidden'
+  overflow: 'hidden',
+  cursor: 'pointer',
+  '&:hover .upload-overlay': {
+    opacity: 1
+  }
 });
 
 const ImageWrapper = styled(Box)({
@@ -40,6 +46,22 @@ const ImageWrapper = styled(Box)({
   }
 });
 
+const UploadOverlay = styled(Box)(({ theme }) => ({
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  opacity: 0,
+  transition: 'opacity 0.3s ease',
+  color: theme.palette.common.white
+}));
+
 const Title = styled(Typography)(({ theme }) => ({
   marginBottom: theme.spacing(2),
   color: theme.palette.text.primary,
@@ -54,8 +76,9 @@ const RaceTitle = styled(Typography)(({ theme }) => ({
 }));
 
 const AppearancePreview: React.FC = () => {
-  const { character } = useCharacterContext();
+  const { character, updateCharacter } = useCharacterContext();
   const [imageError, setImageError] = React.useState(false);
+  const fileInputRef = React.useRef<HTMLInputElement>(null);
 
   // 将种族名称标准化（移除空格，转换为小写）
   const normalizeRaceName = (name: string) => {
@@ -153,24 +176,26 @@ const AppearancePreview: React.FC = () => {
 
   // 获取种族图片路径
   const getRaceImagePath = () => {
+    // 如果有自定义图片，优先使用自定义图片
+    if (character.customContent?.customImage) {
+      return character.customContent.customImage;
+    }
+
     if (!character.race) {
       return '';
     }
 
     // 如果有子种族，优先使用子种族的图片
     if (character.subrace) {
-      // 优先使用显示名称，因为它是中文的
       const originalSubraceKey = character.subrace.displayName || character.subrace.name;
       const displaySubraceKey = character.subrace.displayName;
       const normalizedSubraceKey = normalizeRaceName(character.subrace.name);
       
-      // 优先使用显示名称进行映射
       const subraceKey = subraceNameMap[displaySubraceKey] || 
                       subraceNameMap[originalSubraceKey] || 
                       subraceNameMap[normalizedSubraceKey] ||
                       normalizedSubraceKey;
       
-      // 构建完整的图片路径
       const imagePath = buildImagePath(raceImageMap[subraceKey] || '');
       
       if (raceImageMap[subraceKey]) {
@@ -178,59 +203,57 @@ const AppearancePreview: React.FC = () => {
       }
     }
 
-    // 如果没有子种族或子种族图片不存在，使用主种族图片
     const raceKey = normalizeRaceName(character.race.name);
-    
-    // 构建完整的图片路径
     const imagePath = buildImagePath(raceImageMap[raceKey] || '');
     
     return imagePath;
   };
 
-  // 将日志逻辑移到 useEffect 中
-  React.useEffect(() => {
-    if (character.race) {
-      console.log('Current character race:', character.race);
-      console.log('Current character race name:', character.race.name);
-      console.log('Current character race display name:', character.race.displayName);
-      console.log('Current character subrace:', character.subrace);
-
-      const raceKey = normalizeRaceName(character.race.name);
-      console.log('Race original name:', character.race.name);
-      console.log('Race display name:', character.race.displayName);
-      console.log('Normalized race name:', raceKey);
-      console.log('Looking for race image with key:', raceKey);
-      console.log('Available race keys:', Object.keys(raceImageMap));
-
-      const imagePath = getRaceImagePath();
-      // 将路径构建的日志也移到这里，只在种族变化时打印一次
-      if (imagePath) {
-        console.log('Building image path for:', raceImageMap[raceKey]);
-        console.log('Public URL:', process.env.PUBLIC_URL || '');
-        console.log('Normalized path:', imagePath);
-        console.log('Final image path:', imagePath);
-      }
-    }
-  }, [character.race, character.subrace]);
-
   const handleImageError = (error: React.SyntheticEvent<HTMLImageElement, Event>) => {
     console.error('Image failed to load:', error);
     const img = error.target as HTMLImageElement;
     console.log('Failed image src:', img.src);
-    // 尝试加载一个测试图片来验证路径问题
-    const testImg = new Image();
-    testImg.onload = () => console.log('Test image loaded successfully');
-    testImg.onerror = () => console.log('Test image failed to load');
-    testImg.src = '/data/image/races/人类 (Human).png';
     setImageError(true);
   };
 
   const buildImagePath = (fileName: string) => {
     if (!fileName) return '';
-    // 在 Create React App 中，需要使用 process.env.PUBLIC_URL
     const publicUrl = process.env.PUBLIC_URL || '';
     const normalizedPath = `${publicUrl}/data/image/races/${fileName}`.replace(/\\/g, '/');
     return normalizedPath;
+  };
+
+  // 处理图片上传
+  const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        // 更新角色的自定义图片
+        updateCharacter({
+          customContent: {
+            ...character.customContent,
+            customImage: reader.result as string
+          }
+        });
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  // 处理删除自定义图片
+  const handleDeleteCustomImage = () => {
+    updateCharacter({
+      customContent: {
+        ...character.customContent,
+        customImage: undefined
+      }
+    });
+  };
+
+  // 触发文件选择对话框
+  const handleImageClick = () => {
+    fileInputRef.current?.click();
   };
 
   const imagePath = getRaceImagePath();
@@ -244,7 +267,7 @@ const AppearancePreview: React.FC = () => {
   return (
     <PreviewContainer>
       <Title variant="h6">外观</Title>
-      <ImageContainer>
+      <ImageContainer onClick={handleImageClick}>
         <ImageWrapper>
           {imagePath && (
             <>
@@ -262,15 +285,46 @@ const AppearancePreview: React.FC = () => {
               )}
             </>
           )}
+          <UploadOverlay className="upload-overlay">
+            <AddPhotoAlternateIcon sx={{ fontSize: 40, mb: 1 }} />
+            <Typography variant="body2">
+              点击上传自定义形象
+            </Typography>
+          </UploadOverlay>
         </ImageWrapper>
+        
+        {/* 隐藏的文件输入框 */}
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept="image/*"
+          style={{ display: 'none' }}
+          onChange={handleImageUpload}
+        />
       </ImageContainer>
-      {character.race && (
+      
+      {/* 显示种族名称和删除按钮 */}
+      <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', mt: 2 }}>
         <RaceTitle variant="subtitle1">
           {character.subrace
-            ? `${character.subrace.displayName} (${character.race.displayName})`
-            : character.race.displayName}
+            ? `${character.subrace.displayName} (${character.race?.displayName})`
+            : character.race?.displayName}
         </RaceTitle>
-      )}
+        {character.customContent?.customImage && (
+          <Tooltip title="删除自定义形象">
+            <IconButton
+              size="small"
+              onClick={(e) => {
+                e.stopPropagation();
+                handleDeleteCustomImage();
+              }}
+              sx={{ ml: 1 }}
+            >
+              <DeleteIcon />
+            </IconButton>
+          </Tooltip>
+        )}
+      </Box>
     </PreviewContainer>
   );
 };

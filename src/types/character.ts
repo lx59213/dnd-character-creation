@@ -247,6 +247,7 @@ export interface Character {
         abilities?: string;
         skills?: string;
         proficiencies?: string;
+        customImage?: string; // 存储自定义上传的图片（Base64格式）
     };
 }
 
